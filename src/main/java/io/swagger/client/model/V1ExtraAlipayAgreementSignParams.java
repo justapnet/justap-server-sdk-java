@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayAgreementSignParams
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:38:56.099Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:53:19.749Z")
 public class V1ExtraAlipayAgreementSignParams {
   @SerializedName("access_params")
   private ExtraAlipayAgreementSignParamsAccessParams accessParams = null;
