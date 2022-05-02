@@ -31,7 +31,7 @@ import java.util.List;
  * 返回一个已存在的 charge 对象列表或者一个错误
  */
 @ApiModel(description = "返回一个已存在的 charge 对象列表或者一个错误")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T17:08:04.908Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T17:26:10.059Z")
 public class V1ChargeListResponse {
   @SerializedName("data")
   private List<V1Charge> data = null;

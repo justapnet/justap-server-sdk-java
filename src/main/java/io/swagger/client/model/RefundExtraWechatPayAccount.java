@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * RefundExtraWechatPayAccount
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T17:08:04.908Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T17:26:10.059Z")
 public class RefundExtraWechatPayAccount {
   @SerializedName("from")
   private List<RefundExtraWechatPayAccount> from = null;

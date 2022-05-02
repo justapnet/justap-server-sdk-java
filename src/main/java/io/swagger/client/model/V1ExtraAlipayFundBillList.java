@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayFundBillList
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T17:08:04.908Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T17:26:10.059Z")
 public class V1ExtraAlipayFundBillList {
   @SerializedName("amount")
   private String amount = null;
