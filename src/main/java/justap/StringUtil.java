@@ -13,7 +13,7 @@
 
 package justap;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:10:47.760Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:38:56.099Z")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).

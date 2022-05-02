@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * OpenApiRoyaltyDetailInfoPojoTradeFundBillItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:10:47.760Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:38:56.099Z")
 public class OpenApiRoyaltyDetailInfoPojoTradeFundBillItem {
   @SerializedName("amount")
   private Float amount = null;
