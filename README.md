@@ -2,7 +2,7 @@
 
 Justap API
 - API version: 1.0
-  - Build date: 2022-05-02T14:35:35.057Z
+  - Build date: 2022-05-02T14:44:29.130Z
 
 For more information, please visit [https://www.justap.cn/docs](https://www.justap.cn/docs)
 

@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T14:35:35.057Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T14:44:29.130Z")
 public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
   @SerializedName("amount")
   private Float amount = null;
