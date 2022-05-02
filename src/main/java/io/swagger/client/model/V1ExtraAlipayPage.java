@@ -37,7 +37,7 @@ import java.util.List;
 /**
  * V1ExtraAlipayPage
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:53:19.749Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T16:30:06.246Z")
 public class V1ExtraAlipayPage {
   @SerializedName("agreement_sign_params")
   private V1ExtraAlipayAgreementSignParams agreementSignParams = null;

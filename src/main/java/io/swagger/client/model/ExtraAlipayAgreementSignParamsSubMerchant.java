@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ExtraAlipayAgreementSignParamsSubMerchant
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:53:19.749Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T16:30:06.246Z")
 public class ExtraAlipayAgreementSignParamsSubMerchant {
   @SerializedName("sub_merchant_id")
   private String subMerchantId = null;

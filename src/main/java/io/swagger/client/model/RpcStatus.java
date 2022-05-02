@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * RpcStatus
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:53:19.749Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T16:30:06.246Z")
 public class RpcStatus {
   @SerializedName("code")
   private Integer code = null;
