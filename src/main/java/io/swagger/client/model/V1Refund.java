@@ -33,7 +33,7 @@ import java.util.Map;
  * Refund 对象允许你可以对已经支付的 charge 对象发起退款请求。
  */
 @ApiModel(description = "Refund 对象允许你可以对已经支付的 charge 对象发起退款请求。")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T16:30:06.246Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T17:08:04.908Z")
 public class V1Refund {
   @SerializedName("account")
   private V1RefundExtra account = null;

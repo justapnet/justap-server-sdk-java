@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayH5
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T16:30:06.246Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T17:08:04.908Z")
 public class V1ExtraWechatpayH5 {
   @SerializedName("attach")
   private String attach = null;
