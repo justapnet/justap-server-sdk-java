@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * V1ExtraWechatpayDetail
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T14:44:29.130Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-02T15:10:47.760Z")
 public class V1ExtraWechatpayDetail {
   @SerializedName("cost_price")
   private String costPrice = null;
