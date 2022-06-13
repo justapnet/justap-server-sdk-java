@@ -18,7 +18,7 @@ import justap.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
 public class OAuth implements Authentication {
   private String accessToken;
 
