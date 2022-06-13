@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayAppConfig
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraWechatpayAppConfig {
   @SerializedName("appid")
   private String appid = null;
@@ -56,10 +56,10 @@ public class V1ExtraWechatpayAppConfig {
   }
 
    /**
-   * Get appid
+   * 应用appid
    * @return appid
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "应用appid")
   public String getAppid() {
     return appid;
   }
@@ -74,10 +74,10 @@ public class V1ExtraWechatpayAppConfig {
   }
 
    /**
-   * Get noncestr
+   * 随机字符串
    * @return noncestr
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "随机字符串")
   public String getNoncestr() {
     return noncestr;
   }
@@ -92,10 +92,10 @@ public class V1ExtraWechatpayAppConfig {
   }
 
    /**
-   * Get _package
+   * 扩展字段
    * @return _package
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "扩展字段")
   public String getPackage() {
     return _package;
   }
@@ -110,10 +110,10 @@ public class V1ExtraWechatpayAppConfig {
   }
 
    /**
-   * Get partnerid
+   * 商户号
    * @return partnerid
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户号")
   public String getPartnerid() {
     return partnerid;
   }
@@ -128,10 +128,10 @@ public class V1ExtraWechatpayAppConfig {
   }
 
    /**
-   * Get prepayid
+   * 预支付交易会话标识
    * @return prepayid
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "预支付交易会话标识")
   public String getPrepayid() {
     return prepayid;
   }
@@ -146,10 +146,10 @@ public class V1ExtraWechatpayAppConfig {
   }
 
    /**
-   * Get sign
+   * 签名
    * @return sign
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "签名")
   public String getSign() {
     return sign;
   }
@@ -164,10 +164,10 @@ public class V1ExtraWechatpayAppConfig {
   }
 
    /**
-   * Get timestamp
+   * 时间戳
    * @return timestamp
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "时间戳")
   public String getTimestamp() {
     return timestamp;
   }

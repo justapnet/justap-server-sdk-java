@@ -33,7 +33,7 @@ import java.util.List;
 /**
  * V1ExtraAlipayWap
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayWap {
   @SerializedName("auth_token")
   private String authToken = null;
@@ -95,10 +95,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get authToken
+   * 授权码
    * @return authToken
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "授权码")
   public String getAuthToken() {
     return authToken;
   }
@@ -113,10 +113,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get businessParams
+   * 业务扩展参数
    * @return businessParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "业务扩展参数")
   public String getBusinessParams() {
     return businessParams;
   }
@@ -131,10 +131,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get disablePayChannels
+   * 禁用渠道
    * @return disablePayChannels
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "禁用渠道")
   public String getDisablePayChannels() {
     return disablePayChannels;
   }
@@ -149,10 +149,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get enablePayChannels
+   * 可用渠道
    * @return enablePayChannels
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "可用渠道")
   public String getEnablePayChannels() {
     return enablePayChannels;
   }
@@ -167,10 +167,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get extUserInfo
+   * 支付宝用户信息
    * @return extUserInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付宝用户信息")
   public V1ExtraAlipayExtUserInfo getExtUserInfo() {
     return extUserInfo;
   }
@@ -185,10 +185,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get extendParams
+   * 业务扩展参数
    * @return extendParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "业务扩展参数")
   public V1ExtraAlipayExtendParams getExtendParams() {
     return extendParams;
   }
@@ -211,10 +211,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get fundBillList
+   * 支付金额信息
    * @return fundBillList
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付金额信息")
   public List<String> getFundBillList() {
     return fundBillList;
   }
@@ -237,10 +237,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get goodsDetail
+   * 商品明细列表
    * @return goodsDetail
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "商品明细列表")
   public List<V1ExtraAlipayGoodsDetail> getGoodsDetail() {
     return goodsDetail;
   }
@@ -255,10 +255,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get goodsType
+   * 商品类型
    * @return goodsType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商品类型")
   public String getGoodsType() {
     return goodsType;
   }
@@ -273,10 +273,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get merchantTradeId
+   * [ONLY IN RESPONSE] 商户订单号
    * @return merchantTradeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 商户订单号")
   public String getMerchantTradeId() {
     return merchantTradeId;
   }
@@ -291,10 +291,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get payUrl
+   * [ONLY IN RESPONSE] 支付链接
    * @return payUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 支付链接")
   public String getPayUrl() {
     return payUrl;
   }
@@ -309,10 +309,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get productCode
+   * 销售产品码
    * @return productCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "销售产品码")
   public String getProductCode() {
     return productCode;
   }
@@ -327,10 +327,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get promoParams
+   * 优惠参数
    * @return promoParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "优惠参数")
   public String getPromoParams() {
     return promoParams;
   }
@@ -345,10 +345,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get quitUrl
+   * 支付取消跳转的地址
    * @return quitUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付取消跳转的地址")
   public String getQuitUrl() {
     return quitUrl;
   }
@@ -363,10 +363,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get returnUrl
+   * 支付成功跳转的地址
    * @return returnUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付成功跳转的地址")
   public String getReturnUrl() {
     return returnUrl;
   }
@@ -381,10 +381,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get sellerId
+   * [ONLY IN RESPONSE] 收款支付宝用户ID
    * @return sellerId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 收款支付宝用户ID")
   public String getSellerId() {
     return sellerId;
   }
@@ -399,10 +399,10 @@ public class V1ExtraAlipayWap {
   }
 
    /**
-   * Get storeId
+   * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }

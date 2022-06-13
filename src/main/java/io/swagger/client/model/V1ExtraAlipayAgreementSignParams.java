@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayAgreementSignParams
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayAgreementSignParams {
   @SerializedName("access_params")
   private ExtraAlipayAgreementSignParamsAccessParams accessParams = null;
@@ -62,10 +62,10 @@ public class V1ExtraAlipayAgreementSignParams {
   }
 
    /**
-   * Get accessParams
+   * 请按当前接入的方式进行填充，且输入值必须为文档中的参数取值范围
    * @return accessParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "请按当前接入的方式进行填充，且输入值必须为文档中的参数取值范围")
   public ExtraAlipayAgreementSignParamsAccessParams getAccessParams() {
     return accessParams;
   }
@@ -80,10 +80,10 @@ public class V1ExtraAlipayAgreementSignParams {
   }
 
    /**
-   * Get externalAgreementNo
+   * 外部协议号
    * @return externalAgreementNo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "外部协议号")
   public String getExternalAgreementNo() {
     return externalAgreementNo;
   }
@@ -98,10 +98,10 @@ public class V1ExtraAlipayAgreementSignParams {
   }
 
    /**
-   * Get externalLogonId
+   * 外部用户唯一标识
    * @return externalLogonId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "外部用户唯一标识")
   public String getExternalLogonId() {
     return externalLogonId;
   }
@@ -116,10 +116,10 @@ public class V1ExtraAlipayAgreementSignParams {
   }
 
    /**
-   * Get periodRuleParams
+   * 周期管控规则参数period_rule_params，在签约周期扣款产品（如CYCLE_PAY_AUTH_P）时必传，在签约其他产品时无需传入。 周期扣款产品，会按照这里传入的参数提示用户，并对发起扣款的时间、金额、次数等做相应限制。
    * @return periodRuleParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "周期管控规则参数period_rule_params，在签约周期扣款产品（如CYCLE_PAY_AUTH_P）时必传，在签约其他产品时无需传入。 周期扣款产品，会按照这里传入的参数提示用户，并对发起扣款的时间、金额、次数等做相应限制。")
   public ExtraAlipayAgreementSignParamsPeriodRuleParams getPeriodRuleParams() {
     return periodRuleParams;
   }
@@ -134,10 +134,10 @@ public class V1ExtraAlipayAgreementSignParams {
   }
 
    /**
-   * Get personalProductCode
+   * 个人签约产品码
    * @return personalProductCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "个人签约产品码")
   public String getPersonalProductCode() {
     return personalProductCode;
   }
@@ -152,10 +152,10 @@ public class V1ExtraAlipayAgreementSignParams {
   }
 
    /**
-   * Get signNotifyUrl
+   * 签约回调地址
    * @return signNotifyUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "签约回调地址")
   public String getSignNotifyUrl() {
     return signNotifyUrl;
   }
@@ -170,10 +170,10 @@ public class V1ExtraAlipayAgreementSignParams {
   }
 
    /**
-   * Get signScene
+   * 签约场景
    * @return signScene
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "签约场景")
   public String getSignScene() {
     return signScene;
   }
@@ -188,10 +188,10 @@ public class V1ExtraAlipayAgreementSignParams {
   }
 
    /**
-   * Get subMerchant
+   * 此参数用于传递子商户信息，无特殊需求时不用关注。目前商户代扣、海外代扣、淘旅行信用住产品支持传入该参数（在销售方案中“是否允许自定义子商户信息”需要选是）。
    * @return subMerchant
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "此参数用于传递子商户信息，无特殊需求时不用关注。目前商户代扣、海外代扣、淘旅行信用住产品支持传入该参数（在销售方案中“是否允许自定义子商户信息”需要选是）。")
   public ExtraAlipayAgreementSignParamsSubMerchant getSubMerchant() {
     return subMerchant;
   }

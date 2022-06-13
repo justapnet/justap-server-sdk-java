@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * V1ExtraAlipayQr
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayQr {
   @SerializedName("buyer_id")
   private String buyerId = null;
@@ -71,10 +71,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get buyerId
+   * 买家的支付宝唯一用户号（2088开头的16位纯数字）
    * @return buyerId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "买家的支付宝唯一用户号（2088开头的16位纯数字）")
   public String getBuyerId() {
     return buyerId;
   }
@@ -89,10 +89,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get discountableAmount
+   * 可打折金额. 参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000] 如果该值未传入，但传入了【订单总金额】，【不可打折金额】则该值默认为【订单总金额】-【不可打折金额】
    * @return discountableAmount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "可打折金额. 参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000] 如果该值未传入，但传入了【订单总金额】，【不可打折金额】则该值默认为【订单总金额】-【不可打折金额】")
   public String getDiscountableAmount() {
     return discountableAmount;
   }
@@ -115,10 +115,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get goodsDetail
+   * 商品明细列表
    * @return goodsDetail
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "商品明细列表")
   public List<V1ExtraAlipayGoodsDetail> getGoodsDetail() {
     return goodsDetail;
   }
@@ -133,10 +133,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get operatorId
+   * 商户操作员编号
    * @return operatorId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户操作员编号")
   public String getOperatorId() {
     return operatorId;
   }
@@ -151,10 +151,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get productCode
+   * 销售产品码，商家和支付宝签约的产品码，为固定值QUICK_MSECURITY_PAY
    * @return productCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "销售产品码，商家和支付宝签约的产品码，为固定值QUICK_MSECURITY_PAY")
   public String getProductCode() {
     return productCode;
   }
@@ -169,10 +169,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get qrCode
+   * [ONLY IN RESPONSE] 二维码
    * @return qrCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 二维码")
   public String getQrCode() {
     return qrCode;
   }
@@ -187,10 +187,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get qrCodeTimeoutExpress
+   * 支付场景。 条码支付，取值：bar_code； 声波支付，取值：wave_code
    * @return qrCodeTimeoutExpress
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付场景。 条码支付，取值：bar_code； 声波支付，取值：wave_code")
   public String getQrCodeTimeoutExpress() {
     return qrCodeTimeoutExpress;
   }
@@ -205,10 +205,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get qrLink
+   * [ONLY IN RESPONSE] 二维码图片的URL地址
    * @return qrLink
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 二维码图片的URL地址")
   public String getQrLink() {
     return qrLink;
   }
@@ -223,10 +223,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get queryOptions
+   * 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。注：若为空，则默认为15d。
    * @return queryOptions
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。注：若为空，则默认为15d。")
   public String getQueryOptions() {
     return queryOptions;
   }
@@ -241,10 +241,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get storeId
+   * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }
@@ -259,10 +259,10 @@ public class V1ExtraAlipayQr {
   }
 
    /**
-   * Get terminalId
+   * 商户机具终端编号
    * @return terminalId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户机具终端编号")
   public String getTerminalId() {
     return terminalId;
   }

@@ -32,7 +32,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayJsapi
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraWechatpayJsapi {
   @SerializedName("attach")
   private String attach = null;
@@ -70,10 +70,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get attach
+   * 元数据
    * @return attach
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "元数据")
   public String getAttach() {
     return attach;
   }
@@ -88,10 +88,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get detail
+   * 商品详情
    * @return detail
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "商品详情")
   public V1ExtraWechatpayDetail getDetail() {
     return detail;
   }
@@ -106,10 +106,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get goodsTag
+   * 订单优惠标记
    * @return goodsTag
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "订单优惠标记")
   public String getGoodsTag() {
     return goodsTag;
   }
@@ -124,10 +124,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get jsapiConfig
+   * jsapi支付配置信息
    * @return jsapiConfig
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "jsapi支付配置信息")
   public V1ExtraWechatpayJsapiConfig getJsapiConfig() {
     return jsapiConfig;
   }
@@ -142,10 +142,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get payer
+   * 支付者信息
    * @return payer
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付者信息")
   public V1ExtraWechatpayPayer getPayer() {
     return payer;
   }
@@ -160,10 +160,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get prepayId
+   * 预支付交易会话标识
    * @return prepayId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "预支付交易会话标识")
   public String getPrepayId() {
     return prepayId;
   }
@@ -178,10 +178,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get sceneInfo
+   * 场景信息
    * @return sceneInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "场景信息")
   public V1ExtraWechatpaySceneInfo getSceneInfo() {
     return sceneInfo;
   }
@@ -196,10 +196,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get settleInfo
+   * 结算信息
    * @return settleInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "结算信息")
   public V1ExtraWechatpaySettleInfo getSettleInfo() {
     return settleInfo;
   }
@@ -214,10 +214,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get timeExpire
+   * 交易结束时间
    * @return timeExpire
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "交易结束时间")
   public String getTimeExpire() {
     return timeExpire;
   }
@@ -232,10 +232,10 @@ public class V1ExtraWechatpayJsapi {
   }
 
    /**
-   * Get timeStart
+   * 交易起始时间
    * @return timeStart
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "交易起始时间")
   public String getTimeStart() {
     return timeStart;
   }

@@ -33,13 +33,13 @@ import java.util.Map;
  * Refund 对象允许你可以对已经支付的 charge 对象发起退款请求。
  */
 @ApiModel(description = "Refund 对象允许你可以对已经支付的 charge 对象发起退款请求。")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1Refund {
   @SerializedName("account")
   private V1RefundExtra account = null;
 
   @SerializedName("amount")
-  private Double amount = null;
+  private Float amount = null;
 
   @SerializedName("charge_id")
   private String chargeId = null;
@@ -60,7 +60,7 @@ public class V1Refund {
   private String failureMsg = null;
 
   @SerializedName("is_success")
-  private Boolean isSuccess = null;
+  private Boolean isSuccess = false;
 
   @SerializedName("metadata")
   private Map<String, String> metadata = null;
@@ -98,21 +98,21 @@ public class V1Refund {
     this.account = account;
   }
 
-  public V1Refund amount(Double amount) {
+  public V1Refund amount(Float amount) {
     this.amount = amount;
     return this;
   }
 
    /**
-   * Get amount
+   * 退款金额
    * @return amount
   **/
-  @ApiModelProperty(value = "")
-  public Double getAmount() {
+  @ApiModelProperty(required = true, value = "退款金额")
+  public Float getAmount() {
     return amount;
   }
 
-  public void setAmount(Double amount) {
+  public void setAmount(Float amount) {
     this.amount = amount;
   }
 
@@ -122,10 +122,10 @@ public class V1Refund {
   }
 
    /**
-   * Get chargeId
+   * Charge 对象 id
    * @return chargeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "Charge 对象 id")
   public String getChargeId() {
     return chargeId;
   }
@@ -140,10 +140,10 @@ public class V1Refund {
   }
 
    /**
-   * Get chargeMerchantTradeId
+   * 商户系统订单号
    * @return chargeMerchantTradeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户系统订单号")
   public String getChargeMerchantTradeId() {
     return chargeMerchantTradeId;
   }
@@ -158,10 +158,10 @@ public class V1Refund {
   }
 
    /**
-   * Get createdAt
+   * 退款创建时间
    * @return createdAt
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "退款创建时间")
   public OffsetDateTime getCreatedAt() {
     return createdAt;
   }
@@ -176,10 +176,10 @@ public class V1Refund {
   }
 
    /**
-   * Get description
+   * 退款说明
    * @return description
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "退款说明")
   public String getDescription() {
     return description;
   }
@@ -194,10 +194,10 @@ public class V1Refund {
   }
 
    /**
-   * Get failureCode
+   * 支付渠道失败错误码
    * @return failureCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付渠道失败错误码")
   public String getFailureCode() {
     return failureCode;
   }
@@ -212,10 +212,10 @@ public class V1Refund {
   }
 
    /**
-   * Get failureMsg
+   * 支付渠道失败原因描述
    * @return failureMsg
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付渠道失败原因描述")
   public String getFailureMsg() {
     return failureMsg;
   }
@@ -230,10 +230,10 @@ public class V1Refund {
   }
 
    /**
-   * Get isSuccess
+   * 退款是否成功
    * @return isSuccess
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "退款是否成功")
   public Boolean isIsSuccess() {
     return isSuccess;
   }
@@ -256,10 +256,10 @@ public class V1Refund {
   }
 
    /**
-   * Get metadata
+   * 元数据，原样返回
    * @return metadata
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "元数据，原样返回")
   public Map<String, String> getMetadata() {
     return metadata;
   }
@@ -274,10 +274,10 @@ public class V1Refund {
   }
 
    /**
-   * Get refundId
+   * Refund 对象 ID
    * @return refundId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "Refund 对象 ID")
   public String getRefundId() {
     return refundId;
   }
@@ -292,10 +292,10 @@ public class V1Refund {
   }
 
    /**
-   * Get refundNo
+   * 退款单号
    * @return refundNo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "退款单号")
   public String getRefundNo() {
     return refundNo;
   }
@@ -310,10 +310,10 @@ public class V1Refund {
   }
 
    /**
-   * Get status
+   * 退款状态
    * @return status
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "退款状态")
   public String getStatus() {
     return status;
   }
@@ -328,10 +328,10 @@ public class V1Refund {
   }
 
    /**
-   * Get successAt
+   * 退款成功时间
    * @return successAt
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "退款成功时间")
   public OffsetDateTime getSuccessAt() {
     return successAt;
   }
@@ -346,10 +346,10 @@ public class V1Refund {
   }
 
    /**
-   * Get transactionNo
+   * 交易号
    * @return transactionNo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "交易号")
   public String getTransactionNo() {
     return transactionNo;
   }

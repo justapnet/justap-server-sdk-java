@@ -36,19 +36,19 @@ import java.util.Map;
 /**
  * V1Charge
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1Charge {
   @SerializedName("amount")
-  private Double amount = null;
+  private Double amount = 0.0d;
 
   @SerializedName("amount_fee")
-  private Double amountFee = null;
+  private Float amountFee = null;
 
   @SerializedName("amount_refund")
-  private Double amountRefund = null;
+  private Float amountRefund = null;
 
   @SerializedName("amount_royalty")
-  private Double amountRoyalty = null;
+  private Float amountRoyalty = null;
 
   @SerializedName("amount_settle")
   private Double amountSettle = null;
@@ -69,7 +69,7 @@ public class V1Charge {
   private String clientIp = null;
 
   @SerializedName("closed")
-  private Boolean closed = null;
+  private Boolean closed = false;
 
   @SerializedName("closed_at")
   private OffsetDateTime closedAt = null;
@@ -96,7 +96,7 @@ public class V1Charge {
   private String failureMsg = null;
 
   @SerializedName("live_mode")
-  private Boolean liveMode = null;
+  private Boolean liveMode = false;
 
   @SerializedName("merchant_trade_id")
   private String merchantTradeId = null;
@@ -105,19 +105,19 @@ public class V1Charge {
   private Map<String, String> metadata = null;
 
   @SerializedName("paid")
-  private Boolean paid = null;
+  private Boolean paid = false;
 
   @SerializedName("paid_at")
   private OffsetDateTime paidAt = null;
 
   @SerializedName("refunded")
-  private Boolean refunded = null;
+  private Boolean refunded = false;
 
   @SerializedName("refunds")
   private List<V1Refund> refunds = null;
 
   @SerializedName("reversed")
-  private Boolean reversed = null;
+  private Boolean reversed = false;
 
   @SerializedName("reversed_at")
   private OffsetDateTime reversedAt = null;
@@ -132,7 +132,7 @@ public class V1Charge {
   private String transactionNo = null;
 
   @SerializedName("ttl")
-  private Integer ttl = null;
+  private Integer ttl = 0;
 
   public V1Charge amount(Double amount) {
     this.amount = amount;
@@ -140,10 +140,10 @@ public class V1Charge {
   }
 
    /**
-   * Get amount
+   * 订单金额
    * @return amount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "订单金额")
   public Double getAmount() {
     return amount;
   }
@@ -152,57 +152,57 @@ public class V1Charge {
     this.amount = amount;
   }
 
-  public V1Charge amountFee(Double amountFee) {
+  public V1Charge amountFee(Float amountFee) {
     this.amountFee = amountFee;
     return this;
   }
 
    /**
-   * Get amountFee
+   * 下单金额
    * @return amountFee
   **/
-  @ApiModelProperty(value = "")
-  public Double getAmountFee() {
+  @ApiModelProperty(required = true, value = "下单金额")
+  public Float getAmountFee() {
     return amountFee;
   }
 
-  public void setAmountFee(Double amountFee) {
+  public void setAmountFee(Float amountFee) {
     this.amountFee = amountFee;
   }
 
-  public V1Charge amountRefund(Double amountRefund) {
+  public V1Charge amountRefund(Float amountRefund) {
     this.amountRefund = amountRefund;
     return this;
   }
 
    /**
-   * Get amountRefund
+   * 订单退款总金额
    * @return amountRefund
   **/
-  @ApiModelProperty(value = "")
-  public Double getAmountRefund() {
+  @ApiModelProperty(required = true, value = "订单退款总金额")
+  public Float getAmountRefund() {
     return amountRefund;
   }
 
-  public void setAmountRefund(Double amountRefund) {
+  public void setAmountRefund(Float amountRefund) {
     this.amountRefund = amountRefund;
   }
 
-  public V1Charge amountRoyalty(Double amountRoyalty) {
+  public V1Charge amountRoyalty(Float amountRoyalty) {
     this.amountRoyalty = amountRoyalty;
     return this;
   }
 
    /**
-   * Get amountRoyalty
+   * 分账金额
    * @return amountRoyalty
   **/
-  @ApiModelProperty(value = "")
-  public Double getAmountRoyalty() {
+  @ApiModelProperty(required = true, value = "分账金额")
+  public Float getAmountRoyalty() {
     return amountRoyalty;
   }
 
-  public void setAmountRoyalty(Double amountRoyalty) {
+  public void setAmountRoyalty(Float amountRoyalty) {
     this.amountRoyalty = amountRoyalty;
   }
 
@@ -212,10 +212,10 @@ public class V1Charge {
   }
 
    /**
-   * Get amountSettle
+   * 结算金额，不一定有，视支付通道情况返回
    * @return amountSettle
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "结算金额，不一定有，视支付通道情况返回")
   public Double getAmountSettle() {
     return amountSettle;
   }
@@ -230,10 +230,10 @@ public class V1Charge {
   }
 
    /**
-   * Get appId
+   * 应用ID
    * @return appId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "应用ID")
   public String getAppId() {
     return appId;
   }
@@ -248,10 +248,10 @@ public class V1Charge {
   }
 
    /**
-   * Get body
+   * 订单描述信息
    * @return body
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "订单描述信息")
   public String getBody() {
     return body;
   }
@@ -266,10 +266,10 @@ public class V1Charge {
   }
 
    /**
-   * Get channel
+   * 支付渠道
    * @return channel
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付渠道")
   public V1Channel getChannel() {
     return channel;
   }
@@ -284,10 +284,10 @@ public class V1Charge {
   }
 
    /**
-   * Get chargeId
+   * Charge 对象 id
    * @return chargeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "Charge 对象 id")
   public String getChargeId() {
     return chargeId;
   }
@@ -302,10 +302,10 @@ public class V1Charge {
   }
 
    /**
-   * Get clientIp
+   * 顾客IP
    * @return clientIp
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "顾客IP")
   public String getClientIp() {
     return clientIp;
   }
@@ -320,10 +320,10 @@ public class V1Charge {
   }
 
    /**
-   * Get closed
+   * 是否关闭
    * @return closed
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "是否关闭")
   public Boolean isClosed() {
     return closed;
   }
@@ -338,10 +338,10 @@ public class V1Charge {
   }
 
    /**
-   * Get closedAt
+   * 关闭时间
    * @return closedAt
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "关闭时间")
   public OffsetDateTime getClosedAt() {
     return closedAt;
   }
@@ -356,10 +356,10 @@ public class V1Charge {
   }
 
    /**
-   * Get createdAt
+   * Charge 对象创建时间
    * @return createdAt
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Charge 对象创建时间")
   public OffsetDateTime getCreatedAt() {
     return createdAt;
   }
@@ -374,10 +374,10 @@ public class V1Charge {
   }
 
    /**
-   * Get credential
+   * 支付凭证
    * @return credential
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付凭证")
   public ProtobufAny getCredential() {
     return credential;
   }
@@ -392,10 +392,10 @@ public class V1Charge {
   }
 
    /**
-   * Get currency
+   * 货币单位，当前仅支持 CNY
    * @return currency
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "货币单位，当前仅支持 CNY")
   public String getCurrency() {
     return currency;
   }
@@ -410,10 +410,10 @@ public class V1Charge {
   }
 
    /**
-   * Get description
+   * 描述信息
    * @return description
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "描述信息")
   public String getDescription() {
     return description;
   }
@@ -428,10 +428,10 @@ public class V1Charge {
   }
 
    /**
-   * Get extra
+   * 支付渠道元数据
    * @return extra
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付渠道元数据")
   public V1ChargeExtra getExtra() {
     return extra;
   }
@@ -446,10 +446,10 @@ public class V1Charge {
   }
 
    /**
-   * Get failureCode
+   * 收单机构错误码
    * @return failureCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "收单机构错误码")
   public String getFailureCode() {
     return failureCode;
   }
@@ -464,10 +464,10 @@ public class V1Charge {
   }
 
    /**
-   * Get failureMsg
+   * 收单机构错误描述信息
    * @return failureMsg
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "收单机构错误描述信息")
   public String getFailureMsg() {
     return failureMsg;
   }
@@ -482,10 +482,10 @@ public class V1Charge {
   }
 
    /**
-   * Get liveMode
+   * 表明是否是沙箱环境
    * @return liveMode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "表明是否是沙箱环境")
   public Boolean isLiveMode() {
     return liveMode;
   }
@@ -500,10 +500,10 @@ public class V1Charge {
   }
 
    /**
-   * Get merchantTradeId
+   * 商户系统订单号，APP下需唯一
    * @return merchantTradeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户系统订单号，APP下需唯一")
   public String getMerchantTradeId() {
     return merchantTradeId;
   }
@@ -526,10 +526,10 @@ public class V1Charge {
   }
 
    /**
-   * Get metadata
+   * 订单元数据，原样返回
    * @return metadata
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "订单元数据，原样返回")
   public Map<String, String> getMetadata() {
     return metadata;
   }
@@ -544,10 +544,10 @@ public class V1Charge {
   }
 
    /**
-   * Get paid
+   * 表明是否已支付
    * @return paid
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "表明是否已支付")
   public Boolean isPaid() {
     return paid;
   }
@@ -562,10 +562,10 @@ public class V1Charge {
   }
 
    /**
-   * Get paidAt
+   * 支付时间
    * @return paidAt
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付时间")
   public OffsetDateTime getPaidAt() {
     return paidAt;
   }
@@ -580,10 +580,10 @@ public class V1Charge {
   }
 
    /**
-   * Get refunded
+   * 表明是否包含退款，含退款失败的
    * @return refunded
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "表明是否包含退款，含退款失败的")
   public Boolean isRefunded() {
     return refunded;
   }
@@ -606,10 +606,10 @@ public class V1Charge {
   }
 
    /**
-   * Get refunds
+   * Refund 对象列表
    * @return refunds
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Refund 对象列表")
   public List<V1Refund> getRefunds() {
     return refunds;
   }
@@ -624,10 +624,10 @@ public class V1Charge {
   }
 
    /**
-   * Get reversed
+   * 表明是否已经撤销
    * @return reversed
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "表明是否已经撤销")
   public Boolean isReversed() {
     return reversed;
   }
@@ -642,10 +642,10 @@ public class V1Charge {
   }
 
    /**
-   * Get reversedAt
+   * 冲正时间
    * @return reversedAt
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "冲正时间")
   public OffsetDateTime getReversedAt() {
     return reversedAt;
   }
@@ -660,10 +660,10 @@ public class V1Charge {
   }
 
    /**
-   * Get subject
+   * 订单描述主题
    * @return subject
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "订单描述主题")
   public String getSubject() {
     return subject;
   }
@@ -678,10 +678,10 @@ public class V1Charge {
   }
 
    /**
-   * Get timeExpire
+   * 订单过期时间
    * @return timeExpire
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "订单过期时间")
   public OffsetDateTime getTimeExpire() {
     return timeExpire;
   }
@@ -696,10 +696,10 @@ public class V1Charge {
   }
 
    /**
-   * Get transactionNo
+   * Charge 的支付单号
    * @return transactionNo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "Charge 的支付单号")
   public String getTransactionNo() {
     return transactionNo;
   }
@@ -714,10 +714,10 @@ public class V1Charge {
   }
 
    /**
-   * Get ttl
+   * 订单生存时间，单位秒
    * @return ttl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "订单生存时间，单位秒")
   public Integer getTtl() {
     return ttl;
   }

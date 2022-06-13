@@ -33,7 +33,7 @@ import java.util.Map;
  * 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。
  */
 @ApiModel(description = "你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1CreateChargeRequest {
   @SerializedName("amount")
   private Float amount = null;
@@ -248,10 +248,10 @@ public class V1CreateChargeRequest {
   }
 
    /**
-   * [REQUIRED] 客户系统的交易单号（订单号），必须在应用下唯一。长度不超过32字符
+   * [REQUIRED] 客户系统的交易单号（订单号），必须在应用下唯一。长度不超过30个字符
    * @return merchantTradeId
   **/
-  @ApiModelProperty(required = true, value = "[REQUIRED] 客户系统的交易单号（订单号），必须在应用下唯一。长度不超过32字符")
+  @ApiModelProperty(required = true, value = "[REQUIRED] 客户系统的交易单号（订单号），必须在应用下唯一。长度不超过30个字符")
   public String getMerchantTradeId() {
     return merchantTradeId;
   }

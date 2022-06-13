@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayJsapiConfig
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraWechatpayJsapiConfig {
   @SerializedName("appId")
   private String appId = null;
@@ -53,10 +53,10 @@ public class V1ExtraWechatpayJsapiConfig {
   }
 
    /**
-   * Get appId
+   * 公众号appid
    * @return appId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "公众号appid")
   public String getAppId() {
     return appId;
   }
@@ -71,10 +71,10 @@ public class V1ExtraWechatpayJsapiConfig {
   }
 
    /**
-   * Get nonceStr
+   * 随机字符串
    * @return nonceStr
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "随机字符串")
   public String getNonceStr() {
     return nonceStr;
   }
@@ -89,10 +89,10 @@ public class V1ExtraWechatpayJsapiConfig {
   }
 
    /**
-   * Get _package
+   * 扩展字段
    * @return _package
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "扩展字段")
   public String getPackage() {
     return _package;
   }
@@ -107,10 +107,10 @@ public class V1ExtraWechatpayJsapiConfig {
   }
 
    /**
-   * Get paySign
+   * 签名
    * @return paySign
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "签名")
   public String getPaySign() {
     return paySign;
   }
@@ -125,10 +125,10 @@ public class V1ExtraWechatpayJsapiConfig {
   }
 
    /**
-   * Get signType
+   * 签名类型
    * @return signType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "签名类型")
   public String getSignType() {
     return signType;
   }
@@ -143,10 +143,10 @@ public class V1ExtraWechatpayJsapiConfig {
   }
 
    /**
-   * Get timeStamp
+   * 时间戳
    * @return timeStamp
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "时间戳")
   public String getTimeStamp() {
     return timeStamp;
   }

@@ -2,7 +2,7 @@
 
 Justap API
 - API version: 1.0
-  - Build date: 2022-05-03T06:42:08.333Z
+  - Build date: 2022-06-13T16:11:36.793Z
 
 For more information, please visit [https://www.justap.cn/docs](https://www.justap.cn/docs)
 
@@ -125,8 +125,8 @@ Class | Method | HTTP request | Description
  - [ExtraAlipayRoyaltyInfoRoyaltyDetailInfos](docs/ExtraAlipayRoyaltyInfoRoyaltyDetailInfos.md)
  - [ExtraAlipaySettleInfoSettleDetailInfos](docs/ExtraAlipaySettleInfoSettleDetailInfos.md)
  - [ExtraWechatpayDetailGoodsDetail](docs/ExtraWechatpayDetailGoodsDetail.md)
+ - [ExtraWechatpaySceneInfoH5Info](docs/ExtraWechatpaySceneInfoH5Info.md)
  - [ExtraWechatpaySceneInfoStoreInfo](docs/ExtraWechatpaySceneInfoStoreInfo.md)
- - [HealthCheckResponseServingStatus](docs/HealthCheckResponseServingStatus.md)
  - [OpenApiRoyaltyDetailInfoPojoTradeFundBillItem](docs/OpenApiRoyaltyDetailInfoPojoTradeFundBillItem.md)
  - [ProtobufAny](docs/ProtobufAny.md)
  - [QueryChargeListRequestCreated](docs/QueryChargeListRequestCreated.md)
@@ -179,7 +179,6 @@ Class | Method | HTTP request | Description
  - [V1ExtraWechatpayScan](docs/V1ExtraWechatpayScan.md)
  - [V1ExtraWechatpaySceneInfo](docs/V1ExtraWechatpaySceneInfo.md)
  - [V1ExtraWechatpaySettleInfo](docs/V1ExtraWechatpaySettleInfo.md)
- - [V1HealthCheckResponse](docs/V1HealthCheckResponse.md)
  - [V1Refund](docs/V1Refund.md)
  - [V1RefundExtra](docs/V1RefundExtra.md)
  - [V1RefundExtraAlipay](docs/V1RefundExtraAlipay.md)

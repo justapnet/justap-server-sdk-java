@@ -37,7 +37,7 @@ import java.util.List;
 /**
  * V1ExtraAlipayScan
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayScan {
   @SerializedName("advance_payment_type")
   private String advancePaymentType = null;
@@ -61,13 +61,13 @@ public class V1ExtraAlipayScan {
   private String buyerLogonId = null;
 
   @SerializedName("buyer_pay_amount")
-  private String buyerPayAmount = null;
+  private Double buyerPayAmount = null;
 
   @SerializedName("buyer_user_id")
   private String buyerUserId = null;
 
   @SerializedName("discount_amount")
-  private String discountAmount = null;
+  private Double discountAmount = null;
 
   @SerializedName("discount_goods_detail")
   private String discountGoodsDetail = null;
@@ -88,13 +88,13 @@ public class V1ExtraAlipayScan {
   private List<V1ExtraAlipayGoodsDetail> goodsDetail = null;
 
   @SerializedName("invoice_amount")
-  private String invoiceAmount = null;
+  private Double invoiceAmount = null;
 
   @SerializedName("is_async_pay")
   private V1ExtraAlipayPayParams isAsyncPay = null;
 
   @SerializedName("mdiscount_amount")
-  private String mdiscountAmount = null;
+  private Double mdiscountAmount = null;
 
   @SerializedName("operator_id")
   private String operatorId = null;
@@ -103,7 +103,7 @@ public class V1ExtraAlipayScan {
   private String payParams = null;
 
   @SerializedName("point_amount")
-  private String pointAmount = null;
+  private Double pointAmount = null;
 
   @SerializedName("product_code")
   private String productCode = null;
@@ -112,7 +112,7 @@ public class V1ExtraAlipayScan {
   private String queryOptions = null;
 
   @SerializedName("receipt_amount")
-  private String receiptAmount = null;
+  private Double receiptAmount = null;
 
   @SerializedName("request_org_pid")
   private String requestOrgPid = null;
@@ -136,7 +136,7 @@ public class V1ExtraAlipayScan {
   private String terminalId = null;
 
   @SerializedName("total_amount")
-  private String totalAmount = null;
+  private Double totalAmount = null;
 
   @SerializedName("undiscountable_amount")
   private Double undiscountableAmount = null;
@@ -150,10 +150,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get advancePaymentType
+   * 预授权类型
    * @return advancePaymentType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "预授权类型")
   public String getAdvancePaymentType() {
     return advancePaymentType;
   }
@@ -168,10 +168,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get agreementParams
+   * 协议参数
    * @return agreementParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "协议参数")
   public V1ExtraAlipayAgreementParams getAgreementParams() {
     return agreementParams;
   }
@@ -186,10 +186,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get authCode
+   * 用户的条码
    * @return authCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "用户的条码")
   public String getAuthCode() {
     return authCode;
   }
@@ -204,10 +204,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get authConfirmMode
+   * 授权确认方式
    * @return authConfirmMode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "授权确认方式")
   public String getAuthConfirmMode() {
     return authConfirmMode;
   }
@@ -222,10 +222,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get authNo
+   * 授权号
    * @return authNo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "授权号")
   public String getAuthNo() {
     return authNo;
   }
@@ -240,10 +240,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get buyerId
+   * 买家的支付宝用户id
    * @return buyerId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "买家的支付宝用户id")
   public String getBuyerId() {
     return buyerId;
   }
@@ -258,10 +258,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get buyerLogonId
+   * [ONLY IN RESPONSE] 买家支付宝账号
    * @return buyerLogonId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 买家支付宝账号")
   public String getBuyerLogonId() {
     return buyerLogonId;
   }
@@ -270,21 +270,21 @@ public class V1ExtraAlipayScan {
     this.buyerLogonId = buyerLogonId;
   }
 
-  public V1ExtraAlipayScan buyerPayAmount(String buyerPayAmount) {
+  public V1ExtraAlipayScan buyerPayAmount(Double buyerPayAmount) {
     this.buyerPayAmount = buyerPayAmount;
     return this;
   }
 
    /**
-   * Get buyerPayAmount
+   * [ONLY IN RESPONSE] 付款金额
    * @return buyerPayAmount
   **/
-  @ApiModelProperty(value = "")
-  public String getBuyerPayAmount() {
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 付款金额")
+  public Double getBuyerPayAmount() {
     return buyerPayAmount;
   }
 
-  public void setBuyerPayAmount(String buyerPayAmount) {
+  public void setBuyerPayAmount(Double buyerPayAmount) {
     this.buyerPayAmount = buyerPayAmount;
   }
 
@@ -294,10 +294,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get buyerUserId
+   * [ONLY IN RESPONSE] 买家在支付宝的用户id
    * @return buyerUserId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 买家在支付宝的用户id")
   public String getBuyerUserId() {
     return buyerUserId;
   }
@@ -306,21 +306,21 @@ public class V1ExtraAlipayScan {
     this.buyerUserId = buyerUserId;
   }
 
-  public V1ExtraAlipayScan discountAmount(String discountAmount) {
+  public V1ExtraAlipayScan discountAmount(Double discountAmount) {
     this.discountAmount = discountAmount;
     return this;
   }
 
    /**
-   * Get discountAmount
+   * [ONLY IN RESPONSE] 商家优惠金额
    * @return discountAmount
   **/
-  @ApiModelProperty(value = "")
-  public String getDiscountAmount() {
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 商家优惠金额")
+  public Double getDiscountAmount() {
     return discountAmount;
   }
 
-  public void setDiscountAmount(String discountAmount) {
+  public void setDiscountAmount(Double discountAmount) {
     this.discountAmount = discountAmount;
   }
 
@@ -330,10 +330,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get discountGoodsDetail
+   * [ONLY IN RESPONSE] 商家优惠商品明细
    * @return discountGoodsDetail
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 商家优惠商品明细")
   public String getDiscountGoodsDetail() {
     return discountGoodsDetail;
   }
@@ -348,10 +348,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get discountableAmount
+   * 可打折金额
    * @return discountableAmount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "可打折金额")
   public Double getDiscountableAmount() {
     return discountableAmount;
   }
@@ -366,10 +366,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get extendParams
+   * 业务扩展参数
    * @return extendParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "业务扩展参数")
   public V1ExtraAlipayExtendParams getExtendParams() {
     return extendParams;
   }
@@ -384,10 +384,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get fundBillList
+   * [ONLY IN RESPONSE] 支付金额信息
    * @return fundBillList
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 支付金额信息")
   public V1ExtraAlipayFundBillList getFundBillList() {
     return fundBillList;
   }
@@ -402,10 +402,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get gmtPayment
+   * [ONLY IN RESPONSE] 支付时间
    * @return gmtPayment
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 支付时间")
   public String getGmtPayment() {
     return gmtPayment;
   }
@@ -428,10 +428,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get goodsDetail
+   * 商品明细列表
    * @return goodsDetail
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "商品明细列表")
   public List<V1ExtraAlipayGoodsDetail> getGoodsDetail() {
     return goodsDetail;
   }
@@ -440,21 +440,21 @@ public class V1ExtraAlipayScan {
     this.goodsDetail = goodsDetail;
   }
 
-  public V1ExtraAlipayScan invoiceAmount(String invoiceAmount) {
+  public V1ExtraAlipayScan invoiceAmount(Double invoiceAmount) {
     this.invoiceAmount = invoiceAmount;
     return this;
   }
 
    /**
-   * Get invoiceAmount
+   * [ONLY IN RESPONSE] 开票金额
    * @return invoiceAmount
   **/
-  @ApiModelProperty(value = "")
-  public String getInvoiceAmount() {
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 开票金额")
+  public Double getInvoiceAmount() {
     return invoiceAmount;
   }
 
-  public void setInvoiceAmount(String invoiceAmount) {
+  public void setInvoiceAmount(Double invoiceAmount) {
     this.invoiceAmount = invoiceAmount;
   }
 
@@ -464,10 +464,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get isAsyncPay
+   * 是否异步支付
    * @return isAsyncPay
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "是否异步支付")
   public V1ExtraAlipayPayParams getIsAsyncPay() {
     return isAsyncPay;
   }
@@ -476,21 +476,21 @@ public class V1ExtraAlipayScan {
     this.isAsyncPay = isAsyncPay;
   }
 
-  public V1ExtraAlipayScan mdiscountAmount(String mdiscountAmount) {
+  public V1ExtraAlipayScan mdiscountAmount(Double mdiscountAmount) {
     this.mdiscountAmount = mdiscountAmount;
     return this;
   }
 
    /**
-   * Get mdiscountAmount
+   * [ONLY IN RESPONSE] 平台优惠金额
    * @return mdiscountAmount
   **/
-  @ApiModelProperty(value = "")
-  public String getMdiscountAmount() {
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 平台优惠金额")
+  public Double getMdiscountAmount() {
     return mdiscountAmount;
   }
 
-  public void setMdiscountAmount(String mdiscountAmount) {
+  public void setMdiscountAmount(Double mdiscountAmount) {
     this.mdiscountAmount = mdiscountAmount;
   }
 
@@ -500,10 +500,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get operatorId
+   * 商户操作员编号
    * @return operatorId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户操作员编号")
   public String getOperatorId() {
     return operatorId;
   }
@@ -518,10 +518,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get payParams
+   * [ONLY IN RESPONSE] 支付宝返回的支付参数
    * @return payParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 支付宝返回的支付参数")
   public String getPayParams() {
     return payParams;
   }
@@ -530,21 +530,21 @@ public class V1ExtraAlipayScan {
     this.payParams = payParams;
   }
 
-  public V1ExtraAlipayScan pointAmount(String pointAmount) {
+  public V1ExtraAlipayScan pointAmount(Double pointAmount) {
     this.pointAmount = pointAmount;
     return this;
   }
 
    /**
-   * Get pointAmount
+   * [ONLY IN RESPONSE] 集分宝金额
    * @return pointAmount
   **/
-  @ApiModelProperty(value = "")
-  public String getPointAmount() {
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 集分宝金额")
+  public Double getPointAmount() {
     return pointAmount;
   }
 
-  public void setPointAmount(String pointAmount) {
+  public void setPointAmount(Double pointAmount) {
     this.pointAmount = pointAmount;
   }
 
@@ -554,10 +554,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get productCode
+   * 销售产品码
    * @return productCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "销售产品码")
   public String getProductCode() {
     return productCode;
   }
@@ -572,10 +572,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get queryOptions
+   * 商户授权查询类型
    * @return queryOptions
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户授权查询类型")
   public String getQueryOptions() {
     return queryOptions;
   }
@@ -584,21 +584,21 @@ public class V1ExtraAlipayScan {
     this.queryOptions = queryOptions;
   }
 
-  public V1ExtraAlipayScan receiptAmount(String receiptAmount) {
+  public V1ExtraAlipayScan receiptAmount(Double receiptAmount) {
     this.receiptAmount = receiptAmount;
     return this;
   }
 
    /**
-   * Get receiptAmount
+   * [ONLY IN RESPONSE] 实收金额
    * @return receiptAmount
   **/
-  @ApiModelProperty(value = "")
-  public String getReceiptAmount() {
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 实收金额")
+  public Double getReceiptAmount() {
     return receiptAmount;
   }
 
-  public void setReceiptAmount(String receiptAmount) {
+  public void setReceiptAmount(Double receiptAmount) {
     this.receiptAmount = receiptAmount;
   }
 
@@ -608,10 +608,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get requestOrgPid
+   * 请求方机构id
    * @return requestOrgPid
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "请求方机构id")
   public String getRequestOrgPid() {
     return requestOrgPid;
   }
@@ -626,10 +626,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get scene
+   * 支付场景
    * @return scene
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付场景")
   public String getScene() {
     return scene;
   }
@@ -644,10 +644,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get settleInfo
+   * 结算信息
    * @return settleInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "结算信息")
   public V1ExtraAlipaySettleInfo getSettleInfo() {
     return settleInfo;
   }
@@ -662,10 +662,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get storeId
+   * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }
@@ -680,10 +680,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get storeName
+   * [ONLY IN RESPONSE] 商户门店名称
    * @return storeName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 商户门店名称")
   public String getStoreName() {
     return storeName;
   }
@@ -698,10 +698,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get subMerchant
+   * 子商户信息
    * @return subMerchant
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "子商户信息")
   public V1ExtraAlipaySubMerchant getSubMerchant() {
     return subMerchant;
   }
@@ -716,10 +716,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get terminalId
+   * 商户机具终端编号
    * @return terminalId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户机具终端编号")
   public String getTerminalId() {
     return terminalId;
   }
@@ -728,21 +728,21 @@ public class V1ExtraAlipayScan {
     this.terminalId = terminalId;
   }
 
-  public V1ExtraAlipayScan totalAmount(String totalAmount) {
+  public V1ExtraAlipayScan totalAmount(Double totalAmount) {
     this.totalAmount = totalAmount;
     return this;
   }
 
    /**
-   * Get totalAmount
+   * [ONLY IN RESPONSE] 订单金额
    * @return totalAmount
   **/
-  @ApiModelProperty(value = "")
-  public String getTotalAmount() {
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 订单金额")
+  public Double getTotalAmount() {
     return totalAmount;
   }
 
-  public void setTotalAmount(String totalAmount) {
+  public void setTotalAmount(Double totalAmount) {
     this.totalAmount = totalAmount;
   }
 
@@ -752,10 +752,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get undiscountableAmount
+   * 不可打折金额
    * @return undiscountableAmount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "不可打折金额")
   public Double getUndiscountableAmount() {
     return undiscountableAmount;
   }
@@ -770,10 +770,10 @@ public class V1ExtraAlipayScan {
   }
 
    /**
-   * Get voucherDetailList
+   * [ONLY IN RESPONSE] 商家优惠明细列表
    * @return voucherDetailList
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 商家优惠明细列表")
   public V1ExtraAlipayVoucherDetailList getVoucherDetailList() {
     return voucherDetailList;
   }

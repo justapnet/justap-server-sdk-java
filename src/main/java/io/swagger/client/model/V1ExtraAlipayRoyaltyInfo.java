@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayRoyaltyInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayRoyaltyInfo {
   @SerializedName("royalty_detail_infos")
   private ExtraAlipayRoyaltyInfoRoyaltyDetailInfos royaltyDetailInfos = null;
@@ -42,10 +42,10 @@ public class V1ExtraAlipayRoyaltyInfo {
   }
 
    /**
-   * Get royaltyDetailInfos
+   * 分账明细的信息，可以描述多条分账指令，json数组。
    * @return royaltyDetailInfos
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "分账明细的信息，可以描述多条分账指令，json数组。")
   public ExtraAlipayRoyaltyInfoRoyaltyDetailInfos getRoyaltyDetailInfos() {
     return royaltyDetailInfos;
   }
@@ -60,10 +60,10 @@ public class V1ExtraAlipayRoyaltyInfo {
   }
 
    /**
-   * Get royaltyType
+   * 周期类型period_type是周期扣款产品必填，枚举值为DAY和MONTH
    * @return royaltyType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "周期类型period_type是周期扣款产品必填，枚举值为DAY和MONTH")
   public String getRoyaltyType() {
     return royaltyType;
   }

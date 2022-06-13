@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * V1RefundExtraWechatPay
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1RefundExtraWechatPay {
   @SerializedName("account")
   private RefundExtraWechatPayAccount account = null;
@@ -45,10 +45,10 @@ public class V1RefundExtraWechatPay {
   }
 
    /**
-   * 订单金额信息
+   * 出资账户信息
    * @return account
   **/
-  @ApiModelProperty(value = "订单金额信息")
+  @ApiModelProperty(value = "出资账户信息")
   public RefundExtraWechatPayAccount getAccount() {
     return account;
   }

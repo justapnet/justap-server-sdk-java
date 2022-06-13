@@ -23,11 +23,12 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.math.BigDecimal;
 
 /**
  * V1ExtraAlipayGoodsDetail
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayGoodsDetail {
   @SerializedName("alipay_goods_id")
   private String alipayGoodsId = null;
@@ -48,10 +49,10 @@ public class V1ExtraAlipayGoodsDetail {
   private String goodsName = null;
 
   @SerializedName("price")
-  private Double price = null;
+  private Float price = null;
 
   @SerializedName("quantity")
-  private Integer quantity = null;
+  private BigDecimal quantity = null;
 
   @SerializedName("show_url")
   private String showUrl = null;
@@ -62,10 +63,10 @@ public class V1ExtraAlipayGoodsDetail {
   }
 
    /**
-   * Get alipayGoodsId
+   * 支付宝商品编号
    * @return alipayGoodsId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付宝商品编号")
   public String getAlipayGoodsId() {
     return alipayGoodsId;
   }
@@ -80,10 +81,10 @@ public class V1ExtraAlipayGoodsDetail {
   }
 
    /**
-   * Get body
+   * 商品描述
    * @return body
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商品描述")
   public String getBody() {
     return body;
   }
@@ -98,10 +99,10 @@ public class V1ExtraAlipayGoodsDetail {
   }
 
    /**
-   * Get categoriesTree
+   * 商品类目树
    * @return categoriesTree
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商品类目树")
   public String getCategoriesTree() {
     return categoriesTree;
   }
@@ -116,10 +117,10 @@ public class V1ExtraAlipayGoodsDetail {
   }
 
    /**
-   * Get goodsCategory
+   * 商品类目
    * @return goodsCategory
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商品类目")
   public String getGoodsCategory() {
     return goodsCategory;
   }
@@ -134,10 +135,10 @@ public class V1ExtraAlipayGoodsDetail {
   }
 
    /**
-   * Get goodsId
+   * 商品编号
    * @return goodsId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商品编号")
   public String getGoodsId() {
     return goodsId;
   }
@@ -152,10 +153,10 @@ public class V1ExtraAlipayGoodsDetail {
   }
 
    /**
-   * Get goodsName
+   * 商品名称
    * @return goodsName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商品名称")
   public String getGoodsName() {
     return goodsName;
   }
@@ -164,39 +165,39 @@ public class V1ExtraAlipayGoodsDetail {
     this.goodsName = goodsName;
   }
 
-  public V1ExtraAlipayGoodsDetail price(Double price) {
+  public V1ExtraAlipayGoodsDetail price(Float price) {
     this.price = price;
     return this;
   }
 
    /**
-   * Get price
+   * 价格
    * @return price
   **/
-  @ApiModelProperty(value = "")
-  public Double getPrice() {
+  @ApiModelProperty(required = true, value = "价格")
+  public Float getPrice() {
     return price;
   }
 
-  public void setPrice(Double price) {
+  public void setPrice(Float price) {
     this.price = price;
   }
 
-  public V1ExtraAlipayGoodsDetail quantity(Integer quantity) {
+  public V1ExtraAlipayGoodsDetail quantity(BigDecimal quantity) {
     this.quantity = quantity;
     return this;
   }
 
    /**
-   * Get quantity
+   * 商品数量
    * @return quantity
   **/
-  @ApiModelProperty(value = "")
-  public Integer getQuantity() {
+  @ApiModelProperty(required = true, value = "商品数量")
+  public BigDecimal getQuantity() {
     return quantity;
   }
 
-  public void setQuantity(Integer quantity) {
+  public void setQuantity(BigDecimal quantity) {
     this.quantity = quantity;
   }
 
@@ -206,10 +207,10 @@ public class V1ExtraAlipayGoodsDetail {
   }
 
    /**
-   * Get showUrl
+   * 商品显示链接
    * @return showUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商品显示链接")
   public String getShowUrl() {
     return showUrl;
   }

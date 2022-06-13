@@ -25,134 +25,113 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * ExtraAlipayAgreementSignParamsPeriodRuleParams
+ * ExtraWechatpaySceneInfoH5Info
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
-public class ExtraAlipayAgreementSignParamsPeriodRuleParams {
-  @SerializedName("execute_time")
-  private String executeTime = null;
+public class ExtraWechatpaySceneInfoH5Info {
+  @SerializedName("app_name")
+  private String appName = null;
 
-  @SerializedName("period")
-  private String period = null;
+  @SerializedName("app_url")
+  private String appUrl = null;
 
-  @SerializedName("period_type")
-  private String periodType = null;
+  @SerializedName("bundle_id")
+  private String bundleId = null;
 
-  @SerializedName("single_amount")
-  private String singleAmount = null;
+  @SerializedName("package_name")
+  private String packageName = null;
 
-  @SerializedName("total_amount")
-  private String totalAmount = null;
+  @SerializedName("type")
+  private String type = null;
 
-  @SerializedName("total_payments")
-  private String totalPayments = null;
-
-  public ExtraAlipayAgreementSignParamsPeriodRuleParams executeTime(String executeTime) {
-    this.executeTime = executeTime;
+  public ExtraWechatpaySceneInfoH5Info appName(String appName) {
+    this.appName = appName;
     return this;
   }
 
    /**
-   * 扣款执行时间execute_time是周期扣款产品必填，枚举值为TIMING和FIXED
-   * @return executeTime
+   * Get appName
+   * @return appName
   **/
-  @ApiModelProperty(required = true, value = "扣款执行时间execute_time是周期扣款产品必填，枚举值为TIMING和FIXED")
-  public String getExecuteTime() {
-    return executeTime;
+  @ApiModelProperty(value = "")
+  public String getAppName() {
+    return appName;
   }
 
-  public void setExecuteTime(String executeTime) {
-    this.executeTime = executeTime;
+  public void setAppName(String appName) {
+    this.appName = appName;
   }
 
-  public ExtraAlipayAgreementSignParamsPeriodRuleParams period(String period) {
-    this.period = period;
+  public ExtraWechatpaySceneInfoH5Info appUrl(String appUrl) {
+    this.appUrl = appUrl;
     return this;
   }
 
    /**
-   * 周期数period是周期扣款产品必填。与另一参数period_type组合使用确定扣款周期，例如period_type为DAY，period&#x3D;90，则扣款周期为90天
-   * @return period
+   * Get appUrl
+   * @return appUrl
   **/
-  @ApiModelProperty(required = true, value = "周期数period是周期扣款产品必填。与另一参数period_type组合使用确定扣款周期，例如period_type为DAY，period=90，则扣款周期为90天")
-  public String getPeriod() {
-    return period;
+  @ApiModelProperty(value = "")
+  public String getAppUrl() {
+    return appUrl;
   }
 
-  public void setPeriod(String period) {
-    this.period = period;
+  public void setAppUrl(String appUrl) {
+    this.appUrl = appUrl;
   }
 
-  public ExtraAlipayAgreementSignParamsPeriodRuleParams periodType(String periodType) {
-    this.periodType = periodType;
+  public ExtraWechatpaySceneInfoH5Info bundleId(String bundleId) {
+    this.bundleId = bundleId;
     return this;
   }
 
    /**
-   * 周期类型period_type是周期扣款产品必填，枚举值为DAY和MONTH
-   * @return periodType
+   * Get bundleId
+   * @return bundleId
   **/
-  @ApiModelProperty(required = true, value = "周期类型period_type是周期扣款产品必填，枚举值为DAY和MONTH")
-  public String getPeriodType() {
-    return periodType;
+  @ApiModelProperty(value = "")
+  public String getBundleId() {
+    return bundleId;
   }
 
-  public void setPeriodType(String periodType) {
-    this.periodType = periodType;
+  public void setBundleId(String bundleId) {
+    this.bundleId = bundleId;
   }
 
-  public ExtraAlipayAgreementSignParamsPeriodRuleParams singleAmount(String singleAmount) {
-    this.singleAmount = singleAmount;
+  public ExtraWechatpaySceneInfoH5Info packageName(String packageName) {
+    this.packageName = packageName;
     return this;
   }
 
    /**
-   * 单笔扣款金额single_amount是周期扣款产品必填，单位为元
-   * @return singleAmount
+   * Get packageName
+   * @return packageName
   **/
-  @ApiModelProperty(required = true, value = "单笔扣款金额single_amount是周期扣款产品必填，单位为元")
-  public String getSingleAmount() {
-    return singleAmount;
+  @ApiModelProperty(value = "")
+  public String getPackageName() {
+    return packageName;
   }
 
-  public void setSingleAmount(String singleAmount) {
-    this.singleAmount = singleAmount;
+  public void setPackageName(String packageName) {
+    this.packageName = packageName;
   }
 
-  public ExtraAlipayAgreementSignParamsPeriodRuleParams totalAmount(String totalAmount) {
-    this.totalAmount = totalAmount;
+  public ExtraWechatpaySceneInfoH5Info type(String type) {
+    this.type = type;
     return this;
   }
 
    /**
-   * 扣款总金额total_amount是周期扣款产品必填，单位为元
-   * @return totalAmount
+   * Get type
+   * @return type
   **/
-  @ApiModelProperty(required = true, value = "扣款总金额total_amount是周期扣款产品必填，单位为元")
-  public String getTotalAmount() {
-    return totalAmount;
+  @ApiModelProperty(value = "")
+  public String getType() {
+    return type;
   }
 
-  public void setTotalAmount(String totalAmount) {
-    this.totalAmount = totalAmount;
-  }
-
-  public ExtraAlipayAgreementSignParamsPeriodRuleParams totalPayments(String totalPayments) {
-    this.totalPayments = totalPayments;
-    return this;
-  }
-
-   /**
-   * 扣款总笔数total_payments是周期扣款产品必填，单位为笔
-   * @return totalPayments
-  **/
-  @ApiModelProperty(required = true, value = "扣款总笔数total_payments是周期扣款产品必填，单位为笔")
-  public String getTotalPayments() {
-    return totalPayments;
-  }
-
-  public void setTotalPayments(String totalPayments) {
-    this.totalPayments = totalPayments;
+  public void setType(String type) {
+    this.type = type;
   }
 
 
@@ -164,32 +143,30 @@ public class ExtraAlipayAgreementSignParamsPeriodRuleParams {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ExtraAlipayAgreementSignParamsPeriodRuleParams extraAlipayAgreementSignParamsPeriodRuleParams = (ExtraAlipayAgreementSignParamsPeriodRuleParams) o;
-    return Objects.equals(this.executeTime, extraAlipayAgreementSignParamsPeriodRuleParams.executeTime) &&
-        Objects.equals(this.period, extraAlipayAgreementSignParamsPeriodRuleParams.period) &&
-        Objects.equals(this.periodType, extraAlipayAgreementSignParamsPeriodRuleParams.periodType) &&
-        Objects.equals(this.singleAmount, extraAlipayAgreementSignParamsPeriodRuleParams.singleAmount) &&
-        Objects.equals(this.totalAmount, extraAlipayAgreementSignParamsPeriodRuleParams.totalAmount) &&
-        Objects.equals(this.totalPayments, extraAlipayAgreementSignParamsPeriodRuleParams.totalPayments);
+    ExtraWechatpaySceneInfoH5Info extraWechatpaySceneInfoH5Info = (ExtraWechatpaySceneInfoH5Info) o;
+    return Objects.equals(this.appName, extraWechatpaySceneInfoH5Info.appName) &&
+        Objects.equals(this.appUrl, extraWechatpaySceneInfoH5Info.appUrl) &&
+        Objects.equals(this.bundleId, extraWechatpaySceneInfoH5Info.bundleId) &&
+        Objects.equals(this.packageName, extraWechatpaySceneInfoH5Info.packageName) &&
+        Objects.equals(this.type, extraWechatpaySceneInfoH5Info.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(executeTime, period, periodType, singleAmount, totalAmount, totalPayments);
+    return Objects.hash(appName, appUrl, bundleId, packageName, type);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ExtraAlipayAgreementSignParamsPeriodRuleParams {\n");
+    sb.append("class ExtraWechatpaySceneInfoH5Info {\n");
     
-    sb.append("    executeTime: ").append(toIndentedString(executeTime)).append("\n");
-    sb.append("    period: ").append(toIndentedString(period)).append("\n");
-    sb.append("    periodType: ").append(toIndentedString(periodType)).append("\n");
-    sb.append("    singleAmount: ").append(toIndentedString(singleAmount)).append("\n");
-    sb.append("    totalAmount: ").append(toIndentedString(totalAmount)).append("\n");
-    sb.append("    totalPayments: ").append(toIndentedString(totalPayments)).append("\n");
+    sb.append("    appName: ").append(toIndentedString(appName)).append("\n");
+    sb.append("    appUrl: ").append(toIndentedString(appUrl)).append("\n");
+    sb.append("    bundleId: ").append(toIndentedString(bundleId)).append("\n");
+    sb.append("    packageName: ").append(toIndentedString(packageName)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }

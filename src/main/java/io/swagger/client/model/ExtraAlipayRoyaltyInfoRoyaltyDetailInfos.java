@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ExtraAlipayRoyaltyInfoRoyaltyDetailInfos
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   @SerializedName("amount")
   private String amount = null;
@@ -65,10 +65,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get amount
+   * 分账的金额，单位为元
    * @return amount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "分账的金额，单位为元")
   public String getAmount() {
     return amount;
   }
@@ -83,10 +83,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get amountPercentage
+   * 分账的比例，值为20~100之间的整数，如：20，表示分账金额按20%来打分账
    * @return amountPercentage
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "分账的比例，值为20~100之间的整数，如：20，表示分账金额按20%来打分账")
   public String getAmountPercentage() {
     return amountPercentage;
   }
@@ -101,10 +101,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get batchNo
+   * 分账批次号，格式为：当天日期[yyyyMMdd] + 四位流水号，如：20120220-00001
    * @return batchNo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "分账批次号，格式为：当天日期[yyyyMMdd] + 四位流水号，如：20120220-00001")
   public String getBatchNo() {
     return batchNo;
   }
@@ -119,10 +119,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get desc
+   * 分账描述信息
    * @return desc
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "分账描述信息")
   public String getDesc() {
     return desc;
   }
@@ -137,10 +137,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get outRelationId
+   * 商户分账的外部关联号，用于关联到每一笔分账信息，商户可自定义，如一笔分账多笔，则需要为每一笔分账都保持唯一，如果为空，则有利于商户排查问题
    * @return outRelationId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户分账的外部关联号，用于关联到每一笔分账信息，商户可自定义，如一笔分账多笔，则需要为每一笔分账都保持唯一，如果为空，则有利于商户排查问题")
   public String getOutRelationId() {
     return outRelationId;
   }
@@ -155,10 +155,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get serialNo
+   * 分账序列号，表示分账执行的顺序，必须为正整数
    * @return serialNo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "分账序列号，表示分账执行的顺序，必须为正整数")
   public String getSerialNo() {
     return serialNo;
   }
@@ -173,10 +173,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get transIn
+   * 如果转入账号类型为userId，本参数为接受分账金额的支付宝账号对应的支付宝唯一用户号。以2088开头的纯16位数字。 如果转入账号类型为bankIndex，本参数为28位的银行编号（商户和支付宝签约时确定）。如果转入账号类型为storeId，本参数为商户的门店ID。
    * @return transIn
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "如果转入账号类型为userId，本参数为接受分账金额的支付宝账号对应的支付宝唯一用户号。以2088开头的纯16位数字。 如果转入账号类型为bankIndex，本参数为28位的银行编号（商户和支付宝签约时确定）。如果转入账号类型为storeId，本参数为商户的门店ID。")
   public String getTransIn() {
     return transIn;
   }
@@ -191,10 +191,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get transInType
+   * 接受分账金额的账户类型： userId：支付宝账号对应的支付宝唯一用户号。 bankIndex：分账到银行账户的银行编号。目前暂时只支持分账到一个银行编号。storeId：分账到门店对应的银行卡编号。默认值为userId。
    * @return transInType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "接受分账金额的账户类型： userId：支付宝账号对应的支付宝唯一用户号。 bankIndex：分账到银行账户的银行编号。目前暂时只支持分账到一个银行编号。storeId：分账到门店对应的银行卡编号。默认值为userId。")
   public String getTransInType() {
     return transInType;
   }
@@ -209,10 +209,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get transOut
+   * 如果转出账号类型为userId，本参数为要分账的支付宝账号对应的支付宝唯一用户号。以2088开头的纯16位数字。
    * @return transOut
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "如果转出账号类型为userId，本参数为要分账的支付宝账号对应的支付宝唯一用户号。以2088开头的纯16位数字。")
   public String getTransOut() {
     return transOut;
   }
@@ -227,10 +227,10 @@ public class ExtraAlipayRoyaltyInfoRoyaltyDetailInfos {
   }
 
    /**
-   * Get transOutType
+   * 要分账的账户类型。目前只支持userId：支付宝账号对应的支付宝唯一用户号。默认值为userId。
    * @return transOutType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "要分账的账户类型。目前只支持userId：支付宝账号对应的支付宝唯一用户号。默认值为userId。")
   public String getTransOutType() {
     return transOutType;
   }

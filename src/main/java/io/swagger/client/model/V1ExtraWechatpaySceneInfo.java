@@ -22,16 +22,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.ExtraWechatpaySceneInfoH5Info;
 import io.swagger.client.model.ExtraWechatpaySceneInfoStoreInfo;
 import java.io.IOException;
 
 /**
  * V1ExtraWechatpaySceneInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraWechatpaySceneInfo {
   @SerializedName("device_id")
   private String deviceId = null;
+
+  @SerializedName("h5_info")
+  private ExtraWechatpaySceneInfoH5Info h5Info = null;
 
   @SerializedName("payer_client_ip")
   private String payerClientIp = null;
@@ -55,6 +59,24 @@ public class V1ExtraWechatpaySceneInfo {
 
   public void setDeviceId(String deviceId) {
     this.deviceId = deviceId;
+  }
+
+  public V1ExtraWechatpaySceneInfo h5Info(ExtraWechatpaySceneInfoH5Info h5Info) {
+    this.h5Info = h5Info;
+    return this;
+  }
+
+   /**
+   * Get h5Info
+   * @return h5Info
+  **/
+  @ApiModelProperty(value = "")
+  public ExtraWechatpaySceneInfoH5Info getH5Info() {
+    return h5Info;
+  }
+
+  public void setH5Info(ExtraWechatpaySceneInfoH5Info h5Info) {
+    this.h5Info = h5Info;
   }
 
   public V1ExtraWechatpaySceneInfo payerClientIp(String payerClientIp) {
@@ -104,13 +126,14 @@ public class V1ExtraWechatpaySceneInfo {
     }
     V1ExtraWechatpaySceneInfo v1ExtraWechatpaySceneInfo = (V1ExtraWechatpaySceneInfo) o;
     return Objects.equals(this.deviceId, v1ExtraWechatpaySceneInfo.deviceId) &&
+        Objects.equals(this.h5Info, v1ExtraWechatpaySceneInfo.h5Info) &&
         Objects.equals(this.payerClientIp, v1ExtraWechatpaySceneInfo.payerClientIp) &&
         Objects.equals(this.storeInfo, v1ExtraWechatpaySceneInfo.storeInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deviceId, payerClientIp, storeInfo);
+    return Objects.hash(deviceId, h5Info, payerClientIp, storeInfo);
   }
 
 
@@ -120,6 +143,7 @@ public class V1ExtraWechatpaySceneInfo {
     sb.append("class V1ExtraWechatpaySceneInfo {\n");
     
     sb.append("    deviceId: ").append(toIndentedString(deviceId)).append("\n");
+    sb.append("    h5Info: ").append(toIndentedString(h5Info)).append("\n");
     sb.append("    payerClientIp: ").append(toIndentedString(payerClientIp)).append("\n");
     sb.append("    storeInfo: ").append(toIndentedString(storeInfo)).append("\n");
     sb.append("}");

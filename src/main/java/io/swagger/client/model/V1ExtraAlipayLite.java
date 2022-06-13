@@ -32,7 +32,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayLite
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayLite {
   @SerializedName("body")
   private String body = null;
@@ -91,10 +91,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get body
+   * 商品描述
    * @return body
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商品描述")
   public String getBody() {
     return body;
   }
@@ -109,10 +109,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get businessParams
+   * 业务扩展参数
    * @return businessParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "业务扩展参数")
   public V1ExtraAlipayBusinessParams getBusinessParams() {
     return businessParams;
   }
@@ -127,10 +127,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get buyerId
+   * 买家的支付宝唯一用户号（2088开头的16位纯数字）
    * @return buyerId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "买家的支付宝唯一用户号（2088开头的16位纯数字）")
   public String getBuyerId() {
     return buyerId;
   }
@@ -145,10 +145,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get discountableAmount
+   * 可打折金额. 参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000] 如果该值未传入，但传入了【订单总金额】，【不可打折金额】则该值默认为【订单总金额】-【不可打折金额】
    * @return discountableAmount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "可打折金额. 参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000] 如果该值未传入，但传入了【订单总金额】，【不可打折金额】则该值默认为【订单总金额】-【不可打折金额】")
   public Double getDiscountableAmount() {
     return discountableAmount;
   }
@@ -163,10 +163,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get extendParams
+   * 业务扩展参数
    * @return extendParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "业务扩展参数")
   public V1ExtraAlipayExtendParams getExtendParams() {
     return extendParams;
   }
@@ -181,10 +181,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get logisticsDetail
+   * 物流信息
    * @return logisticsDetail
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "物流信息")
   public V1ExtraAlipayLogisticsDetail getLogisticsDetail() {
     return logisticsDetail;
   }
@@ -199,10 +199,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get operatorId
+   * 商户操作员编号
    * @return operatorId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户操作员编号")
   public String getOperatorId() {
     return operatorId;
   }
@@ -217,10 +217,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get productCode
+   * 销售产品码，商家和支付宝签约的产品码，为固定值 FACE_TO_FACE_PAYMENT
    * @return productCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "销售产品码，商家和支付宝签约的产品码，为固定值 FACE_TO_FACE_PAYMENT")
   public String getProductCode() {
     return productCode;
   }
@@ -235,10 +235,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get receiverAddressInfo
+   * 收货信息
    * @return receiverAddressInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "收货信息")
   public V1ExtraAlipayReceiverAddressInfo getReceiverAddressInfo() {
     return receiverAddressInfo;
   }
@@ -253,10 +253,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get sellerId
+   * 卖家支付宝用户号
    * @return sellerId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "卖家支付宝用户号")
   public String getSellerId() {
     return sellerId;
   }
@@ -271,10 +271,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get settleInfo
+   * 结算信息
    * @return settleInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "结算信息")
   public V1ExtraAlipaySettleInfo getSettleInfo() {
     return settleInfo;
   }
@@ -289,10 +289,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get storeId
+   * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }
@@ -307,10 +307,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get terminalId
+   * 商户机具终端编号
    * @return terminalId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户机具终端编号")
   public String getTerminalId() {
     return terminalId;
   }
@@ -325,10 +325,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get timeExpire
+   * 绝对超时时间，格式为yyyy-MM-dd HH:mm:ss
    * @return timeExpire
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "绝对超时时间，格式为yyyy-MM-dd HH:mm:ss")
   public String getTimeExpire() {
     return timeExpire;
   }
@@ -343,10 +343,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get timeoutExpress
+   * 订单有效时间，该时间段内订单可以进行支付，结束后订单将关闭，天数为0表示永久有效
    * @return timeoutExpress
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "订单有效时间，该时间段内订单可以进行支付，结束后订单将关闭，天数为0表示永久有效")
   public String getTimeoutExpress() {
     return timeoutExpress;
   }
@@ -361,10 +361,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get tradeNo
+   * [ONLY IN RESPONSE] 支付宝交易号
    * @return tradeNo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 支付宝交易号")
   public String getTradeNo() {
     return tradeNo;
   }
@@ -379,10 +379,10 @@ public class V1ExtraAlipayLite {
   }
 
    /**
-   * Get undiscountableAmount
+   * 不可打折金额. 不参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000] 如果该值未传入，但传入了【订单总金额】,【可打折金额】，则该值默认为【订单总金额】-【可打折金额】
    * @return undiscountableAmount
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "不可打折金额. 不参与优惠计算的金额，单位为元，精确到小数点后两位，取值范围[0.01,100000000] 如果该值未传入，但传入了【订单总金额】,【可打折金额】，则该值默认为【订单总金额】-【可打折金额】")
   public Double getUndiscountableAmount() {
     return undiscountableAmount;
   }

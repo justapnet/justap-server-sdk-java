@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ExtraAlipayAgreementSignParamsSubMerchant
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class ExtraAlipayAgreementSignParamsSubMerchant {
   @SerializedName("sub_merchant_id")
   private String subMerchantId = null;
@@ -47,10 +47,10 @@ public class ExtraAlipayAgreementSignParamsSubMerchant {
   }
 
    /**
-   * Get subMerchantId
+   * 子商户id
    * @return subMerchantId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "子商户id")
   public String getSubMerchantId() {
     return subMerchantId;
   }
@@ -65,10 +65,10 @@ public class ExtraAlipayAgreementSignParamsSubMerchant {
   }
 
    /**
-   * Get subMerchantName
+   * 子商户名称
    * @return subMerchantName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "子商户名称")
   public String getSubMerchantName() {
     return subMerchantName;
   }
@@ -83,10 +83,10 @@ public class ExtraAlipayAgreementSignParamsSubMerchant {
   }
 
    /**
-   * Get subMerchantServiceDescription
+   * 子商户服务描述
    * @return subMerchantServiceDescription
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "子商户服务描述")
   public String getSubMerchantServiceDescription() {
     return subMerchantServiceDescription;
   }
@@ -101,10 +101,10 @@ public class ExtraAlipayAgreementSignParamsSubMerchant {
   }
 
    /**
-   * Get subMerchantServiceName
+   * 子商户服务名称
    * @return subMerchantServiceName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "子商户服务名称")
   public String getSubMerchantServiceName() {
     return subMerchantServiceName;
   }

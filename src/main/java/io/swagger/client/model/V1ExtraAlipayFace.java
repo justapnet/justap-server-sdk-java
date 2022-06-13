@@ -15,41 +15,12 @@ package io.swagger.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * V1ExtraAlipayFace
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayFace {
-  @SerializedName("hahaha")
-  private String hahaha = null;
-
-  public V1ExtraAlipayFace hahaha(String hahaha) {
-    this.hahaha = hahaha;
-    return this;
-  }
-
-   /**
-   * Get hahaha
-   * @return hahaha
-  **/
-  @ApiModelProperty(value = "")
-  public String getHahaha() {
-    return hahaha;
-  }
-
-  public void setHahaha(String hahaha) {
-    this.hahaha = hahaha;
-  }
-
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -59,13 +30,12 @@ public class V1ExtraAlipayFace {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1ExtraAlipayFace v1ExtraAlipayFace = (V1ExtraAlipayFace) o;
-    return Objects.equals(this.hahaha, v1ExtraAlipayFace.hahaha);
+    return true;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(hahaha);
+    return Objects.hash();
   }
 
 
@@ -74,7 +44,6 @@ public class V1ExtraAlipayFace {
     StringBuilder sb = new StringBuilder();
     sb.append("class V1ExtraAlipayFace {\n");
     
-    sb.append("    hahaha: ").append(toIndentedString(hahaha)).append("\n");
     sb.append("}");
     return sb.toString();
   }

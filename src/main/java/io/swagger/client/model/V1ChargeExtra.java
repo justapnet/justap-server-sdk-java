@@ -40,7 +40,7 @@ import java.io.IOException;
 /**
  * V1ChargeExtra
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ChargeExtra {
   @SerializedName("alipay_app")
   private V1ExtraAlipayApp alipayApp = null;
@@ -87,10 +87,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get alipayApp
+   * 支付宝 App 支付渠道元数据
    * @return alipayApp
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付宝 App 支付渠道元数据")
   public V1ExtraAlipayApp getAlipayApp() {
     return alipayApp;
   }
@@ -105,10 +105,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get alipayFace
+   * 支付宝 刷脸 支付渠道元数据
    * @return alipayFace
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付宝 刷脸 支付渠道元数据")
   public V1ExtraAlipayFace getAlipayFace() {
     return alipayFace;
   }
@@ -123,10 +123,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get alipayLite
+   * 支付宝 小程序 支付渠道元数据
    * @return alipayLite
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付宝 小程序 支付渠道元数据")
   public V1ExtraAlipayLite getAlipayLite() {
     return alipayLite;
   }
@@ -141,10 +141,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get alipayPage
+   * 支付宝 电脑网站 支付渠道元数据
    * @return alipayPage
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付宝 电脑网站 支付渠道元数据")
   public V1ExtraAlipayPage getAlipayPage() {
     return alipayPage;
   }
@@ -159,10 +159,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get alipayQr
+   * 支付宝 当面付 支付渠道元数据
    * @return alipayQr
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付宝 当面付 支付渠道元数据")
   public V1ExtraAlipayQr getAlipayQr() {
     return alipayQr;
   }
@@ -177,10 +177,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get alipayScan
+   * 支付宝 扫码(被扫) 支付渠道元数据
    * @return alipayScan
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付宝 扫码(被扫) 支付渠道元数据")
   public V1ExtraAlipayScan getAlipayScan() {
     return alipayScan;
   }
@@ -195,10 +195,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get alipayWap
+   * 支付宝 手机网站 支付渠道元数据
    * @return alipayWap
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付宝 手机网站 支付渠道元数据")
   public V1ExtraAlipayWap getAlipayWap() {
     return alipayWap;
   }
@@ -213,10 +213,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get wechatpayApp
+   * 微信支付 App 支付渠道元数据
    * @return wechatpayApp
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "微信支付 App 支付渠道元数据")
   public V1ExtraWechatpayApp getWechatpayApp() {
     return wechatpayApp;
   }
@@ -231,10 +231,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get wechatpayH5
+   * 微信支付 H5 支付渠道元数据
    * @return wechatpayH5
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "微信支付 H5 支付渠道元数据")
   public V1ExtraWechatpayH5 getWechatpayH5() {
     return wechatpayH5;
   }
@@ -249,10 +249,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get wechatpayJsapi
+   * 微信支付 公众号 支付渠道元数据
    * @return wechatpayJsapi
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "微信支付 公众号 支付渠道元数据")
   public V1ExtraWechatpayJsapi getWechatpayJsapi() {
     return wechatpayJsapi;
   }
@@ -267,10 +267,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get wechatpayLite
+   * 微信支付 小程序 支付渠道元数据
    * @return wechatpayLite
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "微信支付 小程序 支付渠道元数据")
   public V1ExtraWechatpayLite getWechatpayLite() {
     return wechatpayLite;
   }
@@ -285,10 +285,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get wechatpayNative
+   * 微信支付 扫码(被扫) 支付渠道元数据
    * @return wechatpayNative
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "微信支付 扫码(被扫) 支付渠道元数据")
   public V1ExtraWechatpayNative getWechatpayNative() {
     return wechatpayNative;
   }
@@ -303,10 +303,10 @@ public class V1ChargeExtra {
   }
 
    /**
-   * Get wechatpayScan
+   * 微信支付 扫码(被扫) 支付渠道元数据
    * @return wechatpayScan
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "微信支付 扫码(被扫) 支付渠道元数据")
   public V1ExtraWechatpayScan getWechatpayScan() {
     return wechatpayScan;
   }

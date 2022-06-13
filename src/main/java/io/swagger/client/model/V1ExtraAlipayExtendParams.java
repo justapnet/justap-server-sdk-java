@@ -23,20 +23,21 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.math.BigDecimal;
 
 /**
  * V1ExtraAlipayExtendParams
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayExtendParams {
   @SerializedName("card_type")
   private String cardType = null;
 
   @SerializedName("hb_fq_num")
-  private Integer hbFqNum = null;
+  private String hbFqNum = null;
 
   @SerializedName("hb_fq_seller_percent")
-  private Integer hbFqSellerPercent = null;
+  private BigDecimal hbFqSellerPercent = null;
 
   @SerializedName("industry_reflux_info")
   private String industryRefluxInfo = null;
@@ -53,10 +54,10 @@ public class V1ExtraAlipayExtendParams {
   }
 
    /**
-   * Get cardType
+   * 卡类型
    * @return cardType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "卡类型")
   public String getCardType() {
     return cardType;
   }
@@ -65,39 +66,39 @@ public class V1ExtraAlipayExtendParams {
     this.cardType = cardType;
   }
 
-  public V1ExtraAlipayExtendParams hbFqNum(Integer hbFqNum) {
+  public V1ExtraAlipayExtendParams hbFqNum(String hbFqNum) {
     this.hbFqNum = hbFqNum;
     return this;
   }
 
    /**
-   * Get hbFqNum
+   * 使用花呗分期要进行的分期数
    * @return hbFqNum
   **/
-  @ApiModelProperty(value = "")
-  public Integer getHbFqNum() {
+  @ApiModelProperty(required = true, value = "使用花呗分期要进行的分期数")
+  public String getHbFqNum() {
     return hbFqNum;
   }
 
-  public void setHbFqNum(Integer hbFqNum) {
+  public void setHbFqNum(String hbFqNum) {
     this.hbFqNum = hbFqNum;
   }
 
-  public V1ExtraAlipayExtendParams hbFqSellerPercent(Integer hbFqSellerPercent) {
+  public V1ExtraAlipayExtendParams hbFqSellerPercent(BigDecimal hbFqSellerPercent) {
     this.hbFqSellerPercent = hbFqSellerPercent;
     return this;
   }
 
    /**
-   * Get hbFqSellerPercent
+   * 使用花呗分期需要卖家承担的手续费比例的百分值，传入100代表100%
    * @return hbFqSellerPercent
   **/
-  @ApiModelProperty(value = "")
-  public Integer getHbFqSellerPercent() {
+  @ApiModelProperty(required = true, value = "使用花呗分期需要卖家承担的手续费比例的百分值，传入100代表100%")
+  public BigDecimal getHbFqSellerPercent() {
     return hbFqSellerPercent;
   }
 
-  public void setHbFqSellerPercent(Integer hbFqSellerPercent) {
+  public void setHbFqSellerPercent(BigDecimal hbFqSellerPercent) {
     this.hbFqSellerPercent = hbFqSellerPercent;
   }
 
@@ -107,10 +108,10 @@ public class V1ExtraAlipayExtendParams {
   }
 
    /**
-   * Get industryRefluxInfo
+   * 行业数据回流信息
    * @return industryRefluxInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "行业数据回流信息")
   public String getIndustryRefluxInfo() {
     return industryRefluxInfo;
   }
@@ -125,10 +126,10 @@ public class V1ExtraAlipayExtendParams {
   }
 
    /**
-   * Get specifiedSellerName
+   * 指定收款支付宝用户名
    * @return specifiedSellerName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "指定收款支付宝用户名")
   public String getSpecifiedSellerName() {
     return specifiedSellerName;
   }
@@ -143,10 +144,10 @@ public class V1ExtraAlipayExtendParams {
   }
 
    /**
-   * Get sysServiceProviderId
+   * 系统商编号，该参数作为系统商返佣数据提取的依据，请填写系统商签约协议的PID
    * @return sysServiceProviderId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "系统商编号，该参数作为系统商返佣数据提取的依据，请填写系统商签约协议的PID")
   public String getSysServiceProviderId() {
     return sysServiceProviderId;
   }

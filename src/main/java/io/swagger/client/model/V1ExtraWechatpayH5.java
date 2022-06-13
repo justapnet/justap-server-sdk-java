@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayH5
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraWechatpayH5 {
   @SerializedName("attach")
   private String attach = null;
@@ -74,10 +74,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get attach
+   * 元数据
    * @return attach
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "元数据")
   public String getAttach() {
     return attach;
   }
@@ -92,10 +92,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get detail
+   * 商品详情
    * @return detail
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "商品详情")
   public V1ExtraWechatpayDetail getDetail() {
     return detail;
   }
@@ -110,10 +110,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get goodsTag
+   * 订单优惠标记
    * @return goodsTag
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "订单优惠标记")
   public String getGoodsTag() {
     return goodsTag;
   }
@@ -128,10 +128,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get paySign
+   * 支付签名
    * @return paySign
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付签名")
   public String getPaySign() {
     return paySign;
   }
@@ -146,10 +146,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get payUrl
+   * 支付链接
    * @return payUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付链接")
   public String getPayUrl() {
     return payUrl;
   }
@@ -164,10 +164,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get prepayId
+   * 预支付交易会话标识
    * @return prepayId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "预支付交易会话标识")
   public String getPrepayId() {
     return prepayId;
   }
@@ -182,10 +182,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get sceneInfo
+   * 场景信息
    * @return sceneInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "场景信息")
   public V1ExtraWechatpaySceneInfo getSceneInfo() {
     return sceneInfo;
   }
@@ -200,10 +200,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get settleInfo
+   * 结算信息
    * @return settleInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "结算信息")
   public V1ExtraWechatpaySettleInfo getSettleInfo() {
     return settleInfo;
   }
@@ -218,10 +218,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get timeExpire
+   * 交易结束时间
    * @return timeExpire
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "交易结束时间")
   public String getTimeExpire() {
     return timeExpire;
   }
@@ -236,10 +236,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get timeStart
+   * 交易起始时间
    * @return timeStart
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "交易起始时间")
   public String getTimeStart() {
     return timeStart;
   }
@@ -254,10 +254,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get wapName
+   * WAP网站名
    * @return wapName
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "WAP网站名")
   public String getWapName() {
     return wapName;
   }
@@ -272,10 +272,10 @@ public class V1ExtraWechatpayH5 {
   }
 
    /**
-   * Get wapUrl
+   * WAP网站URL
    * @return wapUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "WAP网站URL")
   public String getWapUrl() {
     return wapUrl;
   }

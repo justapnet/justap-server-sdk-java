@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ExtraAlipayAgreementSignParamsAccessParams
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class ExtraAlipayAgreementSignParamsAccessParams {
   @SerializedName("channel")
   private String channel = null;
@@ -38,10 +38,10 @@ public class ExtraAlipayAgreementSignParamsAccessParams {
   }
 
    /**
-   * Get channel
+   * 目前支持以下值：1. ALIPAYAPP （钱包h5页面签约）2. QRCODE(扫码签约)3. QRCODEORSMS(扫码签约或者短信签约)
    * @return channel
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "目前支持以下值：1. ALIPAYAPP （钱包h5页面签约）2. QRCODE(扫码签约)3. QRCODEORSMS(扫码签约或者短信签约)")
   public String getChannel() {
     return channel;
   }

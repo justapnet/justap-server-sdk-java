@@ -31,19 +31,20 @@ import io.swagger.client.model.V1ExtraAlipayRoyaltyInfo;
 import io.swagger.client.model.V1ExtraAlipaySettleInfo;
 import io.swagger.client.model.V1ExtraAlipaySubMerchant;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * V1ExtraAlipayPage
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraAlipayPage {
   @SerializedName("agreement_sign_params")
   private V1ExtraAlipayAgreementSignParams agreementSignParams = null;
 
   @SerializedName("business_params")
-  private Integer businessParams = null;
+  private BigDecimal businessParams = null;
 
   @SerializedName("disable_pay_channels")
   private String disablePayChannels = null;
@@ -64,7 +65,7 @@ public class V1ExtraAlipayPage {
   private String goodsType = null;
 
   @SerializedName("integration_type")
-  private Integer integrationType = null;
+  private BigDecimal integrationType = null;
 
   @SerializedName("invoice_info")
   private V1ExtraAlipayInvoiceInfo invoiceInfo = null;
@@ -82,10 +83,10 @@ public class V1ExtraAlipayPage {
   private String qrPayMode = null;
 
   @SerializedName("qrcode_width")
-  private Integer qrcodeWidth = null;
+  private BigDecimal qrcodeWidth = null;
 
   @SerializedName("request_from_url")
-  private Integer requestFromUrl = null;
+  private BigDecimal requestFromUrl = null;
 
   @SerializedName("royalty_info")
   private V1ExtraAlipayRoyaltyInfo royaltyInfo = null;
@@ -111,10 +112,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get agreementSignParams
+   * 签约参数。如果希望在sdk中支付并签约，需要在这里传入签约信息。周期扣款场景 product_code 为 CYCLE_PAY_AUTH 时必填。
    * @return agreementSignParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "签约参数。如果希望在sdk中支付并签约，需要在这里传入签约信息。周期扣款场景 product_code 为 CYCLE_PAY_AUTH 时必填。")
   public V1ExtraAlipayAgreementSignParams getAgreementSignParams() {
     return agreementSignParams;
   }
@@ -123,21 +124,21 @@ public class V1ExtraAlipayPage {
     this.agreementSignParams = agreementSignParams;
   }
 
-  public V1ExtraAlipayPage businessParams(Integer businessParams) {
+  public V1ExtraAlipayPage businessParams(BigDecimal businessParams) {
     this.businessParams = businessParams;
     return this;
   }
 
    /**
-   * Get businessParams
+   * 业务扩展参数
    * @return businessParams
   **/
-  @ApiModelProperty(value = "")
-  public Integer getBusinessParams() {
+  @ApiModelProperty(required = true, value = "业务扩展参数")
+  public BigDecimal getBusinessParams() {
     return businessParams;
   }
 
-  public void setBusinessParams(Integer businessParams) {
+  public void setBusinessParams(BigDecimal businessParams) {
     this.businessParams = businessParams;
   }
 
@@ -147,10 +148,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get disablePayChannels
+   * 禁用渠道
    * @return disablePayChannels
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "禁用渠道")
   public String getDisablePayChannels() {
     return disablePayChannels;
   }
@@ -165,10 +166,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get enablePayChannels
+   * 可用渠道
    * @return enablePayChannels
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "可用渠道")
   public String getEnablePayChannels() {
     return enablePayChannels;
   }
@@ -183,10 +184,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get extUserInfo
+   * 支付宝用户信息
    * @return extUserInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "支付宝用户信息")
   public V1ExtraAlipayExtUserInfo getExtUserInfo() {
     return extUserInfo;
   }
@@ -201,10 +202,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get extendParams
+   * 业务扩展参数
    * @return extendParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "业务扩展参数")
   public V1ExtraAlipayExtendParams getExtendParams() {
     return extendParams;
   }
@@ -227,10 +228,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get goodsDetail
+   * 商品明细列表
    * @return goodsDetail
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "商品明细列表")
   public List<V1ExtraAlipayGoodsDetail> getGoodsDetail() {
     return goodsDetail;
   }
@@ -245,10 +246,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get goodsType
+   * 商品类型
    * @return goodsType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商品类型")
   public String getGoodsType() {
     return goodsType;
   }
@@ -257,21 +258,21 @@ public class V1ExtraAlipayPage {
     this.goodsType = goodsType;
   }
 
-  public V1ExtraAlipayPage integrationType(Integer integrationType) {
+  public V1ExtraAlipayPage integrationType(BigDecimal integrationType) {
     this.integrationType = integrationType;
     return this;
   }
 
    /**
-   * Get integrationType
+   * 支付宝用户ID
    * @return integrationType
   **/
-  @ApiModelProperty(value = "")
-  public Integer getIntegrationType() {
+  @ApiModelProperty(required = true, value = "支付宝用户ID")
+  public BigDecimal getIntegrationType() {
     return integrationType;
   }
 
-  public void setIntegrationType(Integer integrationType) {
+  public void setIntegrationType(BigDecimal integrationType) {
     this.integrationType = integrationType;
   }
 
@@ -281,10 +282,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get invoiceInfo
+   * 发票信息
    * @return invoiceInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "发票信息")
   public V1ExtraAlipayInvoiceInfo getInvoiceInfo() {
     return invoiceInfo;
   }
@@ -299,10 +300,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get merchantTradeId
+   * [ONLY IN RESPONSE] 商户订单号
    * @return merchantTradeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 商户订单号")
   public String getMerchantTradeId() {
     return merchantTradeId;
   }
@@ -317,10 +318,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get payUrl
+   * [ONLY IN RESPONSE] 支付链接
    * @return payUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 支付链接")
   public String getPayUrl() {
     return payUrl;
   }
@@ -335,10 +336,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get promoParams
+   * 优惠参数
    * @return promoParams
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "优惠参数")
   public String getPromoParams() {
     return promoParams;
   }
@@ -353,10 +354,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get qrPayMode
+   * 扫码支付模式
    * @return qrPayMode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "扫码支付模式")
   public String getQrPayMode() {
     return qrPayMode;
   }
@@ -365,39 +366,39 @@ public class V1ExtraAlipayPage {
     this.qrPayMode = qrPayMode;
   }
 
-  public V1ExtraAlipayPage qrcodeWidth(Integer qrcodeWidth) {
+  public V1ExtraAlipayPage qrcodeWidth(BigDecimal qrcodeWidth) {
     this.qrcodeWidth = qrcodeWidth;
     return this;
   }
 
    /**
-   * Get qrcodeWidth
+   * 二维码宽度
    * @return qrcodeWidth
   **/
-  @ApiModelProperty(value = "")
-  public Integer getQrcodeWidth() {
+  @ApiModelProperty(required = true, value = "二维码宽度")
+  public BigDecimal getQrcodeWidth() {
     return qrcodeWidth;
   }
 
-  public void setQrcodeWidth(Integer qrcodeWidth) {
+  public void setQrcodeWidth(BigDecimal qrcodeWidth) {
     this.qrcodeWidth = qrcodeWidth;
   }
 
-  public V1ExtraAlipayPage requestFromUrl(Integer requestFromUrl) {
+  public V1ExtraAlipayPage requestFromUrl(BigDecimal requestFromUrl) {
     this.requestFromUrl = requestFromUrl;
     return this;
   }
 
    /**
-   * Get requestFromUrl
+   * 请求来源地址
    * @return requestFromUrl
   **/
-  @ApiModelProperty(value = "")
-  public Integer getRequestFromUrl() {
+  @ApiModelProperty(required = true, value = "请求来源地址")
+  public BigDecimal getRequestFromUrl() {
     return requestFromUrl;
   }
 
-  public void setRequestFromUrl(Integer requestFromUrl) {
+  public void setRequestFromUrl(BigDecimal requestFromUrl) {
     this.requestFromUrl = requestFromUrl;
   }
 
@@ -407,10 +408,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get royaltyInfo
+   * 分账类型卖家的分账类型，目前只支持传入ROYALTY（普通分账类型）。
    * @return royaltyInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "分账类型卖家的分账类型，目前只支持传入ROYALTY（普通分账类型）。")
   public V1ExtraAlipayRoyaltyInfo getRoyaltyInfo() {
     return royaltyInfo;
   }
@@ -425,10 +426,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get sellerId
+   * [ONLY IN RESPONSE] 收款支付宝用户ID
    * @return sellerId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 收款支付宝用户ID")
   public String getSellerId() {
     return sellerId;
   }
@@ -443,10 +444,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get settleInfo
+   * 结算信息
    * @return settleInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "结算信息")
   public V1ExtraAlipaySettleInfo getSettleInfo() {
     return settleInfo;
   }
@@ -461,10 +462,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get storeId
+   * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }
@@ -479,10 +480,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get subMerchant
+   * 二级商户信息
    * @return subMerchant
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "二级商户信息")
   public V1ExtraAlipaySubMerchant getSubMerchant() {
     return subMerchant;
   }
@@ -497,10 +498,10 @@ public class V1ExtraAlipayPage {
   }
 
    /**
-   * Get timeExpire
+   * 订单失效时间
    * @return timeExpire
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "订单失效时间")
   public Integer getTimeExpire() {
     return timeExpire;
   }

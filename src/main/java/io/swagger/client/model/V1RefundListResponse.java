@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * V1RefundListResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1RefundListResponse {
   @SerializedName("data")
   private List<V1Refund> data = null;
@@ -58,10 +58,10 @@ public class V1RefundListResponse {
   }
 
    /**
-   * Get data
+   * Refund 对象
    * @return data
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "Refund 对象")
   public List<V1Refund> getData() {
     return data;
   }

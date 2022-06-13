@@ -27,11 +27,12 @@ import io.swagger.client.model.V1ExtraWechatpayPayer;
 import io.swagger.client.model.V1ExtraWechatpaySceneInfo;
 import io.swagger.client.model.V1ExtraWechatpaySettleInfo;
 import java.io.IOException;
+import java.math.BigDecimal;
 
 /**
  * V1ExtraWechatpayScan
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-05-03T06:42:08.333Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:11:36.793Z")
 public class V1ExtraWechatpayScan {
   @SerializedName("attach")
   private String attach = null;
@@ -58,7 +59,7 @@ public class V1ExtraWechatpayScan {
   private String goodsTag = null;
 
   @SerializedName("is_subscribe")
-  private Boolean isSubscribe = null;
+  private Boolean isSubscribe = false;
 
   @SerializedName("payer")
   private V1ExtraWechatpayPayer payer = null;
@@ -70,13 +71,13 @@ public class V1ExtraWechatpayScan {
   private V1ExtraWechatpaySettleInfo settleInfo = null;
 
   @SerializedName("settlement_total_fee")
-  private String settlementTotalFee = null;
+  private BigDecimal settlementTotalFee = null;
 
   @SerializedName("spbill_create_ip")
   private String spbillCreateIp = null;
 
   @SerializedName("sub_is_subscribe")
-  private Boolean subIsSubscribe = null;
+  private Boolean subIsSubscribe = false;
 
   @SerializedName("sub_openid")
   private String subOpenid = null;
@@ -96,10 +97,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get attach
+   * 元数据
    * @return attach
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "元数据")
   public String getAttach() {
     return attach;
   }
@@ -114,10 +115,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get authCode
+   * 授权码
    * @return authCode
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "授权码")
   public String getAuthCode() {
     return authCode;
   }
@@ -132,10 +133,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get bankType
+   * 付款银行
    * @return bankType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "付款银行")
   public String getBankType() {
     return bankType;
   }
@@ -150,10 +151,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get cashFee
+   * 现金支付金额
    * @return cashFee
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "现金支付金额")
   public String getCashFee() {
     return cashFee;
   }
@@ -168,10 +169,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get cashFeeType
+   * 现金支付币种
    * @return cashFeeType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "现金支付币种")
   public String getCashFeeType() {
     return cashFeeType;
   }
@@ -186,10 +187,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get detail
+   * 商品详情
    * @return detail
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "商品详情")
   public V1ExtraWechatpayDetail getDetail() {
     return detail;
   }
@@ -204,10 +205,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get feeType
+   * 货币种类
    * @return feeType
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "货币种类")
   public String getFeeType() {
     return feeType;
   }
@@ -222,10 +223,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get goodsTag
+   * 订单优惠标记
    * @return goodsTag
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "订单优惠标记")
   public String getGoodsTag() {
     return goodsTag;
   }
@@ -240,10 +241,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get isSubscribe
+   * 是否关注公众账号
    * @return isSubscribe
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "是否关注公众账号")
   public Boolean isIsSubscribe() {
     return isSubscribe;
   }
@@ -258,10 +259,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get payer
+   * 付款人信息
    * @return payer
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "付款人信息")
   public V1ExtraWechatpayPayer getPayer() {
     return payer;
   }
@@ -276,10 +277,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get sceneInfo
+   * 场景信息
    * @return sceneInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "场景信息")
   public V1ExtraWechatpaySceneInfo getSceneInfo() {
     return sceneInfo;
   }
@@ -294,10 +295,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get settleInfo
+   * 结算信息
    * @return settleInfo
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "结算信息")
   public V1ExtraWechatpaySettleInfo getSettleInfo() {
     return settleInfo;
   }
@@ -306,21 +307,21 @@ public class V1ExtraWechatpayScan {
     this.settleInfo = settleInfo;
   }
 
-  public V1ExtraWechatpayScan settlementTotalFee(String settlementTotalFee) {
+  public V1ExtraWechatpayScan settlementTotalFee(BigDecimal settlementTotalFee) {
     this.settlementTotalFee = settlementTotalFee;
     return this;
   }
 
    /**
-   * Get settlementTotalFee
+   * 应结订单金额
    * @return settlementTotalFee
   **/
-  @ApiModelProperty(value = "")
-  public String getSettlementTotalFee() {
+  @ApiModelProperty(required = true, value = "应结订单金额")
+  public BigDecimal getSettlementTotalFee() {
     return settlementTotalFee;
   }
 
-  public void setSettlementTotalFee(String settlementTotalFee) {
+  public void setSettlementTotalFee(BigDecimal settlementTotalFee) {
     this.settlementTotalFee = settlementTotalFee;
   }
 
@@ -330,10 +331,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get spbillCreateIp
+   * 终端IP
    * @return spbillCreateIp
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "终端IP")
   public String getSpbillCreateIp() {
     return spbillCreateIp;
   }
@@ -348,10 +349,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get subIsSubscribe
+   * 子商户是否关注公众账号
    * @return subIsSubscribe
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "子商户是否关注公众账号")
   public Boolean isSubIsSubscribe() {
     return subIsSubscribe;
   }
@@ -366,10 +367,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get subOpenid
+   * 子商户openid
    * @return subOpenid
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "子商户openid")
   public String getSubOpenid() {
     return subOpenid;
   }
@@ -384,10 +385,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get timeEnd
+   * 支付完成时间
    * @return timeEnd
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "支付完成时间")
   public String getTimeEnd() {
     return timeEnd;
   }
@@ -402,10 +403,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get timeExpire
+   * 交易结束时间
    * @return timeExpire
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "交易结束时间")
   public String getTimeExpire() {
     return timeExpire;
   }
@@ -420,10 +421,10 @@ public class V1ExtraWechatpayScan {
   }
 
    /**
-   * Get timeStart
+   * 交易起始时间
    * @return timeStart
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "交易起始时间")
   public String getTimeStart() {
     return timeStart;
   }
