@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
   @SerializedName("amount")
   private Float amount = null;
@@ -89,7 +89,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 分账的金额，单位为元
    * @return amount
   **/
-  @ApiModelProperty(required = true, value = "分账的金额，单位为元")
+  @ApiModelProperty(value = "分账的金额，单位为元")
   public Float getAmount() {
     return amount;
   }
@@ -107,7 +107,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 买家支付宝账号
    * @return buyerLogonId
   **/
-  @ApiModelProperty(required = true, value = "买家支付宝账号")
+  @ApiModelProperty(value = "买家支付宝账号")
   public String getBuyerLogonId() {
     return buyerLogonId;
   }
@@ -125,7 +125,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 买家在支付宝的用户id
    * @return buyerUserId
   **/
-  @ApiModelProperty(required = true, value = "买家在支付宝的用户id")
+  @ApiModelProperty(value = "买家在支付宝的用户id")
   public String getBuyerUserId() {
     return buyerUserId;
   }
@@ -143,7 +143,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 分账描述
    * @return desc
   **/
-  @ApiModelProperty(required = true, value = "分账描述")
+  @ApiModelProperty(value = "分账描述")
   public String getDesc() {
     return desc;
   }
@@ -161,7 +161,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 分账变更消息
    * @return fundChange
   **/
-  @ApiModelProperty(required = true, value = "分账变更消息")
+  @ApiModelProperty(value = "分账变更消息")
   public String getFundChange() {
     return fundChange;
   }
@@ -205,7 +205,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 总退款金额
    * @return refundFee
   **/
-  @ApiModelProperty(required = true, value = "总退款金额")
+  @ApiModelProperty(value = "总退款金额")
   public Float getRefundFee() {
     return refundFee;
   }
@@ -223,7 +223,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 可选值：达人佣金、平台服务费、技术服务费、其他
    * @return royaltyScene
   **/
-  @ApiModelProperty(required = true, value = "可选值：达人佣金、平台服务费、技术服务费、其他")
+  @ApiModelProperty(value = "可选值：达人佣金、平台服务费、技术服务费、其他")
   public String getRoyaltyScene() {
     return royaltyScene;
   }
@@ -241,7 +241,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 分账类型
    * @return royaltyType
   **/
-  @ApiModelProperty(required = true, value = "分账类型")
+  @ApiModelProperty(value = "分账类型")
   public String getRoyaltyType() {
     return royaltyType;
   }
@@ -259,7 +259,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 买家实际退款金额
    * @return sendBackFee
   **/
-  @ApiModelProperty(required = true, value = "买家实际退款金额")
+  @ApiModelProperty(value = "买家实际退款金额")
   public String getSendBackFee() {
     return sendBackFee;
   }
@@ -277,7 +277,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 交易场景
    * @return storeName
   **/
-  @ApiModelProperty(required = true, value = "交易场景")
+  @ApiModelProperty(value = "交易场景")
   public String getStoreName() {
     return storeName;
   }
@@ -295,7 +295,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 收入方账户
    * @return transIn
   **/
-  @ApiModelProperty(required = true, value = "收入方账户")
+  @ApiModelProperty(value = "收入方账户")
   public String getTransIn() {
     return transIn;
   }
@@ -313,7 +313,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 分账收款方姓名
    * @return transInName
   **/
-  @ApiModelProperty(required = true, value = "分账收款方姓名")
+  @ApiModelProperty(value = "分账收款方姓名")
   public String getTransInName() {
     return transInName;
   }
@@ -331,7 +331,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 收入方账户类型
    * @return transInType
   **/
-  @ApiModelProperty(required = true, value = "收入方账户类型")
+  @ApiModelProperty(value = "收入方账户类型")
   public String getTransInType() {
     return transInType;
   }
@@ -349,7 +349,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 支出方账户
    * @return transOut
   **/
-  @ApiModelProperty(required = true, value = "支出方账户")
+  @ApiModelProperty(value = "支出方账户")
   public String getTransOut() {
     return transOut;
   }
@@ -367,7 +367,7 @@ public class RefundExtraAlipayOpenApiRoyaltyDetailInfoPojo {
    * 支出方账户类型
    * @return transOutType
   **/
-  @ApiModelProperty(required = true, value = "支出方账户类型")
+  @ApiModelProperty(value = "支出方账户类型")
   public String getTransOutType() {
     return transOutType;
   }

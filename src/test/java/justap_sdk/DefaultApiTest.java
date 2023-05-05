@@ -47,9 +47,25 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
-    public void tradeServiceChargesTest() throws Exception {
+    public void chargeServiceChargesTest() throws Exception {
         V1CreateChargeRequest body = null;
-        V1ChargeResponse response = api.tradeServiceCharges(body);
+        V1ChargeResponse response = api.chargeServiceCharges(body);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 创建 Charge 对象
+     *
+     * 发起一次支付请求时需要创建一个新的 charge 对象，获取一个可用的支付凭据用于客户端向第三方渠道发起支付请求。如果使用测试模式的 API Key，则不会发生真实交易。当支付成功后，会发送 Webhooks 通知。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void chargeServiceCharges2Test() throws Exception {
+        V1CreateChargeRequest body = null;
+        V1ChargeResponse response = api.chargeServiceCharges2(body);
 
         // TODO: test validations
     }
@@ -63,10 +79,27 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
-    public void tradeServiceQueryChargeTest() throws Exception {
+    public void chargeServiceQueryChargeTest() throws Exception {
         String chargeId = null;
         String appId = null;
-        V1ChargeResponse response = api.tradeServiceQueryCharge(chargeId, appId);
+        V1ChargeResponse response = api.chargeServiceQueryCharge(chargeId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 查询 Charge 对象
+     *
+     * 你可以在后台异步通知之前，通过查询接口确认支付状态。通过charge对象的id查询一个已创建的charge对象。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void chargeServiceQueryCharge2Test() throws Exception {
+        String chargeId = null;
+        String appId = null;
+        V1ChargeResponse response = api.chargeServiceQueryCharge2(chargeId, appId);
 
         // TODO: test validations
     }
@@ -80,7 +113,7 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
-    public void tradeServiceQueryChargeListTest() throws Exception {
+    public void chargeServiceQueryChargeListTest() throws Exception {
         String appId = null;
         Integer limit = null;
         String startingAfter = null;
@@ -96,61 +129,37 @@ public class DefaultApiTest {
         Boolean reversed = null;
         Boolean closed = null;
         Boolean expired = null;
-        V1ChargeListResponse response = api.tradeServiceQueryChargeList(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired);
+        V1ChargeListResponse response = api.chargeServiceQueryChargeList(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired);
 
         // TODO: test validations
     }
     
     /**
-     * 查询 Refund 对象
+     * 查询 Charge 对象列表
      *
-     * 可以通过 charge 对象的查询接口查询某一个 charge 对象的退款列表，也可以通过 refund 对象的 id 查询一个已创建的 refund 对象。可以在 Webhooks 通知之前，通过查询接口确认退款状态。
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void tradeServiceQueryRefundTest() throws Exception {
-        String chargeId = null;
-        String refundId = null;
-        String appId = null;
-        V1RefundResponse response = api.tradeServiceQueryRefund(chargeId, refundId, appId);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 查询 Refund 对象列表
-     *
-     * 返回之前创建 charge 对象的一个 refund 对象列表。列表是按创建时间进行排序，总是将最新的 refund 对象显示在最前。
+     * 返回之前创建过 charge 对象的一个列表。列表是按创建时间进行排序，总是将最新的 charge 对象显示在最前。如果不设置 created 参数，默认查询近一个月的数据；设置了 created 参数，会按照对应的时间段查询。
      *
      * @throws Exception
      *          if the Api call fails
      */
     @Test
-    public void tradeServiceQueryRefundListTest() throws Exception {
-        String chargeId = null;
+    public void chargeServiceQueryChargeList2Test() throws Exception {
         String appId = null;
         Integer limit = null;
         String startingAfter = null;
         String endingBefore = null;
-        V1RefundListResponse response = api.tradeServiceQueryRefundList(chargeId, appId, limit, startingAfter, endingBefore);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 创建 Refund 对象
-     *
-     * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
-     *
-     * @throws Exception
-     *          if the Api call fails
-     */
-    @Test
-    public void tradeServiceRefundsTest() throws Exception {
-        V1CreateRefundRequest body = null;
-        V1RefundResponse response = api.tradeServiceRefunds(body);
+        String merchantTradeId = null;
+        Long createdLt = null;
+        Long createdLte = null;
+        Long createdGt = null;
+        Long createdGte = null;
+        String channel = null;
+        Boolean paid = null;
+        Boolean refunded = null;
+        Boolean reversed = null;
+        Boolean closed = null;
+        Boolean expired = null;
+        V1ChargeListResponse response = api.chargeServiceQueryChargeList2(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired);
 
         // TODO: test validations
     }
@@ -164,10 +173,135 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
-    public void tradeServiceReverseChargeTest() throws Exception {
+    public void chargeServiceReverseChargeTest() throws Exception {
         String chargeId = null;
         String appId = null;
-        V1ChargeResponse response = api.tradeServiceReverseCharge(chargeId, appId);
+        V1ChargeResponse response = api.chargeServiceReverseCharge(chargeId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 撤销 Charge 对象
+     *
+     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void chargeServiceReverseCharge2Test() throws Exception {
+        String chargeId = null;
+        String appId = null;
+        V1ChargeResponse response = api.chargeServiceReverseCharge2(chargeId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 查询 Refund 对象
+     *
+     * 可以通过 charge 对象的查询接口查询某一个 charge 对象的退款列表，也可以通过 refund 对象的 id 查询一个已创建的 refund 对象。可以在 Webhooks 通知之前，通过查询接口确认退款状态。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void refundServiceQueryRefundTest() throws Exception {
+        String chargeId = null;
+        String refundId = null;
+        String appId = null;
+        V1RefundResponse response = api.refundServiceQueryRefund(chargeId, refundId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 查询 Refund 对象
+     *
+     * 可以通过 charge 对象的查询接口查询某一个 charge 对象的退款列表，也可以通过 refund 对象的 id 查询一个已创建的 refund 对象。可以在 Webhooks 通知之前，通过查询接口确认退款状态。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void refundServiceQueryRefund2Test() throws Exception {
+        String refundId = null;
+        String chargeId = null;
+        String appId = null;
+        V1RefundResponse response = api.refundServiceQueryRefund2(refundId, chargeId, appId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 查询 Refund 对象列表
+     *
+     * 返回之前创建 charge 对象的一个 refund 对象列表。列表是按创建时间进行排序，总是将最新的 refund 对象显示在最前。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void refundServiceQueryRefundListTest() throws Exception {
+        String chargeId = null;
+        String appId = null;
+        Integer limit = null;
+        String startingAfter = null;
+        String endingBefore = null;
+        V1RefundListResponse response = api.refundServiceQueryRefundList(chargeId, appId, limit, startingAfter, endingBefore);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 查询 Refund 对象列表
+     *
+     * 返回之前创建 charge 对象的一个 refund 对象列表。列表是按创建时间进行排序，总是将最新的 refund 对象显示在最前。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void refundServiceQueryRefundList2Test() throws Exception {
+        String chargeId = null;
+        String appId = null;
+        Integer limit = null;
+        String startingAfter = null;
+        String endingBefore = null;
+        V1RefundListResponse response = api.refundServiceQueryRefundList2(chargeId, appId, limit, startingAfter, endingBefore);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 创建 Refund 对象
+     *
+     * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void refundServiceRefundsTest() throws Exception {
+        V1CreateRefundRequest body = null;
+        V1RefundResponse response = api.refundServiceRefunds(body);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 创建 Refund 对象
+     *
+     * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void refundServiceRefunds2Test() throws Exception {
+        V1CreateRefundRequest body = null;
+        V1RefundResponse response = api.refundServiceRefunds2(body);
 
         // TODO: test validations
     }

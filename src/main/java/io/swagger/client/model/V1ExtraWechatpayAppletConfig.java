@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayAppletConfig
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraWechatpayAppletConfig {
   @SerializedName("appId")
   private String appId = null;
@@ -56,7 +56,7 @@ public class V1ExtraWechatpayAppletConfig {
    * 小程序appid
    * @return appId
   **/
-  @ApiModelProperty(required = true, value = "小程序appid")
+  @ApiModelProperty(value = "小程序appid")
   public String getAppId() {
     return appId;
   }
@@ -74,7 +74,7 @@ public class V1ExtraWechatpayAppletConfig {
    * 随机字符串
    * @return nonceStr
   **/
-  @ApiModelProperty(required = true, value = "随机字符串")
+  @ApiModelProperty(value = "随机字符串")
   public String getNonceStr() {
     return nonceStr;
   }
@@ -92,7 +92,7 @@ public class V1ExtraWechatpayAppletConfig {
    * 扩展字段
    * @return _package
   **/
-  @ApiModelProperty(required = true, value = "扩展字段")
+  @ApiModelProperty(value = "扩展字段")
   public String getPackage() {
     return _package;
   }
@@ -110,7 +110,7 @@ public class V1ExtraWechatpayAppletConfig {
    * 签名
    * @return paySign
   **/
-  @ApiModelProperty(required = true, value = "签名")
+  @ApiModelProperty(value = "签名")
   public String getPaySign() {
     return paySign;
   }
@@ -128,7 +128,7 @@ public class V1ExtraWechatpayAppletConfig {
    * 签名类型
    * @return signType
   **/
-  @ApiModelProperty(required = true, value = "签名类型")
+  @ApiModelProperty(value = "签名类型")
   public String getSignType() {
     return signType;
   }
@@ -146,7 +146,7 @@ public class V1ExtraWechatpayAppletConfig {
    * 时间戳
    * @return timeStamp
   **/
-  @ApiModelProperty(required = true, value = "时间戳")
+  @ApiModelProperty(value = "时间戳")
   public String getTimeStamp() {
     return timeStamp;
   }

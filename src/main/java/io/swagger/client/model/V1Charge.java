@@ -23,7 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.ProtobufAny;
-import io.swagger.client.model.V1Channel;
+import io.swagger.client.model.Tradev1Channel;
 import io.swagger.client.model.V1ChargeExtra;
 import io.swagger.client.model.V1Refund;
 import java.io.IOException;
@@ -36,7 +36,7 @@ import java.util.Map;
 /**
  * V1Charge
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1Charge {
   @SerializedName("amount")
   private Double amount = 0.0d;
@@ -60,7 +60,7 @@ public class V1Charge {
   private String body = null;
 
   @SerializedName("channel")
-  private V1Channel channel = null;
+  private Tradev1Channel channel = null;
 
   @SerializedName("charge_id")
   private String chargeId = null;
@@ -74,6 +74,9 @@ public class V1Charge {
   @SerializedName("closed_at")
   private OffsetDateTime closedAt = null;
 
+  @SerializedName("closed_ts")
+  private String closedTs = null;
+
   @SerializedName("created_at")
   private OffsetDateTime createdAt = null;
 
@@ -85,6 +88,9 @@ public class V1Charge {
 
   @SerializedName("description")
   private String description = null;
+
+  @SerializedName("expired_ts")
+  private String expiredTs = null;
 
   @SerializedName("extra")
   private V1ChargeExtra extra = null;
@@ -104,11 +110,17 @@ public class V1Charge {
   @SerializedName("metadata")
   private Map<String, String> metadata = null;
 
+  @SerializedName("object")
+  private String object = "Charge";
+
   @SerializedName("paid")
   private Boolean paid = false;
 
   @SerializedName("paid_at")
   private OffsetDateTime paidAt = null;
+
+  @SerializedName("paid_ts")
+  private String paidTs = null;
 
   @SerializedName("refunded")
   private Boolean refunded = false;
@@ -143,7 +155,7 @@ public class V1Charge {
    * 订单金额
    * @return amount
   **/
-  @ApiModelProperty(required = true, value = "订单金额")
+  @ApiModelProperty(value = "订单金额")
   public Double getAmount() {
     return amount;
   }
@@ -161,7 +173,7 @@ public class V1Charge {
    * 下单金额
    * @return amountFee
   **/
-  @ApiModelProperty(required = true, value = "下单金额")
+  @ApiModelProperty(value = "下单金额")
   public Float getAmountFee() {
     return amountFee;
   }
@@ -179,7 +191,7 @@ public class V1Charge {
    * 订单退款总金额
    * @return amountRefund
   **/
-  @ApiModelProperty(required = true, value = "订单退款总金额")
+  @ApiModelProperty(value = "订单退款总金额")
   public Float getAmountRefund() {
     return amountRefund;
   }
@@ -197,7 +209,7 @@ public class V1Charge {
    * 分账金额
    * @return amountRoyalty
   **/
-  @ApiModelProperty(required = true, value = "分账金额")
+  @ApiModelProperty(value = "分账金额")
   public Float getAmountRoyalty() {
     return amountRoyalty;
   }
@@ -215,7 +227,7 @@ public class V1Charge {
    * 结算金额，不一定有，视支付通道情况返回
    * @return amountSettle
   **/
-  @ApiModelProperty(required = true, value = "结算金额，不一定有，视支付通道情况返回")
+  @ApiModelProperty(value = "结算金额，不一定有，视支付通道情况返回")
   public Double getAmountSettle() {
     return amountSettle;
   }
@@ -233,7 +245,7 @@ public class V1Charge {
    * 应用ID
    * @return appId
   **/
-  @ApiModelProperty(required = true, value = "应用ID")
+  @ApiModelProperty(value = "应用ID")
   public String getAppId() {
     return appId;
   }
@@ -251,7 +263,7 @@ public class V1Charge {
    * 订单描述信息
    * @return body
   **/
-  @ApiModelProperty(required = true, value = "订单描述信息")
+  @ApiModelProperty(value = "订单描述信息")
   public String getBody() {
     return body;
   }
@@ -260,7 +272,7 @@ public class V1Charge {
     this.body = body;
   }
 
-  public V1Charge channel(V1Channel channel) {
+  public V1Charge channel(Tradev1Channel channel) {
     this.channel = channel;
     return this;
   }
@@ -269,12 +281,12 @@ public class V1Charge {
    * 支付渠道
    * @return channel
   **/
-  @ApiModelProperty(required = true, value = "支付渠道")
-  public V1Channel getChannel() {
+  @ApiModelProperty(value = "支付渠道")
+  public Tradev1Channel getChannel() {
     return channel;
   }
 
-  public void setChannel(V1Channel channel) {
+  public void setChannel(Tradev1Channel channel) {
     this.channel = channel;
   }
 
@@ -287,7 +299,7 @@ public class V1Charge {
    * Charge 对象 id
    * @return chargeId
   **/
-  @ApiModelProperty(required = true, value = "Charge 对象 id")
+  @ApiModelProperty(value = "Charge 对象 id")
   public String getChargeId() {
     return chargeId;
   }
@@ -305,7 +317,7 @@ public class V1Charge {
    * 顾客IP
    * @return clientIp
   **/
-  @ApiModelProperty(required = true, value = "顾客IP")
+  @ApiModelProperty(value = "顾客IP")
   public String getClientIp() {
     return clientIp;
   }
@@ -323,7 +335,7 @@ public class V1Charge {
    * 是否关闭
    * @return closed
   **/
-  @ApiModelProperty(required = true, value = "是否关闭")
+  @ApiModelProperty(value = "是否关闭")
   public Boolean isClosed() {
     return closed;
   }
@@ -348,6 +360,24 @@ public class V1Charge {
 
   public void setClosedAt(OffsetDateTime closedAt) {
     this.closedAt = closedAt;
+  }
+
+  public V1Charge closedTs(String closedTs) {
+    this.closedTs = closedTs;
+    return this;
+  }
+
+   /**
+   * 关闭时间戳
+   * @return closedTs
+  **/
+  @ApiModelProperty(value = "关闭时间戳")
+  public String getClosedTs() {
+    return closedTs;
+  }
+
+  public void setClosedTs(String closedTs) {
+    this.closedTs = closedTs;
   }
 
   public V1Charge createdAt(OffsetDateTime createdAt) {
@@ -395,7 +425,7 @@ public class V1Charge {
    * 货币单位，当前仅支持 CNY
    * @return currency
   **/
-  @ApiModelProperty(required = true, value = "货币单位，当前仅支持 CNY")
+  @ApiModelProperty(value = "货币单位，当前仅支持 CNY")
   public String getCurrency() {
     return currency;
   }
@@ -413,13 +443,31 @@ public class V1Charge {
    * 描述信息
    * @return description
   **/
-  @ApiModelProperty(required = true, value = "描述信息")
+  @ApiModelProperty(value = "描述信息")
   public String getDescription() {
     return description;
   }
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public V1Charge expiredTs(String expiredTs) {
+    this.expiredTs = expiredTs;
+    return this;
+  }
+
+   /**
+   * 订单过期时间戳
+   * @return expiredTs
+  **/
+  @ApiModelProperty(value = "订单过期时间戳")
+  public String getExpiredTs() {
+    return expiredTs;
+  }
+
+  public void setExpiredTs(String expiredTs) {
+    this.expiredTs = expiredTs;
   }
 
   public V1Charge extra(V1ChargeExtra extra) {
@@ -449,7 +497,7 @@ public class V1Charge {
    * 收单机构错误码
    * @return failureCode
   **/
-  @ApiModelProperty(required = true, value = "收单机构错误码")
+  @ApiModelProperty(value = "收单机构错误码")
   public String getFailureCode() {
     return failureCode;
   }
@@ -467,7 +515,7 @@ public class V1Charge {
    * 收单机构错误描述信息
    * @return failureMsg
   **/
-  @ApiModelProperty(required = true, value = "收单机构错误描述信息")
+  @ApiModelProperty(value = "收单机构错误描述信息")
   public String getFailureMsg() {
     return failureMsg;
   }
@@ -485,7 +533,7 @@ public class V1Charge {
    * 表明是否是沙箱环境
    * @return liveMode
   **/
-  @ApiModelProperty(required = true, value = "表明是否是沙箱环境")
+  @ApiModelProperty(value = "表明是否是沙箱环境")
   public Boolean isLiveMode() {
     return liveMode;
   }
@@ -503,7 +551,7 @@ public class V1Charge {
    * 商户系统订单号，APP下需唯一
    * @return merchantTradeId
   **/
-  @ApiModelProperty(required = true, value = "商户系统订单号，APP下需唯一")
+  @ApiModelProperty(value = "商户系统订单号，APP下需唯一")
   public String getMerchantTradeId() {
     return merchantTradeId;
   }
@@ -538,6 +586,24 @@ public class V1Charge {
     this.metadata = metadata;
   }
 
+  public V1Charge object(String object) {
+    this.object = object;
+    return this;
+  }
+
+   /**
+   * 对象类型
+   * @return object
+  **/
+  @ApiModelProperty(value = "对象类型")
+  public String getObject() {
+    return object;
+  }
+
+  public void setObject(String object) {
+    this.object = object;
+  }
+
   public V1Charge paid(Boolean paid) {
     this.paid = paid;
     return this;
@@ -547,7 +613,7 @@ public class V1Charge {
    * 表明是否已支付
    * @return paid
   **/
-  @ApiModelProperty(required = true, value = "表明是否已支付")
+  @ApiModelProperty(value = "表明是否已支付")
   public Boolean isPaid() {
     return paid;
   }
@@ -574,6 +640,24 @@ public class V1Charge {
     this.paidAt = paidAt;
   }
 
+  public V1Charge paidTs(String paidTs) {
+    this.paidTs = paidTs;
+    return this;
+  }
+
+   /**
+   * 支付时间戳
+   * @return paidTs
+  **/
+  @ApiModelProperty(value = "支付时间戳")
+  public String getPaidTs() {
+    return paidTs;
+  }
+
+  public void setPaidTs(String paidTs) {
+    this.paidTs = paidTs;
+  }
+
   public V1Charge refunded(Boolean refunded) {
     this.refunded = refunded;
     return this;
@@ -583,7 +667,7 @@ public class V1Charge {
    * 表明是否包含退款，含退款失败的
    * @return refunded
   **/
-  @ApiModelProperty(required = true, value = "表明是否包含退款，含退款失败的")
+  @ApiModelProperty(value = "表明是否包含退款，含退款失败的")
   public Boolean isRefunded() {
     return refunded;
   }
@@ -627,7 +711,7 @@ public class V1Charge {
    * 表明是否已经撤销
    * @return reversed
   **/
-  @ApiModelProperty(required = true, value = "表明是否已经撤销")
+  @ApiModelProperty(value = "表明是否已经撤销")
   public Boolean isReversed() {
     return reversed;
   }
@@ -663,7 +747,7 @@ public class V1Charge {
    * 订单描述主题
    * @return subject
   **/
-  @ApiModelProperty(required = true, value = "订单描述主题")
+  @ApiModelProperty(value = "订单描述主题")
   public String getSubject() {
     return subject;
   }
@@ -699,7 +783,7 @@ public class V1Charge {
    * Charge 的支付单号
    * @return transactionNo
   **/
-  @ApiModelProperty(required = true, value = "Charge 的支付单号")
+  @ApiModelProperty(value = "Charge 的支付单号")
   public String getTransactionNo() {
     return transactionNo;
   }
@@ -717,7 +801,7 @@ public class V1Charge {
    * 订单生存时间，单位秒
    * @return ttl
   **/
-  @ApiModelProperty(required = true, value = "订单生存时间，单位秒")
+  @ApiModelProperty(value = "订单生存时间，单位秒")
   public Integer getTtl() {
     return ttl;
   }
@@ -748,18 +832,22 @@ public class V1Charge {
         Objects.equals(this.clientIp, v1Charge.clientIp) &&
         Objects.equals(this.closed, v1Charge.closed) &&
         Objects.equals(this.closedAt, v1Charge.closedAt) &&
+        Objects.equals(this.closedTs, v1Charge.closedTs) &&
         Objects.equals(this.createdAt, v1Charge.createdAt) &&
         Objects.equals(this.credential, v1Charge.credential) &&
         Objects.equals(this.currency, v1Charge.currency) &&
         Objects.equals(this.description, v1Charge.description) &&
+        Objects.equals(this.expiredTs, v1Charge.expiredTs) &&
         Objects.equals(this.extra, v1Charge.extra) &&
         Objects.equals(this.failureCode, v1Charge.failureCode) &&
         Objects.equals(this.failureMsg, v1Charge.failureMsg) &&
         Objects.equals(this.liveMode, v1Charge.liveMode) &&
         Objects.equals(this.merchantTradeId, v1Charge.merchantTradeId) &&
         Objects.equals(this.metadata, v1Charge.metadata) &&
+        Objects.equals(this.object, v1Charge.object) &&
         Objects.equals(this.paid, v1Charge.paid) &&
         Objects.equals(this.paidAt, v1Charge.paidAt) &&
+        Objects.equals(this.paidTs, v1Charge.paidTs) &&
         Objects.equals(this.refunded, v1Charge.refunded) &&
         Objects.equals(this.refunds, v1Charge.refunds) &&
         Objects.equals(this.reversed, v1Charge.reversed) &&
@@ -772,7 +860,7 @@ public class V1Charge {
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, amountFee, amountRefund, amountRoyalty, amountSettle, appId, body, channel, chargeId, clientIp, closed, closedAt, createdAt, credential, currency, description, extra, failureCode, failureMsg, liveMode, merchantTradeId, metadata, paid, paidAt, refunded, refunds, reversed, reversedAt, subject, timeExpire, transactionNo, ttl);
+    return Objects.hash(amount, amountFee, amountRefund, amountRoyalty, amountSettle, appId, body, channel, chargeId, clientIp, closed, closedAt, closedTs, createdAt, credential, currency, description, expiredTs, extra, failureCode, failureMsg, liveMode, merchantTradeId, metadata, object, paid, paidAt, paidTs, refunded, refunds, reversed, reversedAt, subject, timeExpire, transactionNo, ttl);
   }
 
 
@@ -793,18 +881,22 @@ public class V1Charge {
     sb.append("    clientIp: ").append(toIndentedString(clientIp)).append("\n");
     sb.append("    closed: ").append(toIndentedString(closed)).append("\n");
     sb.append("    closedAt: ").append(toIndentedString(closedAt)).append("\n");
+    sb.append("    closedTs: ").append(toIndentedString(closedTs)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    credential: ").append(toIndentedString(credential)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    expiredTs: ").append(toIndentedString(expiredTs)).append("\n");
     sb.append("    extra: ").append(toIndentedString(extra)).append("\n");
     sb.append("    failureCode: ").append(toIndentedString(failureCode)).append("\n");
     sb.append("    failureMsg: ").append(toIndentedString(failureMsg)).append("\n");
     sb.append("    liveMode: ").append(toIndentedString(liveMode)).append("\n");
     sb.append("    merchantTradeId: ").append(toIndentedString(merchantTradeId)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    object: ").append(toIndentedString(object)).append("\n");
     sb.append("    paid: ").append(toIndentedString(paid)).append("\n");
     sb.append("    paidAt: ").append(toIndentedString(paidAt)).append("\n");
+    sb.append("    paidTs: ").append(toIndentedString(paidTs)).append("\n");
     sb.append("    refunded: ").append(toIndentedString(refunded)).append("\n");
     sb.append("    refunds: ").append(toIndentedString(refunds)).append("\n");
     sb.append("    reversed: ").append(toIndentedString(reversed)).append("\n");

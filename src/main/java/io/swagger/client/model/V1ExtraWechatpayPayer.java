@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayPayer
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraWechatpayPayer {
   @SerializedName("appid")
   private String appid = null;
@@ -41,10 +41,10 @@ public class V1ExtraWechatpayPayer {
   }
 
    /**
-   * Get appid
+   * 应用下的 appid，必需和 Openid 一致
    * @return appid
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "应用下的 appid，必需和 Openid 一致")
   public String getAppid() {
     return appid;
   }
@@ -59,10 +59,10 @@ public class V1ExtraWechatpayPayer {
   }
 
    /**
-   * Get openid
+   * 下单前需获取到用户的 Openid。必需和 appid 一致
    * @return openid
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "下单前需获取到用户的 Openid。必需和 appid 一致")
   public String getOpenid() {
     return openid;
   }

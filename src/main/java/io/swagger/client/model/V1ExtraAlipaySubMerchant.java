@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipaySubMerchant
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraAlipaySubMerchant {
   @SerializedName("merchant_id")
   private String merchantId = null;
@@ -44,7 +44,7 @@ public class V1ExtraAlipaySubMerchant {
    * 商户的支付宝user_id
    * @return merchantId
   **/
-  @ApiModelProperty(required = true, value = "商户的支付宝user_id")
+  @ApiModelProperty(value = "商户的支付宝user_id")
   public String getMerchantId() {
     return merchantId;
   }
@@ -62,7 +62,7 @@ public class V1ExtraAlipaySubMerchant {
    * 商户类型，1：支付宝服务窗，2：第三方App，目前只支持支付宝服务窗，默认为1
    * @return merchantType
   **/
-  @ApiModelProperty(required = true, value = "商户类型，1：支付宝服务窗，2：第三方App，目前只支持支付宝服务窗，默认为1")
+  @ApiModelProperty(value = "商户类型，1：支付宝服务窗，2：第三方App，目前只支持支付宝服务窗，默认为1")
   public String getMerchantType() {
     return merchantType;
   }

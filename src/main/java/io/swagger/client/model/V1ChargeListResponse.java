@@ -31,7 +31,7 @@ import java.util.List;
  * 返回一个已存在的 charge 对象列表或者一个错误
  */
 @ApiModel(description = "返回一个已存在的 charge 对象列表或者一个错误")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ChargeListResponse {
   @SerializedName("data")
   private List<V1Charge> data = null;
@@ -40,7 +40,7 @@ public class V1ChargeListResponse {
   private Boolean hasMore = false;
 
   @SerializedName("object")
-  private String object = "Charge";
+  private String object = null;
 
   public V1ChargeListResponse data(List<V1Charge> data) {
     this.data = data;
@@ -77,7 +77,7 @@ public class V1ChargeListResponse {
    * 表明获取列表之后是否还有更多的元素实体。如果值为 false，表明当前页是最后一页
    * @return hasMore
   **/
-  @ApiModelProperty(required = true, value = "表明获取列表之后是否还有更多的元素实体。如果值为 false，表明当前页是最后一页")
+  @ApiModelProperty(value = "表明获取列表之后是否还有更多的元素实体。如果值为 false，表明当前页是最后一页")
   public Boolean isHasMore() {
     return hasMore;
   }
@@ -92,10 +92,10 @@ public class V1ChargeListResponse {
   }
 
    /**
-   * 对象类型
+   * 返回对象的类型，此值为 ChargeList
    * @return object
   **/
-  @ApiModelProperty(required = true, value = "对象类型")
+  @ApiModelProperty(value = "返回对象的类型，此值为 ChargeList")
   public String getObject() {
     return object;
   }

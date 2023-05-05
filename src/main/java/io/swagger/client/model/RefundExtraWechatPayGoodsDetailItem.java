@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * RefundExtraWechatPayGoodsDetailItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class RefundExtraWechatPayGoodsDetailItem {
   @SerializedName("goods_name")
   private String goodsName = null;
@@ -56,7 +56,7 @@ public class RefundExtraWechatPayGoodsDetailItem {
    * 商品名称, 商品的实际名称
    * @return goodsName
   **/
-  @ApiModelProperty(required = true, value = "商品名称, 商品的实际名称")
+  @ApiModelProperty(value = "商品名称, 商品的实际名称")
   public String getGoodsName() {
     return goodsName;
   }
@@ -74,7 +74,7 @@ public class RefundExtraWechatPayGoodsDetailItem {
    * 商户侧商品编码, 由半角的大小写字母、数字、中划线、下划线中的一种或几种组成
    * @return merchantGoodsId
   **/
-  @ApiModelProperty(required = true, value = "商户侧商品编码, 由半角的大小写字母、数字、中划线、下划线中的一种或几种组成")
+  @ApiModelProperty(value = "商户侧商品编码, 由半角的大小写字母、数字、中划线、下划线中的一种或几种组成")
   public String getMerchantGoodsId() {
     return merchantGoodsId;
   }
@@ -92,7 +92,7 @@ public class RefundExtraWechatPayGoodsDetailItem {
    * 商品退款金额，单位为分
    * @return refundAmount
   **/
-  @ApiModelProperty(required = true, value = "商品退款金额，单位为分")
+  @ApiModelProperty(value = "商品退款金额，单位为分")
   public Long getRefundAmount() {
     return refundAmount;
   }
@@ -110,7 +110,7 @@ public class RefundExtraWechatPayGoodsDetailItem {
    *  单品的退款数量
    * @return refundQuantity
   **/
-  @ApiModelProperty(required = true, value = " 单品的退款数量")
+  @ApiModelProperty(value = " 单品的退款数量")
   public Long getRefundQuantity() {
     return refundQuantity;
   }
@@ -128,7 +128,7 @@ public class RefundExtraWechatPayGoodsDetailItem {
    * 商品单价金额，单位为分
    * @return unitPrice
   **/
-  @ApiModelProperty(required = true, value = "商品单价金额，单位为分")
+  @ApiModelProperty(value = "商品单价金额，单位为分")
   public Long getUnitPrice() {
     return unitPrice;
   }
@@ -146,7 +146,7 @@ public class RefundExtraWechatPayGoodsDetailItem {
    * 微信支付商品编码, 微信支付定义的统一商品编号（没有可不传）
    * @return wechatpayGoodsId
   **/
-  @ApiModelProperty(required = true, value = "微信支付商品编码, 微信支付定义的统一商品编号（没有可不传）")
+  @ApiModelProperty(value = "微信支付商品编码, 微信支付定义的统一商品编号（没有可不传）")
   public String getWechatpayGoodsId() {
     return wechatpayGoodsId;
   }

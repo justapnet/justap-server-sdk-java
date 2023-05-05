@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.V1ExtraAlipayExtUserInfo;
 import io.swagger.client.model.V1ExtraAlipayExtendParams;
 import io.swagger.client.model.V1ExtraAlipayGoodsDetail;
 import io.swagger.client.model.V1ExtraAlipayVoucherDetailList;
@@ -33,7 +32,7 @@ import java.util.List;
 /**
  * V1ExtraAlipayWap
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraAlipayWap {
   @SerializedName("auth_token")
   private String authToken = null;
@@ -46,9 +45,6 @@ public class V1ExtraAlipayWap {
 
   @SerializedName("enable_pay_channels")
   private String enablePayChannels = null;
-
-  @SerializedName("ext_user_info")
-  private V1ExtraAlipayExtUserInfo extUserInfo = null;
 
   @SerializedName("extend_params")
   private V1ExtraAlipayExtendParams extendParams = null;
@@ -98,7 +94,7 @@ public class V1ExtraAlipayWap {
    * 授权码
    * @return authToken
   **/
-  @ApiModelProperty(required = true, value = "授权码")
+  @ApiModelProperty(value = "授权码")
   public String getAuthToken() {
     return authToken;
   }
@@ -116,7 +112,7 @@ public class V1ExtraAlipayWap {
    * 业务扩展参数
    * @return businessParams
   **/
-  @ApiModelProperty(required = true, value = "业务扩展参数")
+  @ApiModelProperty(value = "业务扩展参数")
   public String getBusinessParams() {
     return businessParams;
   }
@@ -134,7 +130,7 @@ public class V1ExtraAlipayWap {
    * 禁用渠道
    * @return disablePayChannels
   **/
-  @ApiModelProperty(required = true, value = "禁用渠道")
+  @ApiModelProperty(value = "禁用渠道")
   public String getDisablePayChannels() {
     return disablePayChannels;
   }
@@ -152,31 +148,13 @@ public class V1ExtraAlipayWap {
    * 可用渠道
    * @return enablePayChannels
   **/
-  @ApiModelProperty(required = true, value = "可用渠道")
+  @ApiModelProperty(value = "可用渠道")
   public String getEnablePayChannels() {
     return enablePayChannels;
   }
 
   public void setEnablePayChannels(String enablePayChannels) {
     this.enablePayChannels = enablePayChannels;
-  }
-
-  public V1ExtraAlipayWap extUserInfo(V1ExtraAlipayExtUserInfo extUserInfo) {
-    this.extUserInfo = extUserInfo;
-    return this;
-  }
-
-   /**
-   * 支付宝用户信息
-   * @return extUserInfo
-  **/
-  @ApiModelProperty(value = "支付宝用户信息")
-  public V1ExtraAlipayExtUserInfo getExtUserInfo() {
-    return extUserInfo;
-  }
-
-  public void setExtUserInfo(V1ExtraAlipayExtUserInfo extUserInfo) {
-    this.extUserInfo = extUserInfo;
   }
 
   public V1ExtraAlipayWap extendParams(V1ExtraAlipayExtendParams extendParams) {
@@ -258,7 +236,7 @@ public class V1ExtraAlipayWap {
    * 商品类型
    * @return goodsType
   **/
-  @ApiModelProperty(required = true, value = "商品类型")
+  @ApiModelProperty(value = "商品类型")
   public String getGoodsType() {
     return goodsType;
   }
@@ -276,7 +254,7 @@ public class V1ExtraAlipayWap {
    * [ONLY IN RESPONSE] 商户订单号
    * @return merchantTradeId
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 商户订单号")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 商户订单号")
   public String getMerchantTradeId() {
     return merchantTradeId;
   }
@@ -294,7 +272,7 @@ public class V1ExtraAlipayWap {
    * [ONLY IN RESPONSE] 支付链接
    * @return payUrl
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 支付链接")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 支付链接")
   public String getPayUrl() {
     return payUrl;
   }
@@ -312,7 +290,7 @@ public class V1ExtraAlipayWap {
    * 销售产品码
    * @return productCode
   **/
-  @ApiModelProperty(required = true, value = "销售产品码")
+  @ApiModelProperty(value = "销售产品码")
   public String getProductCode() {
     return productCode;
   }
@@ -330,7 +308,7 @@ public class V1ExtraAlipayWap {
    * 优惠参数
    * @return promoParams
   **/
-  @ApiModelProperty(required = true, value = "优惠参数")
+  @ApiModelProperty(value = "优惠参数")
   public String getPromoParams() {
     return promoParams;
   }
@@ -348,7 +326,7 @@ public class V1ExtraAlipayWap {
    * 支付取消跳转的地址
    * @return quitUrl
   **/
-  @ApiModelProperty(required = true, value = "支付取消跳转的地址")
+  @ApiModelProperty(value = "支付取消跳转的地址")
   public String getQuitUrl() {
     return quitUrl;
   }
@@ -366,7 +344,7 @@ public class V1ExtraAlipayWap {
    * 支付成功跳转的地址
    * @return returnUrl
   **/
-  @ApiModelProperty(required = true, value = "支付成功跳转的地址")
+  @ApiModelProperty(value = "支付成功跳转的地址")
   public String getReturnUrl() {
     return returnUrl;
   }
@@ -384,7 +362,7 @@ public class V1ExtraAlipayWap {
    * [ONLY IN RESPONSE] 收款支付宝用户ID
    * @return sellerId
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 收款支付宝用户ID")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 收款支付宝用户ID")
   public String getSellerId() {
     return sellerId;
   }
@@ -402,7 +380,7 @@ public class V1ExtraAlipayWap {
    * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(required = true, value = "商户门店编号")
+  @ApiModelProperty(value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }
@@ -443,7 +421,6 @@ public class V1ExtraAlipayWap {
         Objects.equals(this.businessParams, v1ExtraAlipayWap.businessParams) &&
         Objects.equals(this.disablePayChannels, v1ExtraAlipayWap.disablePayChannels) &&
         Objects.equals(this.enablePayChannels, v1ExtraAlipayWap.enablePayChannels) &&
-        Objects.equals(this.extUserInfo, v1ExtraAlipayWap.extUserInfo) &&
         Objects.equals(this.extendParams, v1ExtraAlipayWap.extendParams) &&
         Objects.equals(this.fundBillList, v1ExtraAlipayWap.fundBillList) &&
         Objects.equals(this.goodsDetail, v1ExtraAlipayWap.goodsDetail) &&
@@ -461,7 +438,7 @@ public class V1ExtraAlipayWap {
 
   @Override
   public int hashCode() {
-    return Objects.hash(authToken, businessParams, disablePayChannels, enablePayChannels, extUserInfo, extendParams, fundBillList, goodsDetail, goodsType, merchantTradeId, payUrl, productCode, promoParams, quitUrl, returnUrl, sellerId, storeId, voucherDetailList);
+    return Objects.hash(authToken, businessParams, disablePayChannels, enablePayChannels, extendParams, fundBillList, goodsDetail, goodsType, merchantTradeId, payUrl, productCode, promoParams, quitUrl, returnUrl, sellerId, storeId, voucherDetailList);
   }
 
 
@@ -474,7 +451,6 @@ public class V1ExtraAlipayWap {
     sb.append("    businessParams: ").append(toIndentedString(businessParams)).append("\n");
     sb.append("    disablePayChannels: ").append(toIndentedString(disablePayChannels)).append("\n");
     sb.append("    enablePayChannels: ").append(toIndentedString(enablePayChannels)).append("\n");
-    sb.append("    extUserInfo: ").append(toIndentedString(extUserInfo)).append("\n");
     sb.append("    extendParams: ").append(toIndentedString(extendParams)).append("\n");
     sb.append("    fundBillList: ").append(toIndentedString(fundBillList)).append("\n");
     sb.append("    goodsDetail: ").append(toIndentedString(goodsDetail)).append("\n");

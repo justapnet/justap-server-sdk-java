@@ -32,7 +32,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayLite
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraAlipayLite {
   @SerializedName("body")
   private String body = null;
@@ -94,7 +94,7 @@ public class V1ExtraAlipayLite {
    * 商品描述
    * @return body
   **/
-  @ApiModelProperty(required = true, value = "商品描述")
+  @ApiModelProperty(value = "商品描述")
   public String getBody() {
     return body;
   }
@@ -130,7 +130,7 @@ public class V1ExtraAlipayLite {
    * 买家的支付宝唯一用户号（2088开头的16位纯数字）
    * @return buyerId
   **/
-  @ApiModelProperty(required = true, value = "买家的支付宝唯一用户号（2088开头的16位纯数字）")
+  @ApiModelProperty(value = "买家的支付宝唯一用户号（2088开头的16位纯数字）")
   public String getBuyerId() {
     return buyerId;
   }
@@ -202,7 +202,7 @@ public class V1ExtraAlipayLite {
    * 商户操作员编号
    * @return operatorId
   **/
-  @ApiModelProperty(required = true, value = "商户操作员编号")
+  @ApiModelProperty(value = "商户操作员编号")
   public String getOperatorId() {
     return operatorId;
   }
@@ -220,7 +220,7 @@ public class V1ExtraAlipayLite {
    * 销售产品码，商家和支付宝签约的产品码，为固定值 FACE_TO_FACE_PAYMENT
    * @return productCode
   **/
-  @ApiModelProperty(required = true, value = "销售产品码，商家和支付宝签约的产品码，为固定值 FACE_TO_FACE_PAYMENT")
+  @ApiModelProperty(value = "销售产品码，商家和支付宝签约的产品码，为固定值 FACE_TO_FACE_PAYMENT")
   public String getProductCode() {
     return productCode;
   }
@@ -256,7 +256,7 @@ public class V1ExtraAlipayLite {
    * 卖家支付宝用户号
    * @return sellerId
   **/
-  @ApiModelProperty(required = true, value = "卖家支付宝用户号")
+  @ApiModelProperty(value = "卖家支付宝用户号")
   public String getSellerId() {
     return sellerId;
   }
@@ -292,7 +292,7 @@ public class V1ExtraAlipayLite {
    * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(required = true, value = "商户门店编号")
+  @ApiModelProperty(value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }
@@ -310,7 +310,7 @@ public class V1ExtraAlipayLite {
    * 商户机具终端编号
    * @return terminalId
   **/
-  @ApiModelProperty(required = true, value = "商户机具终端编号")
+  @ApiModelProperty(value = "商户机具终端编号")
   public String getTerminalId() {
     return terminalId;
   }
@@ -328,7 +328,7 @@ public class V1ExtraAlipayLite {
    * 绝对超时时间，格式为yyyy-MM-dd HH:mm:ss
    * @return timeExpire
   **/
-  @ApiModelProperty(required = true, value = "绝对超时时间，格式为yyyy-MM-dd HH:mm:ss")
+  @ApiModelProperty(value = "绝对超时时间，格式为yyyy-MM-dd HH:mm:ss")
   public String getTimeExpire() {
     return timeExpire;
   }
@@ -346,7 +346,7 @@ public class V1ExtraAlipayLite {
    * 订单有效时间，该时间段内订单可以进行支付，结束后订单将关闭，天数为0表示永久有效
    * @return timeoutExpress
   **/
-  @ApiModelProperty(required = true, value = "订单有效时间，该时间段内订单可以进行支付，结束后订单将关闭，天数为0表示永久有效")
+  @ApiModelProperty(value = "订单有效时间，该时间段内订单可以进行支付，结束后订单将关闭，天数为0表示永久有效")
   public String getTimeoutExpress() {
     return timeoutExpress;
   }
@@ -364,7 +364,7 @@ public class V1ExtraAlipayLite {
    * [ONLY IN RESPONSE] 支付宝交易号
    * @return tradeNo
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 支付宝交易号")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 支付宝交易号")
   public String getTradeNo() {
     return tradeNo;
   }

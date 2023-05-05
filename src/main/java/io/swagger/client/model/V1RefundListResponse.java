@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * V1RefundListResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1RefundListResponse {
   @SerializedName("data")
   private List<V1Refund> data = null;
@@ -39,7 +39,7 @@ public class V1RefundListResponse {
   private Boolean hasMore = false;
 
   @SerializedName("object")
-  private String object = "Refund";
+  private String object = "RefundList";
 
   @SerializedName("total")
   private Integer total = 0;
@@ -79,7 +79,7 @@ public class V1RefundListResponse {
    * 表明获取列表之后是否还有更多的元素实体。如果值为 false，表明当前页是最后一页
    * @return hasMore
   **/
-  @ApiModelProperty(required = true, value = "表明获取列表之后是否还有更多的元素实体。如果值为 false，表明当前页是最后一页")
+  @ApiModelProperty(value = "表明获取列表之后是否还有更多的元素实体。如果值为 false，表明当前页是最后一页")
   public Boolean isHasMore() {
     return hasMore;
   }
@@ -97,7 +97,7 @@ public class V1RefundListResponse {
    * 对象类型
    * @return object
   **/
-  @ApiModelProperty(required = true, value = "对象类型")
+  @ApiModelProperty(value = "对象类型")
   public String getObject() {
     return object;
   }
@@ -115,7 +115,7 @@ public class V1RefundListResponse {
    * 总数据条数
    * @return total
   **/
-  @ApiModelProperty(required = true, value = "总数据条数")
+  @ApiModelProperty(value = "总数据条数")
   public Integer getTotal() {
     return total;
   }

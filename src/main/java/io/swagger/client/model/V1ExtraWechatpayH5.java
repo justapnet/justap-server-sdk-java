@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayH5
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraWechatpayH5 {
   @SerializedName("attach")
   private String attach = null;
@@ -113,7 +113,7 @@ public class V1ExtraWechatpayH5 {
    * 订单优惠标记
    * @return goodsTag
   **/
-  @ApiModelProperty(required = true, value = "订单优惠标记")
+  @ApiModelProperty(value = "订单优惠标记")
   public String getGoodsTag() {
     return goodsTag;
   }
@@ -131,7 +131,7 @@ public class V1ExtraWechatpayH5 {
    * 支付签名
    * @return paySign
   **/
-  @ApiModelProperty(required = true, value = "支付签名")
+  @ApiModelProperty(value = "支付签名")
   public String getPaySign() {
     return paySign;
   }
@@ -149,7 +149,7 @@ public class V1ExtraWechatpayH5 {
    * 支付链接
    * @return payUrl
   **/
-  @ApiModelProperty(required = true, value = "支付链接")
+  @ApiModelProperty(value = "支付链接")
   public String getPayUrl() {
     return payUrl;
   }
@@ -167,7 +167,7 @@ public class V1ExtraWechatpayH5 {
    * 预支付交易会话标识
    * @return prepayId
   **/
-  @ApiModelProperty(required = true, value = "预支付交易会话标识")
+  @ApiModelProperty(value = "预支付交易会话标识")
   public String getPrepayId() {
     return prepayId;
   }
@@ -221,7 +221,7 @@ public class V1ExtraWechatpayH5 {
    * 交易结束时间
    * @return timeExpire
   **/
-  @ApiModelProperty(required = true, value = "交易结束时间")
+  @ApiModelProperty(value = "交易结束时间")
   public String getTimeExpire() {
     return timeExpire;
   }
@@ -239,7 +239,7 @@ public class V1ExtraWechatpayH5 {
    * 交易起始时间
    * @return timeStart
   **/
-  @ApiModelProperty(required = true, value = "交易起始时间")
+  @ApiModelProperty(value = "交易起始时间")
   public String getTimeStart() {
     return timeStart;
   }
@@ -257,7 +257,7 @@ public class V1ExtraWechatpayH5 {
    * WAP网站名
    * @return wapName
   **/
-  @ApiModelProperty(required = true, value = "WAP网站名")
+  @ApiModelProperty(value = "WAP网站名")
   public String getWapName() {
     return wapName;
   }
@@ -275,7 +275,7 @@ public class V1ExtraWechatpayH5 {
    * WAP网站URL
    * @return wapUrl
   **/
-  @ApiModelProperty(required = true, value = "WAP网站URL")
+  @ApiModelProperty(value = "WAP网站URL")
   public String getWapUrl() {
     return wapUrl;
   }

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayAppConfig
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraWechatpayAppConfig {
   @SerializedName("appid")
   private String appid = null;
@@ -59,7 +59,7 @@ public class V1ExtraWechatpayAppConfig {
    * 应用appid
    * @return appid
   **/
-  @ApiModelProperty(required = true, value = "应用appid")
+  @ApiModelProperty(value = "应用appid")
   public String getAppid() {
     return appid;
   }
@@ -77,7 +77,7 @@ public class V1ExtraWechatpayAppConfig {
    * 随机字符串
    * @return noncestr
   **/
-  @ApiModelProperty(required = true, value = "随机字符串")
+  @ApiModelProperty(value = "随机字符串")
   public String getNoncestr() {
     return noncestr;
   }
@@ -95,7 +95,7 @@ public class V1ExtraWechatpayAppConfig {
    * 扩展字段
    * @return _package
   **/
-  @ApiModelProperty(required = true, value = "扩展字段")
+  @ApiModelProperty(value = "扩展字段")
   public String getPackage() {
     return _package;
   }
@@ -113,7 +113,7 @@ public class V1ExtraWechatpayAppConfig {
    * 商户号
    * @return partnerid
   **/
-  @ApiModelProperty(required = true, value = "商户号")
+  @ApiModelProperty(value = "商户号")
   public String getPartnerid() {
     return partnerid;
   }
@@ -131,7 +131,7 @@ public class V1ExtraWechatpayAppConfig {
    * 预支付交易会话标识
    * @return prepayid
   **/
-  @ApiModelProperty(required = true, value = "预支付交易会话标识")
+  @ApiModelProperty(value = "预支付交易会话标识")
   public String getPrepayid() {
     return prepayid;
   }
@@ -149,7 +149,7 @@ public class V1ExtraWechatpayAppConfig {
    * 签名
    * @return sign
   **/
-  @ApiModelProperty(required = true, value = "签名")
+  @ApiModelProperty(value = "签名")
   public String getSign() {
     return sign;
   }
@@ -167,7 +167,7 @@ public class V1ExtraWechatpayAppConfig {
    * 时间戳
    * @return timestamp
   **/
-  @ApiModelProperty(required = true, value = "时间戳")
+  @ApiModelProperty(value = "时间戳")
   public String getTimestamp() {
     return timestamp;
   }

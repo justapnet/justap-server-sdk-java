@@ -22,13 +22,9 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.V1ExtraAlipayAgreementSignParams;
-import io.swagger.client.model.V1ExtraAlipayExtUserInfo;
 import io.swagger.client.model.V1ExtraAlipayExtendParams;
 import io.swagger.client.model.V1ExtraAlipayGoodsDetail;
 import io.swagger.client.model.V1ExtraAlipayInvoiceInfo;
-import io.swagger.client.model.V1ExtraAlipayRoyaltyInfo;
-import io.swagger.client.model.V1ExtraAlipaySettleInfo;
 import io.swagger.client.model.V1ExtraAlipaySubMerchant;
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -38,11 +34,8 @@ import java.util.List;
 /**
  * V1ExtraAlipayPage
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraAlipayPage {
-  @SerializedName("agreement_sign_params")
-  private V1ExtraAlipayAgreementSignParams agreementSignParams = null;
-
   @SerializedName("business_params")
   private BigDecimal businessParams = null;
 
@@ -51,9 +44,6 @@ public class V1ExtraAlipayPage {
 
   @SerializedName("enable_pay_channels")
   private String enablePayChannels = null;
-
-  @SerializedName("ext_user_info")
-  private V1ExtraAlipayExtUserInfo extUserInfo = null;
 
   @SerializedName("extend_params")
   private V1ExtraAlipayExtendParams extendParams = null;
@@ -88,14 +78,8 @@ public class V1ExtraAlipayPage {
   @SerializedName("request_from_url")
   private BigDecimal requestFromUrl = null;
 
-  @SerializedName("royalty_info")
-  private V1ExtraAlipayRoyaltyInfo royaltyInfo = null;
-
   @SerializedName("seller_id")
   private String sellerId = null;
-
-  @SerializedName("settle_info")
-  private V1ExtraAlipaySettleInfo settleInfo = null;
 
   @SerializedName("store_id")
   private String storeId = null;
@@ -106,24 +90,6 @@ public class V1ExtraAlipayPage {
   @SerializedName("time_expire")
   private Integer timeExpire = null;
 
-  public V1ExtraAlipayPage agreementSignParams(V1ExtraAlipayAgreementSignParams agreementSignParams) {
-    this.agreementSignParams = agreementSignParams;
-    return this;
-  }
-
-   /**
-   * 签约参数。如果希望在sdk中支付并签约，需要在这里传入签约信息。周期扣款场景 product_code 为 CYCLE_PAY_AUTH 时必填。
-   * @return agreementSignParams
-  **/
-  @ApiModelProperty(value = "签约参数。如果希望在sdk中支付并签约，需要在这里传入签约信息。周期扣款场景 product_code 为 CYCLE_PAY_AUTH 时必填。")
-  public V1ExtraAlipayAgreementSignParams getAgreementSignParams() {
-    return agreementSignParams;
-  }
-
-  public void setAgreementSignParams(V1ExtraAlipayAgreementSignParams agreementSignParams) {
-    this.agreementSignParams = agreementSignParams;
-  }
-
   public V1ExtraAlipayPage businessParams(BigDecimal businessParams) {
     this.businessParams = businessParams;
     return this;
@@ -133,7 +99,7 @@ public class V1ExtraAlipayPage {
    * 业务扩展参数
    * @return businessParams
   **/
-  @ApiModelProperty(required = true, value = "业务扩展参数")
+  @ApiModelProperty(value = "业务扩展参数")
   public BigDecimal getBusinessParams() {
     return businessParams;
   }
@@ -151,7 +117,7 @@ public class V1ExtraAlipayPage {
    * 禁用渠道
    * @return disablePayChannels
   **/
-  @ApiModelProperty(required = true, value = "禁用渠道")
+  @ApiModelProperty(value = "禁用渠道")
   public String getDisablePayChannels() {
     return disablePayChannels;
   }
@@ -169,31 +135,13 @@ public class V1ExtraAlipayPage {
    * 可用渠道
    * @return enablePayChannels
   **/
-  @ApiModelProperty(required = true, value = "可用渠道")
+  @ApiModelProperty(value = "可用渠道")
   public String getEnablePayChannels() {
     return enablePayChannels;
   }
 
   public void setEnablePayChannels(String enablePayChannels) {
     this.enablePayChannels = enablePayChannels;
-  }
-
-  public V1ExtraAlipayPage extUserInfo(V1ExtraAlipayExtUserInfo extUserInfo) {
-    this.extUserInfo = extUserInfo;
-    return this;
-  }
-
-   /**
-   * 支付宝用户信息
-   * @return extUserInfo
-  **/
-  @ApiModelProperty(value = "支付宝用户信息")
-  public V1ExtraAlipayExtUserInfo getExtUserInfo() {
-    return extUserInfo;
-  }
-
-  public void setExtUserInfo(V1ExtraAlipayExtUserInfo extUserInfo) {
-    this.extUserInfo = extUserInfo;
   }
 
   public V1ExtraAlipayPage extendParams(V1ExtraAlipayExtendParams extendParams) {
@@ -249,7 +197,7 @@ public class V1ExtraAlipayPage {
    * 商品类型
    * @return goodsType
   **/
-  @ApiModelProperty(required = true, value = "商品类型")
+  @ApiModelProperty(value = "商品类型")
   public String getGoodsType() {
     return goodsType;
   }
@@ -267,7 +215,7 @@ public class V1ExtraAlipayPage {
    * 支付宝用户ID
    * @return integrationType
   **/
-  @ApiModelProperty(required = true, value = "支付宝用户ID")
+  @ApiModelProperty(value = "支付宝用户ID")
   public BigDecimal getIntegrationType() {
     return integrationType;
   }
@@ -303,7 +251,7 @@ public class V1ExtraAlipayPage {
    * [ONLY IN RESPONSE] 商户订单号
    * @return merchantTradeId
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 商户订单号")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 商户订单号")
   public String getMerchantTradeId() {
     return merchantTradeId;
   }
@@ -321,7 +269,7 @@ public class V1ExtraAlipayPage {
    * [ONLY IN RESPONSE] 支付链接
    * @return payUrl
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 支付链接")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 支付链接")
   public String getPayUrl() {
     return payUrl;
   }
@@ -339,7 +287,7 @@ public class V1ExtraAlipayPage {
    * 优惠参数
    * @return promoParams
   **/
-  @ApiModelProperty(required = true, value = "优惠参数")
+  @ApiModelProperty(value = "优惠参数")
   public String getPromoParams() {
     return promoParams;
   }
@@ -357,7 +305,7 @@ public class V1ExtraAlipayPage {
    * 扫码支付模式
    * @return qrPayMode
   **/
-  @ApiModelProperty(required = true, value = "扫码支付模式")
+  @ApiModelProperty(value = "扫码支付模式")
   public String getQrPayMode() {
     return qrPayMode;
   }
@@ -375,7 +323,7 @@ public class V1ExtraAlipayPage {
    * 二维码宽度
    * @return qrcodeWidth
   **/
-  @ApiModelProperty(required = true, value = "二维码宽度")
+  @ApiModelProperty(value = "二维码宽度")
   public BigDecimal getQrcodeWidth() {
     return qrcodeWidth;
   }
@@ -393,31 +341,13 @@ public class V1ExtraAlipayPage {
    * 请求来源地址
    * @return requestFromUrl
   **/
-  @ApiModelProperty(required = true, value = "请求来源地址")
+  @ApiModelProperty(value = "请求来源地址")
   public BigDecimal getRequestFromUrl() {
     return requestFromUrl;
   }
 
   public void setRequestFromUrl(BigDecimal requestFromUrl) {
     this.requestFromUrl = requestFromUrl;
-  }
-
-  public V1ExtraAlipayPage royaltyInfo(V1ExtraAlipayRoyaltyInfo royaltyInfo) {
-    this.royaltyInfo = royaltyInfo;
-    return this;
-  }
-
-   /**
-   * 分账类型卖家的分账类型，目前只支持传入ROYALTY（普通分账类型）。
-   * @return royaltyInfo
-  **/
-  @ApiModelProperty(value = "分账类型卖家的分账类型，目前只支持传入ROYALTY（普通分账类型）。")
-  public V1ExtraAlipayRoyaltyInfo getRoyaltyInfo() {
-    return royaltyInfo;
-  }
-
-  public void setRoyaltyInfo(V1ExtraAlipayRoyaltyInfo royaltyInfo) {
-    this.royaltyInfo = royaltyInfo;
   }
 
   public V1ExtraAlipayPage sellerId(String sellerId) {
@@ -429,31 +359,13 @@ public class V1ExtraAlipayPage {
    * [ONLY IN RESPONSE] 收款支付宝用户ID
    * @return sellerId
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 收款支付宝用户ID")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 收款支付宝用户ID")
   public String getSellerId() {
     return sellerId;
   }
 
   public void setSellerId(String sellerId) {
     this.sellerId = sellerId;
-  }
-
-  public V1ExtraAlipayPage settleInfo(V1ExtraAlipaySettleInfo settleInfo) {
-    this.settleInfo = settleInfo;
-    return this;
-  }
-
-   /**
-   * 结算信息
-   * @return settleInfo
-  **/
-  @ApiModelProperty(value = "结算信息")
-  public V1ExtraAlipaySettleInfo getSettleInfo() {
-    return settleInfo;
-  }
-
-  public void setSettleInfo(V1ExtraAlipaySettleInfo settleInfo) {
-    this.settleInfo = settleInfo;
   }
 
   public V1ExtraAlipayPage storeId(String storeId) {
@@ -465,7 +377,7 @@ public class V1ExtraAlipayPage {
    * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(required = true, value = "商户门店编号")
+  @ApiModelProperty(value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }
@@ -520,11 +432,9 @@ public class V1ExtraAlipayPage {
       return false;
     }
     V1ExtraAlipayPage v1ExtraAlipayPage = (V1ExtraAlipayPage) o;
-    return Objects.equals(this.agreementSignParams, v1ExtraAlipayPage.agreementSignParams) &&
-        Objects.equals(this.businessParams, v1ExtraAlipayPage.businessParams) &&
+    return Objects.equals(this.businessParams, v1ExtraAlipayPage.businessParams) &&
         Objects.equals(this.disablePayChannels, v1ExtraAlipayPage.disablePayChannels) &&
         Objects.equals(this.enablePayChannels, v1ExtraAlipayPage.enablePayChannels) &&
-        Objects.equals(this.extUserInfo, v1ExtraAlipayPage.extUserInfo) &&
         Objects.equals(this.extendParams, v1ExtraAlipayPage.extendParams) &&
         Objects.equals(this.goodsDetail, v1ExtraAlipayPage.goodsDetail) &&
         Objects.equals(this.goodsType, v1ExtraAlipayPage.goodsType) &&
@@ -536,9 +446,7 @@ public class V1ExtraAlipayPage {
         Objects.equals(this.qrPayMode, v1ExtraAlipayPage.qrPayMode) &&
         Objects.equals(this.qrcodeWidth, v1ExtraAlipayPage.qrcodeWidth) &&
         Objects.equals(this.requestFromUrl, v1ExtraAlipayPage.requestFromUrl) &&
-        Objects.equals(this.royaltyInfo, v1ExtraAlipayPage.royaltyInfo) &&
         Objects.equals(this.sellerId, v1ExtraAlipayPage.sellerId) &&
-        Objects.equals(this.settleInfo, v1ExtraAlipayPage.settleInfo) &&
         Objects.equals(this.storeId, v1ExtraAlipayPage.storeId) &&
         Objects.equals(this.subMerchant, v1ExtraAlipayPage.subMerchant) &&
         Objects.equals(this.timeExpire, v1ExtraAlipayPage.timeExpire);
@@ -546,7 +454,7 @@ public class V1ExtraAlipayPage {
 
   @Override
   public int hashCode() {
-    return Objects.hash(agreementSignParams, businessParams, disablePayChannels, enablePayChannels, extUserInfo, extendParams, goodsDetail, goodsType, integrationType, invoiceInfo, merchantTradeId, payUrl, promoParams, qrPayMode, qrcodeWidth, requestFromUrl, royaltyInfo, sellerId, settleInfo, storeId, subMerchant, timeExpire);
+    return Objects.hash(businessParams, disablePayChannels, enablePayChannels, extendParams, goodsDetail, goodsType, integrationType, invoiceInfo, merchantTradeId, payUrl, promoParams, qrPayMode, qrcodeWidth, requestFromUrl, sellerId, storeId, subMerchant, timeExpire);
   }
 
 
@@ -555,11 +463,9 @@ public class V1ExtraAlipayPage {
     StringBuilder sb = new StringBuilder();
     sb.append("class V1ExtraAlipayPage {\n");
     
-    sb.append("    agreementSignParams: ").append(toIndentedString(agreementSignParams)).append("\n");
     sb.append("    businessParams: ").append(toIndentedString(businessParams)).append("\n");
     sb.append("    disablePayChannels: ").append(toIndentedString(disablePayChannels)).append("\n");
     sb.append("    enablePayChannels: ").append(toIndentedString(enablePayChannels)).append("\n");
-    sb.append("    extUserInfo: ").append(toIndentedString(extUserInfo)).append("\n");
     sb.append("    extendParams: ").append(toIndentedString(extendParams)).append("\n");
     sb.append("    goodsDetail: ").append(toIndentedString(goodsDetail)).append("\n");
     sb.append("    goodsType: ").append(toIndentedString(goodsType)).append("\n");
@@ -571,9 +477,7 @@ public class V1ExtraAlipayPage {
     sb.append("    qrPayMode: ").append(toIndentedString(qrPayMode)).append("\n");
     sb.append("    qrcodeWidth: ").append(toIndentedString(qrcodeWidth)).append("\n");
     sb.append("    requestFromUrl: ").append(toIndentedString(requestFromUrl)).append("\n");
-    sb.append("    royaltyInfo: ").append(toIndentedString(royaltyInfo)).append("\n");
     sb.append("    sellerId: ").append(toIndentedString(sellerId)).append("\n");
-    sb.append("    settleInfo: ").append(toIndentedString(settleInfo)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    subMerchant: ").append(toIndentedString(subMerchant)).append("\n");
     sb.append("    timeExpire: ").append(toIndentedString(timeExpire)).append("\n");

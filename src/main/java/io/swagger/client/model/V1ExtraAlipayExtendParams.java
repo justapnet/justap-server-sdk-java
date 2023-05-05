@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * V1ExtraAlipayExtendParams
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraAlipayExtendParams {
   @SerializedName("card_type")
   private String cardType = null;
@@ -57,7 +57,7 @@ public class V1ExtraAlipayExtendParams {
    * 卡类型
    * @return cardType
   **/
-  @ApiModelProperty(required = true, value = "卡类型")
+  @ApiModelProperty(value = "卡类型")
   public String getCardType() {
     return cardType;
   }
@@ -75,7 +75,7 @@ public class V1ExtraAlipayExtendParams {
    * 使用花呗分期要进行的分期数
    * @return hbFqNum
   **/
-  @ApiModelProperty(required = true, value = "使用花呗分期要进行的分期数")
+  @ApiModelProperty(value = "使用花呗分期要进行的分期数")
   public String getHbFqNum() {
     return hbFqNum;
   }
@@ -93,7 +93,7 @@ public class V1ExtraAlipayExtendParams {
    * 使用花呗分期需要卖家承担的手续费比例的百分值，传入100代表100%
    * @return hbFqSellerPercent
   **/
-  @ApiModelProperty(required = true, value = "使用花呗分期需要卖家承担的手续费比例的百分值，传入100代表100%")
+  @ApiModelProperty(value = "使用花呗分期需要卖家承担的手续费比例的百分值，传入100代表100%")
   public BigDecimal getHbFqSellerPercent() {
     return hbFqSellerPercent;
   }
@@ -111,7 +111,7 @@ public class V1ExtraAlipayExtendParams {
    * 行业数据回流信息
    * @return industryRefluxInfo
   **/
-  @ApiModelProperty(required = true, value = "行业数据回流信息")
+  @ApiModelProperty(value = "行业数据回流信息")
   public String getIndustryRefluxInfo() {
     return industryRefluxInfo;
   }
@@ -129,7 +129,7 @@ public class V1ExtraAlipayExtendParams {
    * 指定收款支付宝用户名
    * @return specifiedSellerName
   **/
-  @ApiModelProperty(required = true, value = "指定收款支付宝用户名")
+  @ApiModelProperty(value = "指定收款支付宝用户名")
   public String getSpecifiedSellerName() {
     return specifiedSellerName;
   }
@@ -147,7 +147,7 @@ public class V1ExtraAlipayExtendParams {
    * 系统商编号，该参数作为系统商返佣数据提取的依据，请填写系统商签约协议的PID
    * @return sysServiceProviderId
   **/
-  @ApiModelProperty(required = true, value = "系统商编号，该参数作为系统商返佣数据提取的依据，请填写系统商签约协议的PID")
+  @ApiModelProperty(value = "系统商编号，该参数作为系统商返佣数据提取的依据，请填写系统商签约协议的PID")
   public String getSysServiceProviderId() {
     return sysServiceProviderId;
   }

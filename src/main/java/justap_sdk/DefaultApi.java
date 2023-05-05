@@ -61,14 +61,14 @@ public class DefaultApi {
     }
 
     /**
-     * Build call for tradeServiceCharges
-     * @param body  (required)
+     * Build call for chargeServiceCharges
+     * @param body 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。 (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceChargesCall(V1CreateChargeRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call chargeServiceChargesCall(V1CreateChargeRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
 
         // create path and map variables
@@ -110,15 +110,15 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call tradeServiceChargesValidateBeforeCall(V1CreateChargeRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call chargeServiceChargesValidateBeforeCall(V1CreateChargeRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'body' is set
         if (body == null) {
-            throw new ApiException("Missing the required parameter 'body' when calling tradeServiceCharges(Async)");
+            throw new ApiException("Missing the required parameter 'body' when calling chargeServiceCharges(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = tradeServiceChargesCall(body, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = chargeServiceChargesCall(body, progressListener, progressRequestListener);
         return call;
 
     }
@@ -126,24 +126,24 @@ public class DefaultApi {
     /**
      * 创建 Charge 对象
      * 发起一次支付请求时需要创建一个新的 charge 对象，获取一个可用的支付凭据用于客户端向第三方渠道发起支付请求。如果使用测试模式的 API Key，则不会发生真实交易。当支付成功后，会发送 Webhooks 通知。
-     * @param body  (required)
+     * @param body 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。 (required)
      * @return V1ChargeResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public V1ChargeResponse tradeServiceCharges(V1CreateChargeRequest body) throws ApiException {
-        ApiResponse<V1ChargeResponse> resp = tradeServiceChargesWithHttpInfo(body);
+    public V1ChargeResponse chargeServiceCharges(V1CreateChargeRequest body) throws ApiException {
+        ApiResponse<V1ChargeResponse> resp = chargeServiceChargesWithHttpInfo(body);
         return resp.getData();
     }
 
     /**
      * 创建 Charge 对象
      * 发起一次支付请求时需要创建一个新的 charge 对象，获取一个可用的支付凭据用于客户端向第三方渠道发起支付请求。如果使用测试模式的 API Key，则不会发生真实交易。当支付成功后，会发送 Webhooks 通知。
-     * @param body  (required)
+     * @param body 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。 (required)
      * @return ApiResponse&lt;V1ChargeResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<V1ChargeResponse> tradeServiceChargesWithHttpInfo(V1CreateChargeRequest body) throws ApiException {
-        com.squareup.okhttp.Call call = tradeServiceChargesValidateBeforeCall(body, null, null);
+    public ApiResponse<V1ChargeResponse> chargeServiceChargesWithHttpInfo(V1CreateChargeRequest body) throws ApiException {
+        com.squareup.okhttp.Call call = chargeServiceChargesValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -151,12 +151,12 @@ public class DefaultApi {
     /**
      * 创建 Charge 对象 (asynchronously)
      * 发起一次支付请求时需要创建一个新的 charge 对象，获取一个可用的支付凭据用于客户端向第三方渠道发起支付请求。如果使用测试模式的 API Key，则不会发生真实交易。当支付成功后，会发送 Webhooks 通知。
-     * @param body  (required)
+     * @param body 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。 (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceChargesAsync(V1CreateChargeRequest body, final ApiCallback<V1ChargeResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call chargeServiceChargesAsync(V1CreateChargeRequest body, final ApiCallback<V1ChargeResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -177,13 +177,135 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = tradeServiceChargesValidateBeforeCall(body, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = chargeServiceChargesValidateBeforeCall(body, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for tradeServiceQueryCharge
+     * Build call for chargeServiceCharges2
+     * @param body 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。 (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceCharges2Call(V1CreateChargeRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
+
+        // create path and map variables
+        String localVarPath = "/v1/charges";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call chargeServiceCharges2ValidateBeforeCall(V1CreateChargeRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling chargeServiceCharges2(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = chargeServiceCharges2Call(body, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 创建 Charge 对象
+     * 发起一次支付请求时需要创建一个新的 charge 对象，获取一个可用的支付凭据用于客户端向第三方渠道发起支付请求。如果使用测试模式的 API Key，则不会发生真实交易。当支付成功后，会发送 Webhooks 通知。
+     * @param body 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。 (required)
+     * @return V1ChargeResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public V1ChargeResponse chargeServiceCharges2(V1CreateChargeRequest body) throws ApiException {
+        ApiResponse<V1ChargeResponse> resp = chargeServiceCharges2WithHttpInfo(body);
+        return resp.getData();
+    }
+
+    /**
+     * 创建 Charge 对象
+     * 发起一次支付请求时需要创建一个新的 charge 对象，获取一个可用的支付凭据用于客户端向第三方渠道发起支付请求。如果使用测试模式的 API Key，则不会发生真实交易。当支付成功后，会发送 Webhooks 通知。
+     * @param body 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。 (required)
+     * @return ApiResponse&lt;V1ChargeResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<V1ChargeResponse> chargeServiceCharges2WithHttpInfo(V1CreateChargeRequest body) throws ApiException {
+        com.squareup.okhttp.Call call = chargeServiceCharges2ValidateBeforeCall(body, null, null);
+        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * 创建 Charge 对象 (asynchronously)
+     * 发起一次支付请求时需要创建一个新的 charge 对象，获取一个可用的支付凭据用于客户端向第三方渠道发起支付请求。如果使用测试模式的 API Key，则不会发生真实交易。当支付成功后，会发送 Webhooks 通知。
+     * @param body 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。 (required)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceCharges2Async(V1CreateChargeRequest body, final ApiCallback<V1ChargeResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = chargeServiceCharges2ValidateBeforeCall(body, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for chargeServiceQueryCharge
      * @param chargeId [REQUIRED] Charge 对象 id (required)
      * @param appId [REQUIRED] 应用 id (optional)
      * @param progressListener Progress listener
@@ -191,7 +313,7 @@ public class DefaultApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceQueryChargeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call chargeServiceQueryChargeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -236,15 +358,15 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call tradeServiceQueryChargeValidateBeforeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call chargeServiceQueryChargeValidateBeforeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'chargeId' is set
         if (chargeId == null) {
-            throw new ApiException("Missing the required parameter 'chargeId' when calling tradeServiceQueryCharge(Async)");
+            throw new ApiException("Missing the required parameter 'chargeId' when calling chargeServiceQueryCharge(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = tradeServiceQueryChargeCall(chargeId, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = chargeServiceQueryChargeCall(chargeId, appId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -257,8 +379,8 @@ public class DefaultApi {
      * @return V1ChargeResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public V1ChargeResponse tradeServiceQueryCharge(String chargeId, String appId) throws ApiException {
-        ApiResponse<V1ChargeResponse> resp = tradeServiceQueryChargeWithHttpInfo(chargeId, appId);
+    public V1ChargeResponse chargeServiceQueryCharge(String chargeId, String appId) throws ApiException {
+        ApiResponse<V1ChargeResponse> resp = chargeServiceQueryChargeWithHttpInfo(chargeId, appId);
         return resp.getData();
     }
 
@@ -270,8 +392,8 @@ public class DefaultApi {
      * @return ApiResponse&lt;V1ChargeResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<V1ChargeResponse> tradeServiceQueryChargeWithHttpInfo(String chargeId, String appId) throws ApiException {
-        com.squareup.okhttp.Call call = tradeServiceQueryChargeValidateBeforeCall(chargeId, appId, null, null);
+    public ApiResponse<V1ChargeResponse> chargeServiceQueryChargeWithHttpInfo(String chargeId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = chargeServiceQueryChargeValidateBeforeCall(chargeId, appId, null, null);
         Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -285,7 +407,7 @@ public class DefaultApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceQueryChargeAsync(String chargeId, String appId, final ApiCallback<V1ChargeResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call chargeServiceQueryChargeAsync(String chargeId, String appId, final ApiCallback<V1ChargeResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -306,13 +428,142 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = tradeServiceQueryChargeValidateBeforeCall(chargeId, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = chargeServiceQueryChargeValidateBeforeCall(chargeId, appId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for tradeServiceQueryChargeList
+     * Build call for chargeServiceQueryCharge2
+     * @param chargeId [REQUIRED] Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceQueryCharge2Call(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/charges/{charge_id}"
+            .replaceAll("\\{" + "charge_id" + "\\}", apiClient.escapeString(chargeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (appId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("app_id", appId));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call chargeServiceQueryCharge2ValidateBeforeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'chargeId' is set
+        if (chargeId == null) {
+            throw new ApiException("Missing the required parameter 'chargeId' when calling chargeServiceQueryCharge2(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = chargeServiceQueryCharge2Call(chargeId, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 查询 Charge 对象
+     * 你可以在后台异步通知之前，通过查询接口确认支付状态。通过charge对象的id查询一个已创建的charge对象。
+     * @param chargeId [REQUIRED] Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @return V1ChargeResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public V1ChargeResponse chargeServiceQueryCharge2(String chargeId, String appId) throws ApiException {
+        ApiResponse<V1ChargeResponse> resp = chargeServiceQueryCharge2WithHttpInfo(chargeId, appId);
+        return resp.getData();
+    }
+
+    /**
+     * 查询 Charge 对象
+     * 你可以在后台异步通知之前，通过查询接口确认支付状态。通过charge对象的id查询一个已创建的charge对象。
+     * @param chargeId [REQUIRED] Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @return ApiResponse&lt;V1ChargeResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<V1ChargeResponse> chargeServiceQueryCharge2WithHttpInfo(String chargeId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = chargeServiceQueryCharge2ValidateBeforeCall(chargeId, appId, null, null);
+        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * 查询 Charge 对象 (asynchronously)
+     * 你可以在后台异步通知之前，通过查询接口确认支付状态。通过charge对象的id查询一个已创建的charge对象。
+     * @param chargeId [REQUIRED] Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceQueryCharge2Async(String chargeId, String appId, final ApiCallback<V1ChargeResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = chargeServiceQueryCharge2ValidateBeforeCall(chargeId, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for chargeServiceQueryChargeList
      * @param appId [REQUIRED] 应用 id (optional)
      * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
      * @param startingAfter [OPTIONAL] 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after &#x3D; obj_end 去获取下一页 (optional)
@@ -333,7 +584,7 @@ public class DefaultApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceQueryChargeListCall(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call chargeServiceQueryChargeListCall(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -405,10 +656,10 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call tradeServiceQueryChargeListValidateBeforeCall(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call chargeServiceQueryChargeListValidateBeforeCall(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
 
-        com.squareup.okhttp.Call call = tradeServiceQueryChargeListCall(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = chargeServiceQueryChargeListCall(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired, progressListener, progressRequestListener);
         return call;
 
     }
@@ -434,8 +685,8 @@ public class DefaultApi {
      * @return V1ChargeListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public V1ChargeListResponse tradeServiceQueryChargeList(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired) throws ApiException {
-        ApiResponse<V1ChargeListResponse> resp = tradeServiceQueryChargeListWithHttpInfo(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired);
+    public V1ChargeListResponse chargeServiceQueryChargeList(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired) throws ApiException {
+        ApiResponse<V1ChargeListResponse> resp = chargeServiceQueryChargeListWithHttpInfo(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired);
         return resp.getData();
     }
 
@@ -460,8 +711,8 @@ public class DefaultApi {
      * @return ApiResponse&lt;V1ChargeListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<V1ChargeListResponse> tradeServiceQueryChargeListWithHttpInfo(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired) throws ApiException {
-        com.squareup.okhttp.Call call = tradeServiceQueryChargeListValidateBeforeCall(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired, null, null);
+    public ApiResponse<V1ChargeListResponse> chargeServiceQueryChargeListWithHttpInfo(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired) throws ApiException {
+        com.squareup.okhttp.Call call = chargeServiceQueryChargeListValidateBeforeCall(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired, null, null);
         Type localVarReturnType = new TypeToken<V1ChargeListResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -488,7 +739,7 @@ public class DefaultApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceQueryChargeListAsync(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired, final ApiCallback<V1ChargeListResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call chargeServiceQueryChargeListAsync(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired, final ApiCallback<V1ChargeListResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -509,13 +760,474 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = tradeServiceQueryChargeListValidateBeforeCall(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = chargeServiceQueryChargeListValidateBeforeCall(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<V1ChargeListResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for tradeServiceQueryRefund
+     * Build call for chargeServiceQueryChargeList2
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
+     * @param startingAfter [OPTIONAL] 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after &#x3D; obj_end 去获取下一页 (optional)
+     * @param endingBefore [OPTIONAL] 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的第一项的 id 是 obj_start，你可以使用 ending_before &#x3D; obj_start 去获取上一页 (optional)
+     * @param merchantTradeId [OPTIONAL] 客户系统订单号 (optional)
+     * @param createdLt 大于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdLte 大于或等于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdGt 小于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdGte 小于或等于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param channel [OPTIONAL] 渠道名称   - BALANCE: 余额支付  - AlipayQR: 支付宝扫码支付  - AlipayScan: 支付宝条码支付  - AlipayApp: 支付宝 App 支付  - AlipayWap: 支付宝手机网站支付  - AlipayPage: 支付宝电脑网站支付  - AlipayFace: 支付宝刷脸支付  - AlipayLite: 支付宝小程序支付  - WechatpayApp: 微信 App 支付  - WechatpayJSAPI: 微信 JSAPI 支付  - WechatpayH5: 微信 H5 支付  - WechatpayNative: 微信 Native 支付  - WechatpayLite: 微信小程序支付  - WechatpayFace: 刷脸支付  - WechatpayScan: 微信付款码支付 (optional, default to CHANNEL_INVALID_UNSPECIFIED)
+     * @param paid [OPTIONAL] 是否已付款 (optional, default to false)
+     * @param refunded [OPTIONAL] 是否存在退款信息，无论退款是否成功。 (optional, default to false)
+     * @param reversed [OPTIONAL] 是否已撤销 (optional, default to false)
+     * @param closed [OPTIONAL] 是否已关闭 (optional, default to false)
+     * @param expired [OPTIONAL] 是否已过期 (optional, default to false)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceQueryChargeList2Call(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/charges";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (appId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("app_id", appId));
+        if (limit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+        if (startingAfter != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
+        if (endingBefore != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
+        if (merchantTradeId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("merchant_trade_id", merchantTradeId));
+        if (createdLt != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("created.lt", createdLt));
+        if (createdLte != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("created.lte", createdLte));
+        if (createdGt != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("created.gt", createdGt));
+        if (createdGte != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("created.gte", createdGte));
+        if (channel != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("channel", channel));
+        if (paid != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("paid", paid));
+        if (refunded != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("refunded", refunded));
+        if (reversed != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("reversed", reversed));
+        if (closed != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("closed", closed));
+        if (expired != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("expired", expired));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call chargeServiceQueryChargeList2ValidateBeforeCall(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+
+        com.squareup.okhttp.Call call = chargeServiceQueryChargeList2Call(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 查询 Charge 对象列表
+     * 返回之前创建过 charge 对象的一个列表。列表是按创建时间进行排序，总是将最新的 charge 对象显示在最前。如果不设置 created 参数，默认查询近一个月的数据；设置了 created 参数，会按照对应的时间段查询。
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
+     * @param startingAfter [OPTIONAL] 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after &#x3D; obj_end 去获取下一页 (optional)
+     * @param endingBefore [OPTIONAL] 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的第一项的 id 是 obj_start，你可以使用 ending_before &#x3D; obj_start 去获取上一页 (optional)
+     * @param merchantTradeId [OPTIONAL] 客户系统订单号 (optional)
+     * @param createdLt 大于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdLte 大于或等于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdGt 小于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdGte 小于或等于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param channel [OPTIONAL] 渠道名称   - BALANCE: 余额支付  - AlipayQR: 支付宝扫码支付  - AlipayScan: 支付宝条码支付  - AlipayApp: 支付宝 App 支付  - AlipayWap: 支付宝手机网站支付  - AlipayPage: 支付宝电脑网站支付  - AlipayFace: 支付宝刷脸支付  - AlipayLite: 支付宝小程序支付  - WechatpayApp: 微信 App 支付  - WechatpayJSAPI: 微信 JSAPI 支付  - WechatpayH5: 微信 H5 支付  - WechatpayNative: 微信 Native 支付  - WechatpayLite: 微信小程序支付  - WechatpayFace: 刷脸支付  - WechatpayScan: 微信付款码支付 (optional, default to CHANNEL_INVALID_UNSPECIFIED)
+     * @param paid [OPTIONAL] 是否已付款 (optional, default to false)
+     * @param refunded [OPTIONAL] 是否存在退款信息，无论退款是否成功。 (optional, default to false)
+     * @param reversed [OPTIONAL] 是否已撤销 (optional, default to false)
+     * @param closed [OPTIONAL] 是否已关闭 (optional, default to false)
+     * @param expired [OPTIONAL] 是否已过期 (optional, default to false)
+     * @return V1ChargeListResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public V1ChargeListResponse chargeServiceQueryChargeList2(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired) throws ApiException {
+        ApiResponse<V1ChargeListResponse> resp = chargeServiceQueryChargeList2WithHttpInfo(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired);
+        return resp.getData();
+    }
+
+    /**
+     * 查询 Charge 对象列表
+     * 返回之前创建过 charge 对象的一个列表。列表是按创建时间进行排序，总是将最新的 charge 对象显示在最前。如果不设置 created 参数，默认查询近一个月的数据；设置了 created 参数，会按照对应的时间段查询。
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
+     * @param startingAfter [OPTIONAL] 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after &#x3D; obj_end 去获取下一页 (optional)
+     * @param endingBefore [OPTIONAL] 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的第一项的 id 是 obj_start，你可以使用 ending_before &#x3D; obj_start 去获取上一页 (optional)
+     * @param merchantTradeId [OPTIONAL] 客户系统订单号 (optional)
+     * @param createdLt 大于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdLte 大于或等于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdGt 小于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdGte 小于或等于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param channel [OPTIONAL] 渠道名称   - BALANCE: 余额支付  - AlipayQR: 支付宝扫码支付  - AlipayScan: 支付宝条码支付  - AlipayApp: 支付宝 App 支付  - AlipayWap: 支付宝手机网站支付  - AlipayPage: 支付宝电脑网站支付  - AlipayFace: 支付宝刷脸支付  - AlipayLite: 支付宝小程序支付  - WechatpayApp: 微信 App 支付  - WechatpayJSAPI: 微信 JSAPI 支付  - WechatpayH5: 微信 H5 支付  - WechatpayNative: 微信 Native 支付  - WechatpayLite: 微信小程序支付  - WechatpayFace: 刷脸支付  - WechatpayScan: 微信付款码支付 (optional, default to CHANNEL_INVALID_UNSPECIFIED)
+     * @param paid [OPTIONAL] 是否已付款 (optional, default to false)
+     * @param refunded [OPTIONAL] 是否存在退款信息，无论退款是否成功。 (optional, default to false)
+     * @param reversed [OPTIONAL] 是否已撤销 (optional, default to false)
+     * @param closed [OPTIONAL] 是否已关闭 (optional, default to false)
+     * @param expired [OPTIONAL] 是否已过期 (optional, default to false)
+     * @return ApiResponse&lt;V1ChargeListResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<V1ChargeListResponse> chargeServiceQueryChargeList2WithHttpInfo(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired) throws ApiException {
+        com.squareup.okhttp.Call call = chargeServiceQueryChargeList2ValidateBeforeCall(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired, null, null);
+        Type localVarReturnType = new TypeToken<V1ChargeListResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * 查询 Charge 对象列表 (asynchronously)
+     * 返回之前创建过 charge 对象的一个列表。列表是按创建时间进行排序，总是将最新的 charge 对象显示在最前。如果不设置 created 参数，默认查询近一个月的数据；设置了 created 参数，会按照对应的时间段查询。
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
+     * @param startingAfter [OPTIONAL] 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after &#x3D; obj_end 去获取下一页 (optional)
+     * @param endingBefore [OPTIONAL] 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的第一项的 id 是 obj_start，你可以使用 ending_before &#x3D; obj_start 去获取上一页 (optional)
+     * @param merchantTradeId [OPTIONAL] 客户系统订单号 (optional)
+     * @param createdLt 大于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdLte 大于或等于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdGt 小于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param createdGte 小于或等于 charge 对象的创建时间，用 Unix 时间戳表示 (optional, default to 0)
+     * @param channel [OPTIONAL] 渠道名称   - BALANCE: 余额支付  - AlipayQR: 支付宝扫码支付  - AlipayScan: 支付宝条码支付  - AlipayApp: 支付宝 App 支付  - AlipayWap: 支付宝手机网站支付  - AlipayPage: 支付宝电脑网站支付  - AlipayFace: 支付宝刷脸支付  - AlipayLite: 支付宝小程序支付  - WechatpayApp: 微信 App 支付  - WechatpayJSAPI: 微信 JSAPI 支付  - WechatpayH5: 微信 H5 支付  - WechatpayNative: 微信 Native 支付  - WechatpayLite: 微信小程序支付  - WechatpayFace: 刷脸支付  - WechatpayScan: 微信付款码支付 (optional, default to CHANNEL_INVALID_UNSPECIFIED)
+     * @param paid [OPTIONAL] 是否已付款 (optional, default to false)
+     * @param refunded [OPTIONAL] 是否存在退款信息，无论退款是否成功。 (optional, default to false)
+     * @param reversed [OPTIONAL] 是否已撤销 (optional, default to false)
+     * @param closed [OPTIONAL] 是否已关闭 (optional, default to false)
+     * @param expired [OPTIONAL] 是否已过期 (optional, default to false)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceQueryChargeList2Async(String appId, Integer limit, String startingAfter, String endingBefore, String merchantTradeId, Long createdLt, Long createdLte, Long createdGt, Long createdGte, String channel, Boolean paid, Boolean refunded, Boolean reversed, Boolean closed, Boolean expired, final ApiCallback<V1ChargeListResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = chargeServiceQueryChargeList2ValidateBeforeCall(appId, limit, startingAfter, endingBefore, merchantTradeId, createdLt, createdLte, createdGt, createdGte, channel, paid, refunded, reversed, closed, expired, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<V1ChargeListResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for chargeServiceReverseCharge
+     * @param chargeId Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceReverseChargeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/transaction/v1/charges/{charge_id}/reverse"
+            .replaceAll("\\{" + "charge_id" + "\\}", apiClient.escapeString(chargeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (appId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("app_id", appId));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call chargeServiceReverseChargeValidateBeforeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'chargeId' is set
+        if (chargeId == null) {
+            throw new ApiException("Missing the required parameter 'chargeId' when calling chargeServiceReverseCharge(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = chargeServiceReverseChargeCall(chargeId, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 撤销 Charge 对象
+     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
+     * @param chargeId Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @return V1ChargeResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public V1ChargeResponse chargeServiceReverseCharge(String chargeId, String appId) throws ApiException {
+        ApiResponse<V1ChargeResponse> resp = chargeServiceReverseChargeWithHttpInfo(chargeId, appId);
+        return resp.getData();
+    }
+
+    /**
+     * 撤销 Charge 对象
+     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
+     * @param chargeId Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @return ApiResponse&lt;V1ChargeResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<V1ChargeResponse> chargeServiceReverseChargeWithHttpInfo(String chargeId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = chargeServiceReverseChargeValidateBeforeCall(chargeId, appId, null, null);
+        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * 撤销 Charge 对象 (asynchronously)
+     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
+     * @param chargeId Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceReverseChargeAsync(String chargeId, String appId, final ApiCallback<V1ChargeResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = chargeServiceReverseChargeValidateBeforeCall(chargeId, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for chargeServiceReverseCharge2
+     * @param chargeId Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceReverseCharge2Call(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/charges/{charge_id}/reverse"
+            .replaceAll("\\{" + "charge_id" + "\\}", apiClient.escapeString(chargeId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (appId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("app_id", appId));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return apiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call chargeServiceReverseCharge2ValidateBeforeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'chargeId' is set
+        if (chargeId == null) {
+            throw new ApiException("Missing the required parameter 'chargeId' when calling chargeServiceReverseCharge2(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = chargeServiceReverseCharge2Call(chargeId, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 撤销 Charge 对象
+     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
+     * @param chargeId Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @return V1ChargeResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public V1ChargeResponse chargeServiceReverseCharge2(String chargeId, String appId) throws ApiException {
+        ApiResponse<V1ChargeResponse> resp = chargeServiceReverseCharge2WithHttpInfo(chargeId, appId);
+        return resp.getData();
+    }
+
+    /**
+     * 撤销 Charge 对象
+     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
+     * @param chargeId Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @return ApiResponse&lt;V1ChargeResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<V1ChargeResponse> chargeServiceReverseCharge2WithHttpInfo(String chargeId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = chargeServiceReverseCharge2ValidateBeforeCall(chargeId, appId, null, null);
+        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * 撤销 Charge 对象 (asynchronously)
+     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
+     * @param chargeId Charge 对象 id (required)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call chargeServiceReverseCharge2Async(String chargeId, String appId, final ApiCallback<V1ChargeResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = chargeServiceReverseCharge2ValidateBeforeCall(chargeId, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for refundServiceQueryRefund
      * @param chargeId [REQUIRED] 支付 Charge Id (required)
      * @param refundId [REQUIRED] Refund 对象 id (required)
      * @param appId [REQUIRED] 应用 id (optional)
@@ -524,7 +1236,7 @@ public class DefaultApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceQueryRefundCall(String chargeId, String refundId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call refundServiceQueryRefundCall(String chargeId, String refundId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -570,20 +1282,20 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call tradeServiceQueryRefundValidateBeforeCall(String chargeId, String refundId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call refundServiceQueryRefundValidateBeforeCall(String chargeId, String refundId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'chargeId' is set
         if (chargeId == null) {
-            throw new ApiException("Missing the required parameter 'chargeId' when calling tradeServiceQueryRefund(Async)");
+            throw new ApiException("Missing the required parameter 'chargeId' when calling refundServiceQueryRefund(Async)");
         }
         
         // verify the required parameter 'refundId' is set
         if (refundId == null) {
-            throw new ApiException("Missing the required parameter 'refundId' when calling tradeServiceQueryRefund(Async)");
+            throw new ApiException("Missing the required parameter 'refundId' when calling refundServiceQueryRefund(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = tradeServiceQueryRefundCall(chargeId, refundId, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = refundServiceQueryRefundCall(chargeId, refundId, appId, progressListener, progressRequestListener);
         return call;
 
     }
@@ -597,8 +1309,8 @@ public class DefaultApi {
      * @return V1RefundResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public V1RefundResponse tradeServiceQueryRefund(String chargeId, String refundId, String appId) throws ApiException {
-        ApiResponse<V1RefundResponse> resp = tradeServiceQueryRefundWithHttpInfo(chargeId, refundId, appId);
+    public V1RefundResponse refundServiceQueryRefund(String chargeId, String refundId, String appId) throws ApiException {
+        ApiResponse<V1RefundResponse> resp = refundServiceQueryRefundWithHttpInfo(chargeId, refundId, appId);
         return resp.getData();
     }
 
@@ -611,8 +1323,8 @@ public class DefaultApi {
      * @return ApiResponse&lt;V1RefundResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<V1RefundResponse> tradeServiceQueryRefundWithHttpInfo(String chargeId, String refundId, String appId) throws ApiException {
-        com.squareup.okhttp.Call call = tradeServiceQueryRefundValidateBeforeCall(chargeId, refundId, appId, null, null);
+    public ApiResponse<V1RefundResponse> refundServiceQueryRefundWithHttpInfo(String chargeId, String refundId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = refundServiceQueryRefundValidateBeforeCall(chargeId, refundId, appId, null, null);
         Type localVarReturnType = new TypeToken<V1RefundResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -627,7 +1339,7 @@ public class DefaultApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceQueryRefundAsync(String chargeId, String refundId, String appId, final ApiCallback<V1RefundResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call refundServiceQueryRefundAsync(String chargeId, String refundId, String appId, final ApiCallback<V1RefundResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -648,13 +1360,148 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = tradeServiceQueryRefundValidateBeforeCall(chargeId, refundId, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = refundServiceQueryRefundValidateBeforeCall(chargeId, refundId, appId, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<V1RefundResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for tradeServiceQueryRefundList
+     * Build call for refundServiceQueryRefund2
+     * @param refundId [REQUIRED] Refund 对象 id (required)
+     * @param chargeId [REQUIRED] 支付 Charge Id (optional)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call refundServiceQueryRefund2Call(String refundId, String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/refunds/{refund_id}"
+            .replaceAll("\\{" + "refund_id" + "\\}", apiClient.escapeString(refundId.toString()));
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (chargeId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("charge_id", chargeId));
+        if (appId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("app_id", appId));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call refundServiceQueryRefund2ValidateBeforeCall(String refundId, String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+        // verify the required parameter 'refundId' is set
+        if (refundId == null) {
+            throw new ApiException("Missing the required parameter 'refundId' when calling refundServiceQueryRefund2(Async)");
+        }
+        
+
+        com.squareup.okhttp.Call call = refundServiceQueryRefund2Call(refundId, chargeId, appId, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 查询 Refund 对象
+     * 可以通过 charge 对象的查询接口查询某一个 charge 对象的退款列表，也可以通过 refund 对象的 id 查询一个已创建的 refund 对象。可以在 Webhooks 通知之前，通过查询接口确认退款状态。
+     * @param refundId [REQUIRED] Refund 对象 id (required)
+     * @param chargeId [REQUIRED] 支付 Charge Id (optional)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @return V1RefundResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public V1RefundResponse refundServiceQueryRefund2(String refundId, String chargeId, String appId) throws ApiException {
+        ApiResponse<V1RefundResponse> resp = refundServiceQueryRefund2WithHttpInfo(refundId, chargeId, appId);
+        return resp.getData();
+    }
+
+    /**
+     * 查询 Refund 对象
+     * 可以通过 charge 对象的查询接口查询某一个 charge 对象的退款列表，也可以通过 refund 对象的 id 查询一个已创建的 refund 对象。可以在 Webhooks 通知之前，通过查询接口确认退款状态。
+     * @param refundId [REQUIRED] Refund 对象 id (required)
+     * @param chargeId [REQUIRED] 支付 Charge Id (optional)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @return ApiResponse&lt;V1RefundResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<V1RefundResponse> refundServiceQueryRefund2WithHttpInfo(String refundId, String chargeId, String appId) throws ApiException {
+        com.squareup.okhttp.Call call = refundServiceQueryRefund2ValidateBeforeCall(refundId, chargeId, appId, null, null);
+        Type localVarReturnType = new TypeToken<V1RefundResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * 查询 Refund 对象 (asynchronously)
+     * 可以通过 charge 对象的查询接口查询某一个 charge 对象的退款列表，也可以通过 refund 对象的 id 查询一个已创建的 refund 对象。可以在 Webhooks 通知之前，通过查询接口确认退款状态。
+     * @param refundId [REQUIRED] Refund 对象 id (required)
+     * @param chargeId [REQUIRED] 支付 Charge Id (optional)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call refundServiceQueryRefund2Async(String refundId, String chargeId, String appId, final ApiCallback<V1RefundResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = refundServiceQueryRefund2ValidateBeforeCall(refundId, chargeId, appId, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<V1RefundResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for refundServiceQueryRefundList
      * @param chargeId [REQUIRED] 支付 Charge Id (required)
      * @param appId [REQUIRED] 应用 id (optional)
      * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
@@ -665,7 +1512,7 @@ public class DefaultApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceQueryRefundListCall(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call refundServiceQueryRefundListCall(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -716,15 +1563,15 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call tradeServiceQueryRefundListValidateBeforeCall(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call refundServiceQueryRefundListValidateBeforeCall(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'chargeId' is set
         if (chargeId == null) {
-            throw new ApiException("Missing the required parameter 'chargeId' when calling tradeServiceQueryRefundList(Async)");
+            throw new ApiException("Missing the required parameter 'chargeId' when calling refundServiceQueryRefundList(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = tradeServiceQueryRefundListCall(chargeId, appId, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = refundServiceQueryRefundListCall(chargeId, appId, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         return call;
 
     }
@@ -740,8 +1587,8 @@ public class DefaultApi {
      * @return V1RefundListResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public V1RefundListResponse tradeServiceQueryRefundList(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore) throws ApiException {
-        ApiResponse<V1RefundListResponse> resp = tradeServiceQueryRefundListWithHttpInfo(chargeId, appId, limit, startingAfter, endingBefore);
+    public V1RefundListResponse refundServiceQueryRefundList(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore) throws ApiException {
+        ApiResponse<V1RefundListResponse> resp = refundServiceQueryRefundListWithHttpInfo(chargeId, appId, limit, startingAfter, endingBefore);
         return resp.getData();
     }
 
@@ -756,8 +1603,8 @@ public class DefaultApi {
      * @return ApiResponse&lt;V1RefundListResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<V1RefundListResponse> tradeServiceQueryRefundListWithHttpInfo(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore) throws ApiException {
-        com.squareup.okhttp.Call call = tradeServiceQueryRefundListValidateBeforeCall(chargeId, appId, limit, startingAfter, endingBefore, null, null);
+    public ApiResponse<V1RefundListResponse> refundServiceQueryRefundListWithHttpInfo(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore) throws ApiException {
+        com.squareup.okhttp.Call call = refundServiceQueryRefundListValidateBeforeCall(chargeId, appId, limit, startingAfter, endingBefore, null, null);
         Type localVarReturnType = new TypeToken<V1RefundListResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -774,7 +1621,7 @@ public class DefaultApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceQueryRefundListAsync(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore, final ApiCallback<V1RefundListResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call refundServiceQueryRefundListAsync(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore, final ApiCallback<V1RefundListResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -795,20 +1642,163 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = tradeServiceQueryRefundListValidateBeforeCall(chargeId, appId, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = refundServiceQueryRefundListValidateBeforeCall(chargeId, appId, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<V1RefundListResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for tradeServiceRefunds
-     * @param body  (required)
+     * Build call for refundServiceQueryRefundList2
+     * @param chargeId [REQUIRED] 支付 Charge Id (optional)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
+     * @param startingAfter [OPTIONAL] 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after &#x3D; obj_end 去获取下一页 (optional)
+     * @param endingBefore [OPTIONAL] 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的第一项的 id 是 obj_start，你可以使用 ending_before &#x3D; obj_start 去获取上一页 (optional)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceRefundsCall(V1CreateRefundRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call refundServiceQueryRefundList2Call(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = null;
+
+        // create path and map variables
+        String localVarPath = "/v1/refunds";
+
+        List<Pair> localVarQueryParams = new ArrayList<Pair>();
+        List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+        if (chargeId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("charge_id", chargeId));
+        if (appId != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("app_id", appId));
+        if (limit != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+        if (startingAfter != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("starting_after", startingAfter));
+        if (endingBefore != null)
+        localVarQueryParams.addAll(apiClient.parameterToPair("ending_before", endingBefore));
+
+        Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+        Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        final String[] localVarAccepts = {
+            "application/json"
+        };
+        final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+        final String[] localVarContentTypes = {
+            "application/json"
+        };
+        final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+        localVarHeaderParams.put("Content-Type", localVarContentType);
+
+        if(progressListener != null) {
+            apiClient.getHttpClient().networkInterceptors().add(new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                    com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                    return originalResponse.newBuilder()
+                    .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                    .build();
+                }
+            });
+        }
+
+        String[] localVarAuthNames = new String[] { "ApiKeyAuth" };
+        return apiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAuthNames, progressRequestListener);
+    }
+
+    @SuppressWarnings("rawtypes")
+    private com.squareup.okhttp.Call refundServiceQueryRefundList2ValidateBeforeCall(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        
+
+        com.squareup.okhttp.Call call = refundServiceQueryRefundList2Call(chargeId, appId, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
+        return call;
+
+    }
+
+    /**
+     * 查询 Refund 对象列表
+     * 返回之前创建 charge 对象的一个 refund 对象列表。列表是按创建时间进行排序，总是将最新的 refund 对象显示在最前。
+     * @param chargeId [REQUIRED] 支付 Charge Id (optional)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
+     * @param startingAfter [OPTIONAL] 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after &#x3D; obj_end 去获取下一页 (optional)
+     * @param endingBefore [OPTIONAL] 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的第一项的 id 是 obj_start，你可以使用 ending_before &#x3D; obj_start 去获取上一页 (optional)
+     * @return V1RefundListResponse
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public V1RefundListResponse refundServiceQueryRefundList2(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore) throws ApiException {
+        ApiResponse<V1RefundListResponse> resp = refundServiceQueryRefundList2WithHttpInfo(chargeId, appId, limit, startingAfter, endingBefore);
+        return resp.getData();
+    }
+
+    /**
+     * 查询 Refund 对象列表
+     * 返回之前创建 charge 对象的一个 refund 对象列表。列表是按创建时间进行排序，总是将最新的 refund 对象显示在最前。
+     * @param chargeId [REQUIRED] 支付 Charge Id (optional)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
+     * @param startingAfter [OPTIONAL] 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after &#x3D; obj_end 去获取下一页 (optional)
+     * @param endingBefore [OPTIONAL] 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的第一项的 id 是 obj_start，你可以使用 ending_before &#x3D; obj_start 去获取上一页 (optional)
+     * @return ApiResponse&lt;V1RefundListResponse&gt;
+     * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+     */
+    public ApiResponse<V1RefundListResponse> refundServiceQueryRefundList2WithHttpInfo(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore) throws ApiException {
+        com.squareup.okhttp.Call call = refundServiceQueryRefundList2ValidateBeforeCall(chargeId, appId, limit, startingAfter, endingBefore, null, null);
+        Type localVarReturnType = new TypeToken<V1RefundListResponse>(){}.getType();
+        return apiClient.execute(call, localVarReturnType);
+    }
+
+    /**
+     * 查询 Refund 对象列表 (asynchronously)
+     * 返回之前创建 charge 对象的一个 refund 对象列表。列表是按创建时间进行排序，总是将最新的 refund 对象显示在最前。
+     * @param chargeId [REQUIRED] 支付 Charge Id (optional)
+     * @param appId [REQUIRED] 应用 id (optional)
+     * @param limit [OPTIONAL] 限制有多少对象可以被返回，限制范围是从 1~100 项，默认是 10 项 (optional, default to 10)
+     * @param startingAfter [OPTIONAL] 在分页时使用的指针，决定了列表的第一项从何处开始。假设你的一次请求返回列表的最后一项的 id 是 obj_end，你可以使用 starting_after &#x3D; obj_end 去获取下一页 (optional)
+     * @param endingBefore [OPTIONAL] 在分页时使用的指针，决定了列表的最末项在何处结束。假设你的一次请求返回列表的第一项的 id 是 obj_start，你可以使用 ending_before &#x3D; obj_start 去获取上一页 (optional)
+     * @param callback The callback to be executed when the API call finishes
+     * @return The request call
+     * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+     */
+    public com.squareup.okhttp.Call refundServiceQueryRefundList2Async(String chargeId, String appId, Integer limit, String startingAfter, String endingBefore, final ApiCallback<V1RefundListResponse> callback) throws ApiException {
+
+        ProgressResponseBody.ProgressListener progressListener = null;
+        ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+        if (callback != null) {
+            progressListener = new ProgressResponseBody.ProgressListener() {
+                @Override
+                public void update(long bytesRead, long contentLength, boolean done) {
+                    callback.onDownloadProgress(bytesRead, contentLength, done);
+                }
+            };
+
+            progressRequestListener = new ProgressRequestBody.ProgressRequestListener() {
+                @Override
+                public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                    callback.onUploadProgress(bytesWritten, contentLength, done);
+                }
+            };
+        }
+
+        com.squareup.okhttp.Call call = refundServiceQueryRefundList2ValidateBeforeCall(chargeId, appId, limit, startingAfter, endingBefore, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<V1RefundListResponse>(){}.getType();
+        apiClient.executeAsync(call, localVarReturnType, callback);
+        return call;
+    }
+    /**
+     * Build call for refundServiceRefunds
+     * @param body 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。 (required)
+     * @param progressListener Progress listener
+     * @param progressRequestListener Progress request listener
+     * @return Call to execute
+     * @throws ApiException If fail to serialize the request body object
+     */
+    public com.squareup.okhttp.Call refundServiceRefundsCall(V1CreateRefundRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = body;
 
         // create path and map variables
@@ -850,15 +1840,15 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call tradeServiceRefundsValidateBeforeCall(V1CreateRefundRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call refundServiceRefundsValidateBeforeCall(V1CreateRefundRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
         // verify the required parameter 'body' is set
         if (body == null) {
-            throw new ApiException("Missing the required parameter 'body' when calling tradeServiceRefunds(Async)");
+            throw new ApiException("Missing the required parameter 'body' when calling refundServiceRefunds(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = tradeServiceRefundsCall(body, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = refundServiceRefundsCall(body, progressListener, progressRequestListener);
         return call;
 
     }
@@ -866,24 +1856,24 @@ public class DefaultApi {
     /**
      * 创建 Refund 对象
      * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
-     * @param body  (required)
+     * @param body 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。 (required)
      * @return V1RefundResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public V1RefundResponse tradeServiceRefunds(V1CreateRefundRequest body) throws ApiException {
-        ApiResponse<V1RefundResponse> resp = tradeServiceRefundsWithHttpInfo(body);
+    public V1RefundResponse refundServiceRefunds(V1CreateRefundRequest body) throws ApiException {
+        ApiResponse<V1RefundResponse> resp = refundServiceRefundsWithHttpInfo(body);
         return resp.getData();
     }
 
     /**
      * 创建 Refund 对象
      * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
-     * @param body  (required)
+     * @param body 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。 (required)
      * @return ApiResponse&lt;V1RefundResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<V1RefundResponse> tradeServiceRefundsWithHttpInfo(V1CreateRefundRequest body) throws ApiException {
-        com.squareup.okhttp.Call call = tradeServiceRefundsValidateBeforeCall(body, null, null);
+    public ApiResponse<V1RefundResponse> refundServiceRefundsWithHttpInfo(V1CreateRefundRequest body) throws ApiException {
+        com.squareup.okhttp.Call call = refundServiceRefundsValidateBeforeCall(body, null, null);
         Type localVarReturnType = new TypeToken<V1RefundResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -891,12 +1881,12 @@ public class DefaultApi {
     /**
      * 创建 Refund 对象 (asynchronously)
      * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
-     * @param body  (required)
+     * @param body 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。 (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceRefundsAsync(V1CreateRefundRequest body, final ApiCallback<V1RefundResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call refundServiceRefundsAsync(V1CreateRefundRequest body, final ApiCallback<V1RefundResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -917,31 +1907,27 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = tradeServiceRefundsValidateBeforeCall(body, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = refundServiceRefundsValidateBeforeCall(body, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<V1RefundResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }
     /**
-     * Build call for tradeServiceReverseCharge
-     * @param chargeId Charge 对象 id (required)
-     * @param appId [REQUIRED] 应用 id (optional)
+     * Build call for refundServiceRefunds2
+     * @param body 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。 (required)
      * @param progressListener Progress listener
      * @param progressRequestListener Progress request listener
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceReverseChargeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
-        Object localVarPostBody = null;
+    public com.squareup.okhttp.Call refundServiceRefunds2Call(V1CreateRefundRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+        Object localVarPostBody = body;
 
         // create path and map variables
-        String localVarPath = "/transaction/v1/charges/{charge_id}/reverse"
-            .replaceAll("\\{" + "charge_id" + "\\}", apiClient.escapeString(chargeId.toString()));
+        String localVarPath = "/v1/refunds";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-        if (appId != null)
-        localVarQueryParams.addAll(apiClient.parameterToPair("app_id", appId));
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -976,56 +1962,53 @@ public class DefaultApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call tradeServiceReverseChargeValidateBeforeCall(String chargeId, String appId, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call refundServiceRefunds2ValidateBeforeCall(V1CreateRefundRequest body, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         
-        // verify the required parameter 'chargeId' is set
-        if (chargeId == null) {
-            throw new ApiException("Missing the required parameter 'chargeId' when calling tradeServiceReverseCharge(Async)");
+        // verify the required parameter 'body' is set
+        if (body == null) {
+            throw new ApiException("Missing the required parameter 'body' when calling refundServiceRefunds2(Async)");
         }
         
 
-        com.squareup.okhttp.Call call = tradeServiceReverseChargeCall(chargeId, appId, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = refundServiceRefunds2Call(body, progressListener, progressRequestListener);
         return call;
 
     }
 
     /**
-     * 撤销 Charge 对象
-     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
-     * @param chargeId Charge 对象 id (required)
-     * @param appId [REQUIRED] 应用 id (optional)
-     * @return V1ChargeResponse
+     * 创建 Refund 对象
+     * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
+     * @param body 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。 (required)
+     * @return V1RefundResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public V1ChargeResponse tradeServiceReverseCharge(String chargeId, String appId) throws ApiException {
-        ApiResponse<V1ChargeResponse> resp = tradeServiceReverseChargeWithHttpInfo(chargeId, appId);
+    public V1RefundResponse refundServiceRefunds2(V1CreateRefundRequest body) throws ApiException {
+        ApiResponse<V1RefundResponse> resp = refundServiceRefunds2WithHttpInfo(body);
         return resp.getData();
     }
 
     /**
-     * 撤销 Charge 对象
-     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
-     * @param chargeId Charge 对象 id (required)
-     * @param appId [REQUIRED] 应用 id (optional)
-     * @return ApiResponse&lt;V1ChargeResponse&gt;
+     * 创建 Refund 对象
+     * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
+     * @param body 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。 (required)
+     * @return ApiResponse&lt;V1RefundResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<V1ChargeResponse> tradeServiceReverseChargeWithHttpInfo(String chargeId, String appId) throws ApiException {
-        com.squareup.okhttp.Call call = tradeServiceReverseChargeValidateBeforeCall(chargeId, appId, null, null);
-        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+    public ApiResponse<V1RefundResponse> refundServiceRefunds2WithHttpInfo(V1CreateRefundRequest body) throws ApiException {
+        com.squareup.okhttp.Call call = refundServiceRefunds2ValidateBeforeCall(body, null, null);
+        Type localVarReturnType = new TypeToken<V1RefundResponse>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
     /**
-     * 撤销 Charge 对象 (asynchronously)
-     * 针对已经创建的 Charge，你可以调用撤销接口进行交易的关闭。接口支持对于未成功付款的订单进行撤销，则关闭交易。调用此接口后用户后期不能支付成功。  注：撤销订单在不同收单机构会有不同的行为。对于成功付款的订单请使用 退款 接口进行退款处理。只有针对未支付的订单，我们建议你调用撤销接口。  - 微信支付：如果此订单用户支付失败，微信支付系统会将此订单关闭；如果用户支付成功，微信支付系统会将此订单资金退还给用户。(7天以内的交易单可调用撤销) - 支付宝：如果此订单用户支付失败，支付宝系统会将此订单关闭；如果用户支付成功，支付宝系统会将此订单资金退还给用户。
-     * @param chargeId Charge 对象 id (required)
-     * @param appId [REQUIRED] 应用 id (optional)
+     * 创建 Refund 对象 (asynchronously)
+     * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
+     * @param body 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。 (required)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call tradeServiceReverseChargeAsync(String chargeId, String appId, final ApiCallback<V1ChargeResponse> callback) throws ApiException {
+    public com.squareup.okhttp.Call refundServiceRefunds2Async(V1CreateRefundRequest body, final ApiCallback<V1RefundResponse> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -1046,8 +2029,8 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = tradeServiceReverseChargeValidateBeforeCall(chargeId, appId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<V1ChargeResponse>(){}.getType();
+        com.squareup.okhttp.Call call = refundServiceRefunds2ValidateBeforeCall(body, progressListener, progressRequestListener);
+        Type localVarReturnType = new TypeToken<V1RefundResponse>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

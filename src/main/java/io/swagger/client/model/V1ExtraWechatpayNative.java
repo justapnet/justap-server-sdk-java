@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayNative
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraWechatpayNative {
   @SerializedName("attach")
   private String attach = null;
@@ -104,7 +104,7 @@ public class V1ExtraWechatpayNative {
    * 订单优惠标记
    * @return goodsTag
   **/
-  @ApiModelProperty(required = true, value = "订单优惠标记")
+  @ApiModelProperty(value = "订单优惠标记")
   public String getGoodsTag() {
     return goodsTag;
   }
@@ -122,7 +122,7 @@ public class V1ExtraWechatpayNative {
    * 二维码数据
    * @return qrCode
   **/
-  @ApiModelProperty(required = true, value = "二维码数据")
+  @ApiModelProperty(value = "二维码数据")
   public String getQrCode() {
     return qrCode;
   }
@@ -140,7 +140,7 @@ public class V1ExtraWechatpayNative {
    * 二维码链接
    * @return qrLink
   **/
-  @ApiModelProperty(required = true, value = "二维码链接")
+  @ApiModelProperty(value = "二维码链接")
   public String getQrLink() {
     return qrLink;
   }
@@ -194,7 +194,7 @@ public class V1ExtraWechatpayNative {
    * 交易过期时间
    * @return timeExpire
   **/
-  @ApiModelProperty(required = true, value = "交易过期时间")
+  @ApiModelProperty(value = "交易过期时间")
   public String getTimeExpire() {
     return timeExpire;
   }
@@ -212,7 +212,7 @@ public class V1ExtraWechatpayNative {
    * 交易起始时间
    * @return timeStart
   **/
-  @ApiModelProperty(required = true, value = "交易起始时间")
+  @ApiModelProperty(value = "交易起始时间")
   public String getTimeStart() {
     return timeStart;
   }

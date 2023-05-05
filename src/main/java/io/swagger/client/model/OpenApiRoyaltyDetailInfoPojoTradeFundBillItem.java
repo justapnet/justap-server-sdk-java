@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * OpenApiRoyaltyDetailInfoPojoTradeFundBillItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class OpenApiRoyaltyDetailInfoPojoTradeFundBillItem {
   @SerializedName("amount")
   private Float amount = null;
@@ -50,7 +50,7 @@ public class OpenApiRoyaltyDetailInfoPojoTradeFundBillItem {
    * 金额
    * @return amount
   **/
-  @ApiModelProperty(required = true, value = "金额")
+  @ApiModelProperty(value = "金额")
   public Float getAmount() {
     return amount;
   }
@@ -68,7 +68,7 @@ public class OpenApiRoyaltyDetailInfoPojoTradeFundBillItem {
    * 资金渠道
    * @return fundChannel
   **/
-  @ApiModelProperty(required = true, value = "资金渠道")
+  @ApiModelProperty(value = "资金渠道")
   public String getFundChannel() {
     return fundChannel;
   }
@@ -86,7 +86,7 @@ public class OpenApiRoyaltyDetailInfoPojoTradeFundBillItem {
    * 渠道所使用的资金类型
    * @return fundType
   **/
-  @ApiModelProperty(required = true, value = "渠道所使用的资金类型")
+  @ApiModelProperty(value = "渠道所使用的资金类型")
   public String getFundType() {
     return fundType;
   }
@@ -104,7 +104,7 @@ public class OpenApiRoyaltyDetailInfoPojoTradeFundBillItem {
    * 渠道实际付款金额
    * @return realAmount
   **/
-  @ApiModelProperty(required = true, value = "渠道实际付款金额")
+  @ApiModelProperty(value = "渠道实际付款金额")
   public Float getRealAmount() {
     return realAmount;
   }

@@ -22,7 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.V1Channel;
+import io.swagger.client.model.Tradev1Channel;
 import io.swagger.client.model.V1CreateChargeRequestExtra;
 import java.io.IOException;
 import java.util.HashMap;
@@ -33,7 +33,7 @@ import java.util.Map;
  * 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。
  */
 @ApiModel(description = "你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1CreateChargeRequest {
   @SerializedName("amount")
   private Float amount = null;
@@ -48,7 +48,7 @@ public class V1CreateChargeRequest {
   private String callbackUrl = null;
 
   @SerializedName("channel")
-  private V1Channel channel = null;
+  private Tradev1Channel channel = null;
 
   @SerializedName("client_ip")
   private String clientIp = null;
@@ -89,7 +89,7 @@ public class V1CreateChargeRequest {
    * [REQUIRED] 订单金额，单位元， 如 0.01
    * @return amount
   **/
-  @ApiModelProperty(required = true, value = "[REQUIRED] 订单金额，单位元， 如 0.01")
+  @ApiModelProperty(value = "[REQUIRED] 订单金额，单位元， 如 0.01")
   public Float getAmount() {
     return amount;
   }
@@ -107,7 +107,7 @@ public class V1CreateChargeRequest {
    * [REQUIRED] 应用 id
    * @return appId
   **/
-  @ApiModelProperty(required = true, value = "[REQUIRED] 应用 id")
+  @ApiModelProperty(value = "[REQUIRED] 应用 id")
   public String getAppId() {
     return appId;
   }
@@ -125,7 +125,7 @@ public class V1CreateChargeRequest {
    * [REQUIRED] 服务明细
    * @return body
   **/
-  @ApiModelProperty(required = true, value = "[REQUIRED] 服务明细")
+  @ApiModelProperty(value = "[REQUIRED] 服务明细")
   public String getBody() {
     return body;
   }
@@ -143,7 +143,7 @@ public class V1CreateChargeRequest {
    * [OPTIONAL] 回调地址，如不传则使用 APP 设置中的回调地址。若都为空，则无法跳回原页面
    * @return callbackUrl
   **/
-  @ApiModelProperty(required = true, value = "[OPTIONAL] 回调地址，如不传则使用 APP 设置中的回调地址。若都为空，则无法跳回原页面")
+  @ApiModelProperty(value = "[OPTIONAL] 回调地址，如不传则使用 APP 设置中的回调地址。若都为空，则无法跳回原页面")
   public String getCallbackUrl() {
     return callbackUrl;
   }
@@ -152,7 +152,7 @@ public class V1CreateChargeRequest {
     this.callbackUrl = callbackUrl;
   }
 
-  public V1CreateChargeRequest channel(V1Channel channel) {
+  public V1CreateChargeRequest channel(Tradev1Channel channel) {
     this.channel = channel;
     return this;
   }
@@ -161,12 +161,12 @@ public class V1CreateChargeRequest {
    * [REQUIRED] 渠道名称
    * @return channel
   **/
-  @ApiModelProperty(required = true, value = "[REQUIRED] 渠道名称")
-  public V1Channel getChannel() {
+  @ApiModelProperty(value = "[REQUIRED] 渠道名称")
+  public Tradev1Channel getChannel() {
     return channel;
   }
 
-  public void setChannel(V1Channel channel) {
+  public void setChannel(Tradev1Channel channel) {
     this.channel = channel;
   }
 
@@ -179,7 +179,7 @@ public class V1CreateChargeRequest {
    * [REQUIRED] 客户端机器 IP
    * @return clientIp
   **/
-  @ApiModelProperty(required = true, value = "[REQUIRED] 客户端机器 IP")
+  @ApiModelProperty(value = "[REQUIRED] 客户端机器 IP")
   public String getClientIp() {
     return clientIp;
   }
@@ -197,7 +197,7 @@ public class V1CreateChargeRequest {
    * 货币单位。国内收单机构仅支持 CNY
    * @return currency
   **/
-  @ApiModelProperty(required = true, value = "货币单位。国内收单机构仅支持 CNY")
+  @ApiModelProperty(value = "货币单位。国内收单机构仅支持 CNY")
   public String getCurrency() {
     return currency;
   }
@@ -215,7 +215,7 @@ public class V1CreateChargeRequest {
    * [OPTIONAL] 交易描述
    * @return description
   **/
-  @ApiModelProperty(required = true, value = "[OPTIONAL] 交易描述")
+  @ApiModelProperty(value = "[OPTIONAL] 交易描述")
   public String getDescription() {
     return description;
   }
@@ -251,7 +251,7 @@ public class V1CreateChargeRequest {
    * [REQUIRED] 客户系统的交易单号（订单号），必须在应用下唯一。长度不超过30个字符
    * @return merchantTradeId
   **/
-  @ApiModelProperty(required = true, value = "[REQUIRED] 客户系统的交易单号（订单号），必须在应用下唯一。长度不超过30个字符")
+  @ApiModelProperty(value = "[REQUIRED] 客户系统的交易单号（订单号），必须在应用下唯一。长度不超过30个字符")
   public String getMerchantTradeId() {
     return merchantTradeId;
   }
@@ -295,7 +295,7 @@ public class V1CreateChargeRequest {
    * [OPTIONAL] 接受通知服务器所在区域，为确保消息能够送达，请选择服务器所在国家的国家码。如不填默认为 CN
    * @return notificationArea
   **/
-  @ApiModelProperty(required = true, value = "[OPTIONAL] 接受通知服务器所在区域，为确保消息能够送达，请选择服务器所在国家的国家码。如不填默认为 CN")
+  @ApiModelProperty(value = "[OPTIONAL] 接受通知服务器所在区域，为确保消息能够送达，请选择服务器所在国家的国家码。如不填默认为 CN")
   public String getNotificationArea() {
     return notificationArea;
   }
@@ -313,7 +313,7 @@ public class V1CreateChargeRequest {
    * [OPTIONAL] 通知地址，如不传则使用 APP 设置中的通知地址。若都为空，则不发送通知
    * @return notifyUrl
   **/
-  @ApiModelProperty(required = true, value = "[OPTIONAL] 通知地址，如不传则使用 APP 设置中的通知地址。若都为空，则不发送通知")
+  @ApiModelProperty(value = "[OPTIONAL] 通知地址，如不传则使用 APP 设置中的通知地址。若都为空，则不发送通知")
   public String getNotifyUrl() {
     return notifyUrl;
   }
@@ -331,7 +331,7 @@ public class V1CreateChargeRequest {
    * [REQUIRED] 物品或服务名称（交易标题）
    * @return subject
   **/
-  @ApiModelProperty(required = true, value = "[REQUIRED] 物品或服务名称（交易标题）")
+  @ApiModelProperty(value = "[REQUIRED] 物品或服务名称（交易标题）")
   public String getSubject() {
     return subject;
   }
@@ -349,7 +349,7 @@ public class V1CreateChargeRequest {
    * [OPTIONAL] 订单超时时间，单位秒
    * @return ttl
   **/
-  @ApiModelProperty(required = true, value = "[OPTIONAL] 订单超时时间，单位秒")
+  @ApiModelProperty(value = "[OPTIONAL] 订单超时时间，单位秒")
   public Integer getTtl() {
     return ttl;
   }

@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * V1ExtraAlipayQr
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraAlipayQr {
   @SerializedName("buyer_id")
   private String buyerId = null;
@@ -56,9 +56,6 @@ public class V1ExtraAlipayQr {
   @SerializedName("qr_link")
   private String qrLink = null;
 
-  @SerializedName("query_options")
-  private String queryOptions = null;
-
   @SerializedName("store_id")
   private String storeId = null;
 
@@ -74,7 +71,7 @@ public class V1ExtraAlipayQr {
    * 买家的支付宝唯一用户号（2088开头的16位纯数字）
    * @return buyerId
   **/
-  @ApiModelProperty(required = true, value = "买家的支付宝唯一用户号（2088开头的16位纯数字）")
+  @ApiModelProperty(value = "买家的支付宝唯一用户号（2088开头的16位纯数字）")
   public String getBuyerId() {
     return buyerId;
   }
@@ -136,7 +133,7 @@ public class V1ExtraAlipayQr {
    * 商户操作员编号
    * @return operatorId
   **/
-  @ApiModelProperty(required = true, value = "商户操作员编号")
+  @ApiModelProperty(value = "商户操作员编号")
   public String getOperatorId() {
     return operatorId;
   }
@@ -154,7 +151,7 @@ public class V1ExtraAlipayQr {
    * 销售产品码，商家和支付宝签约的产品码，为固定值QUICK_MSECURITY_PAY
    * @return productCode
   **/
-  @ApiModelProperty(required = true, value = "销售产品码，商家和支付宝签约的产品码，为固定值QUICK_MSECURITY_PAY")
+  @ApiModelProperty(value = "销售产品码，商家和支付宝签约的产品码，为固定值QUICK_MSECURITY_PAY")
   public String getProductCode() {
     return productCode;
   }
@@ -172,7 +169,7 @@ public class V1ExtraAlipayQr {
    * [ONLY IN RESPONSE] 二维码
    * @return qrCode
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 二维码")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 二维码")
   public String getQrCode() {
     return qrCode;
   }
@@ -190,7 +187,7 @@ public class V1ExtraAlipayQr {
    * 支付场景。 条码支付，取值：bar_code； 声波支付，取值：wave_code
    * @return qrCodeTimeoutExpress
   **/
-  @ApiModelProperty(required = true, value = "支付场景。 条码支付，取值：bar_code； 声波支付，取值：wave_code")
+  @ApiModelProperty(value = "支付场景。 条码支付，取值：bar_code； 声波支付，取值：wave_code")
   public String getQrCodeTimeoutExpress() {
     return qrCodeTimeoutExpress;
   }
@@ -208,31 +205,13 @@ public class V1ExtraAlipayQr {
    * [ONLY IN RESPONSE] 二维码图片的URL地址
    * @return qrLink
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 二维码图片的URL地址")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 二维码图片的URL地址")
   public String getQrLink() {
     return qrLink;
   }
 
   public void setQrLink(String qrLink) {
     this.qrLink = qrLink;
-  }
-
-  public V1ExtraAlipayQr queryOptions(String queryOptions) {
-    this.queryOptions = queryOptions;
-    return this;
-  }
-
-   /**
-   * 该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。注：若为空，则默认为15d。
-   * @return queryOptions
-  **/
-  @ApiModelProperty(value = "该笔订单允许的最晚付款时间，逾期将关闭交易。取值范围：1m～15d。m-分钟，h-小时，d-天，1c-当天（1c-当天的情况下，无论交易何时创建，都在0点关闭）。 该参数数值不接受小数点， 如 1.5h，可转换为 90m。注：若为空，则默认为15d。")
-  public String getQueryOptions() {
-    return queryOptions;
-  }
-
-  public void setQueryOptions(String queryOptions) {
-    this.queryOptions = queryOptions;
   }
 
   public V1ExtraAlipayQr storeId(String storeId) {
@@ -244,7 +223,7 @@ public class V1ExtraAlipayQr {
    * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(required = true, value = "商户门店编号")
+  @ApiModelProperty(value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }
@@ -262,7 +241,7 @@ public class V1ExtraAlipayQr {
    * 商户机具终端编号
    * @return terminalId
   **/
-  @ApiModelProperty(required = true, value = "商户机具终端编号")
+  @ApiModelProperty(value = "商户机具终端编号")
   public String getTerminalId() {
     return terminalId;
   }
@@ -289,14 +268,13 @@ public class V1ExtraAlipayQr {
         Objects.equals(this.qrCode, v1ExtraAlipayQr.qrCode) &&
         Objects.equals(this.qrCodeTimeoutExpress, v1ExtraAlipayQr.qrCodeTimeoutExpress) &&
         Objects.equals(this.qrLink, v1ExtraAlipayQr.qrLink) &&
-        Objects.equals(this.queryOptions, v1ExtraAlipayQr.queryOptions) &&
         Objects.equals(this.storeId, v1ExtraAlipayQr.storeId) &&
         Objects.equals(this.terminalId, v1ExtraAlipayQr.terminalId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(buyerId, discountableAmount, goodsDetail, operatorId, productCode, qrCode, qrCodeTimeoutExpress, qrLink, queryOptions, storeId, terminalId);
+    return Objects.hash(buyerId, discountableAmount, goodsDetail, operatorId, productCode, qrCode, qrCodeTimeoutExpress, qrLink, storeId, terminalId);
   }
 
 
@@ -313,7 +291,6 @@ public class V1ExtraAlipayQr {
     sb.append("    qrCode: ").append(toIndentedString(qrCode)).append("\n");
     sb.append("    qrCodeTimeoutExpress: ").append(toIndentedString(qrCodeTimeoutExpress)).append("\n");
     sb.append("    qrLink: ").append(toIndentedString(qrLink)).append("\n");
-    sb.append("    queryOptions: ").append(toIndentedString(queryOptions)).append("\n");
     sb.append("    storeId: ").append(toIndentedString(storeId)).append("\n");
     sb.append("    terminalId: ").append(toIndentedString(terminalId)).append("\n");
     sb.append("}");

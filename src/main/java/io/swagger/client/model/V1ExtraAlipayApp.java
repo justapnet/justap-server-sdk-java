@@ -22,7 +22,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.V1ExtraAlipayAgreementSignParams;
 import io.swagger.client.model.V1ExtraAlipayExtUserInfo;
 import io.swagger.client.model.V1ExtraAlipayExtendParams;
 import io.swagger.client.model.V1ExtraAlipayGoodsDetail;
@@ -33,11 +32,8 @@ import java.util.List;
 /**
  * V1ExtraAlipayApp
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraAlipayApp {
-  @SerializedName("agreement_sign_params")
-  private V1ExtraAlipayAgreementSignParams agreementSignParams = null;
-
   @SerializedName("credit_agreement_id")
   private String creditAgreementId = null;
 
@@ -80,24 +76,6 @@ public class V1ExtraAlipayApp {
   @SerializedName("store_id")
   private String storeId = null;
 
-  public V1ExtraAlipayApp agreementSignParams(V1ExtraAlipayAgreementSignParams agreementSignParams) {
-    this.agreementSignParams = agreementSignParams;
-    return this;
-  }
-
-   /**
-   * 签约参数。如果希望在sdk中支付并签约，需要在这里传入签约信息。周期扣款场景 product_code 为 CYCLE_PAY_AUTH 时必填。
-   * @return agreementSignParams
-  **/
-  @ApiModelProperty(value = "签约参数。如果希望在sdk中支付并签约，需要在这里传入签约信息。周期扣款场景 product_code 为 CYCLE_PAY_AUTH 时必填。")
-  public V1ExtraAlipayAgreementSignParams getAgreementSignParams() {
-    return agreementSignParams;
-  }
-
-  public void setAgreementSignParams(V1ExtraAlipayAgreementSignParams agreementSignParams) {
-    this.agreementSignParams = agreementSignParams;
-  }
-
   public V1ExtraAlipayApp creditAgreementId(String creditAgreementId) {
     this.creditAgreementId = creditAgreementId;
     return this;
@@ -107,7 +85,7 @@ public class V1ExtraAlipayApp {
    * [ONLY IN RESPONSE] 信用支付协议号
    * @return creditAgreementId
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 信用支付协议号")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 信用支付协议号")
   public String getCreditAgreementId() {
     return creditAgreementId;
   }
@@ -125,7 +103,7 @@ public class V1ExtraAlipayApp {
    * [ONLY IN RESPONSE] 信用支付业务订单号
    * @return creditBizOrderId
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 信用支付业务订单号")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 信用支付业务订单号")
   public String getCreditBizOrderId() {
     return creditBizOrderId;
   }
@@ -143,7 +121,7 @@ public class V1ExtraAlipayApp {
    * [ONLY IN RESPONSE] 信用支付模式
    * @return creditPayMode
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 信用支付模式")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 信用支付模式")
   public String getCreditPayMode() {
     return creditPayMode;
   }
@@ -161,7 +139,7 @@ public class V1ExtraAlipayApp {
    * 禁用渠道
    * @return disablePayChannels
   **/
-  @ApiModelProperty(required = true, value = "禁用渠道")
+  @ApiModelProperty(value = "禁用渠道")
   public String getDisablePayChannels() {
     return disablePayChannels;
   }
@@ -179,7 +157,7 @@ public class V1ExtraAlipayApp {
    * 可用渠道
    * @return enablePayChannels
   **/
-  @ApiModelProperty(required = true, value = "可用渠道")
+  @ApiModelProperty(value = "可用渠道")
   public String getEnablePayChannels() {
     return enablePayChannels;
   }
@@ -259,7 +237,7 @@ public class V1ExtraAlipayApp {
    * 商品类型
    * @return goodsType
   **/
-  @ApiModelProperty(required = true, value = "商品类型")
+  @ApiModelProperty(value = "商品类型")
   public String getGoodsType() {
     return goodsType;
   }
@@ -277,7 +255,7 @@ public class V1ExtraAlipayApp {
    * [ONLY IN RESPONSE] 商户订单号
    * @return merchantTradeId
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 商户订单号")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 商户订单号")
   public String getMerchantTradeId() {
     return merchantTradeId;
   }
@@ -295,7 +273,7 @@ public class V1ExtraAlipayApp {
    * [ONLY IN RESPONSE] App 用于拉起支付的请求字符串
    * @return payParam
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] App 用于拉起支付的请求字符串")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] App 用于拉起支付的请求字符串")
   public String getPayParam() {
     return payParam;
   }
@@ -313,7 +291,7 @@ public class V1ExtraAlipayApp {
    * 销售产品码，商家和支付宝签约的产品码
    * @return productCode
   **/
-  @ApiModelProperty(required = true, value = "销售产品码，商家和支付宝签约的产品码")
+  @ApiModelProperty(value = "销售产品码，商家和支付宝签约的产品码")
   public String getProductCode() {
     return productCode;
   }
@@ -331,7 +309,7 @@ public class V1ExtraAlipayApp {
    * [ONLY IN RESPONSE] 支付宝卖家支付宝用户ID
    * @return sellerId
   **/
-  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 支付宝卖家支付宝用户ID")
+  @ApiModelProperty(value = "[ONLY IN RESPONSE] 支付宝卖家支付宝用户ID")
   public String getSellerId() {
     return sellerId;
   }
@@ -349,7 +327,7 @@ public class V1ExtraAlipayApp {
    * 商户门店编号
    * @return storeId
   **/
-  @ApiModelProperty(required = true, value = "商户门店编号")
+  @ApiModelProperty(value = "商户门店编号")
   public String getStoreId() {
     return storeId;
   }
@@ -368,8 +346,7 @@ public class V1ExtraAlipayApp {
       return false;
     }
     V1ExtraAlipayApp v1ExtraAlipayApp = (V1ExtraAlipayApp) o;
-    return Objects.equals(this.agreementSignParams, v1ExtraAlipayApp.agreementSignParams) &&
-        Objects.equals(this.creditAgreementId, v1ExtraAlipayApp.creditAgreementId) &&
+    return Objects.equals(this.creditAgreementId, v1ExtraAlipayApp.creditAgreementId) &&
         Objects.equals(this.creditBizOrderId, v1ExtraAlipayApp.creditBizOrderId) &&
         Objects.equals(this.creditPayMode, v1ExtraAlipayApp.creditPayMode) &&
         Objects.equals(this.disablePayChannels, v1ExtraAlipayApp.disablePayChannels) &&
@@ -387,7 +364,7 @@ public class V1ExtraAlipayApp {
 
   @Override
   public int hashCode() {
-    return Objects.hash(agreementSignParams, creditAgreementId, creditBizOrderId, creditPayMode, disablePayChannels, enablePayChannels, extUserInfo, extendParams, goodsDetail, goodsType, merchantTradeId, payParam, productCode, sellerId, storeId);
+    return Objects.hash(creditAgreementId, creditBizOrderId, creditPayMode, disablePayChannels, enablePayChannels, extUserInfo, extendParams, goodsDetail, goodsType, merchantTradeId, payParam, productCode, sellerId, storeId);
   }
 
 
@@ -396,7 +373,6 @@ public class V1ExtraAlipayApp {
     StringBuilder sb = new StringBuilder();
     sb.append("class V1ExtraAlipayApp {\n");
     
-    sb.append("    agreementSignParams: ").append(toIndentedString(agreementSignParams)).append("\n");
     sb.append("    creditAgreementId: ").append(toIndentedString(creditAgreementId)).append("\n");
     sb.append("    creditBizOrderId: ").append(toIndentedString(creditBizOrderId)).append("\n");
     sb.append("    creditPayMode: ").append(toIndentedString(creditPayMode)).append("\n");

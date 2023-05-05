@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * V1ExtraAlipayGoodsDetail
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraAlipayGoodsDetail {
   @SerializedName("alipay_goods_id")
   private String alipayGoodsId = null;
@@ -66,7 +66,7 @@ public class V1ExtraAlipayGoodsDetail {
    * 支付宝商品编号
    * @return alipayGoodsId
   **/
-  @ApiModelProperty(required = true, value = "支付宝商品编号")
+  @ApiModelProperty(value = "支付宝商品编号")
   public String getAlipayGoodsId() {
     return alipayGoodsId;
   }
@@ -84,7 +84,7 @@ public class V1ExtraAlipayGoodsDetail {
    * 商品描述
    * @return body
   **/
-  @ApiModelProperty(required = true, value = "商品描述")
+  @ApiModelProperty(value = "商品描述")
   public String getBody() {
     return body;
   }
@@ -102,7 +102,7 @@ public class V1ExtraAlipayGoodsDetail {
    * 商品类目树
    * @return categoriesTree
   **/
-  @ApiModelProperty(required = true, value = "商品类目树")
+  @ApiModelProperty(value = "商品类目树")
   public String getCategoriesTree() {
     return categoriesTree;
   }
@@ -120,7 +120,7 @@ public class V1ExtraAlipayGoodsDetail {
    * 商品类目
    * @return goodsCategory
   **/
-  @ApiModelProperty(required = true, value = "商品类目")
+  @ApiModelProperty(value = "商品类目")
   public String getGoodsCategory() {
     return goodsCategory;
   }
@@ -138,7 +138,7 @@ public class V1ExtraAlipayGoodsDetail {
    * 商品编号
    * @return goodsId
   **/
-  @ApiModelProperty(required = true, value = "商品编号")
+  @ApiModelProperty(value = "商品编号")
   public String getGoodsId() {
     return goodsId;
   }
@@ -156,7 +156,7 @@ public class V1ExtraAlipayGoodsDetail {
    * 商品名称
    * @return goodsName
   **/
-  @ApiModelProperty(required = true, value = "商品名称")
+  @ApiModelProperty(value = "商品名称")
   public String getGoodsName() {
     return goodsName;
   }
@@ -174,7 +174,7 @@ public class V1ExtraAlipayGoodsDetail {
    * 价格
    * @return price
   **/
-  @ApiModelProperty(required = true, value = "价格")
+  @ApiModelProperty(value = "价格")
   public Float getPrice() {
     return price;
   }
@@ -192,7 +192,7 @@ public class V1ExtraAlipayGoodsDetail {
    * 商品数量
    * @return quantity
   **/
-  @ApiModelProperty(required = true, value = "商品数量")
+  @ApiModelProperty(value = "商品数量")
   public BigDecimal getQuantity() {
     return quantity;
   }
@@ -210,7 +210,7 @@ public class V1ExtraAlipayGoodsDetail {
    * 商品显示链接
    * @return showUrl
   **/
-  @ApiModelProperty(required = true, value = "商品显示链接")
+  @ApiModelProperty(value = "商品显示链接")
   public String getShowUrl() {
     return showUrl;
   }

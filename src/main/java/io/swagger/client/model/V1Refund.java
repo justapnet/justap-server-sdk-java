@@ -24,6 +24,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.V1RefundExtra;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.List;
@@ -33,7 +34,7 @@ import java.util.Map;
  * Refund 对象允许你可以对已经支付的 charge 对象发起退款请求。
  */
 @ApiModel(description = "Refund 对象允许你可以对已经支付的 charge 对象发起退款请求。")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1Refund {
   @SerializedName("account")
   private V1RefundExtra account = null;
@@ -46,6 +47,9 @@ public class V1Refund {
 
   @SerializedName("charge_merchant_trade_id")
   private String chargeMerchantTradeId = null;
+
+  @SerializedName("created")
+  private BigDecimal created = null;
 
   @SerializedName("created_at")
   private OffsetDateTime createdAt = null;
@@ -73,6 +77,9 @@ public class V1Refund {
 
   @SerializedName("status")
   private String status = null;
+
+  @SerializedName("succeed_ts")
+  private BigDecimal succeedTs = null;
 
   @SerializedName("success_at")
   private OffsetDateTime successAt = null;
@@ -107,7 +114,7 @@ public class V1Refund {
    * 退款金额
    * @return amount
   **/
-  @ApiModelProperty(required = true, value = "退款金额")
+  @ApiModelProperty(value = "退款金额")
   public Float getAmount() {
     return amount;
   }
@@ -125,7 +132,7 @@ public class V1Refund {
    * Charge 对象 id
    * @return chargeId
   **/
-  @ApiModelProperty(required = true, value = "Charge 对象 id")
+  @ApiModelProperty(value = "Charge 对象 id")
   public String getChargeId() {
     return chargeId;
   }
@@ -143,13 +150,31 @@ public class V1Refund {
    * 商户系统订单号
    * @return chargeMerchantTradeId
   **/
-  @ApiModelProperty(required = true, value = "商户系统订单号")
+  @ApiModelProperty(value = "商户系统订单号")
   public String getChargeMerchantTradeId() {
     return chargeMerchantTradeId;
   }
 
   public void setChargeMerchantTradeId(String chargeMerchantTradeId) {
     this.chargeMerchantTradeId = chargeMerchantTradeId;
+  }
+
+  public V1Refund created(BigDecimal created) {
+    this.created = created;
+    return this;
+  }
+
+   /**
+   * 退款创建时间
+   * @return created
+  **/
+  @ApiModelProperty(value = "退款创建时间")
+  public BigDecimal getCreated() {
+    return created;
+  }
+
+  public void setCreated(BigDecimal created) {
+    this.created = created;
   }
 
   public V1Refund createdAt(OffsetDateTime createdAt) {
@@ -179,7 +204,7 @@ public class V1Refund {
    * 退款说明
    * @return description
   **/
-  @ApiModelProperty(required = true, value = "退款说明")
+  @ApiModelProperty(value = "退款说明")
   public String getDescription() {
     return description;
   }
@@ -197,7 +222,7 @@ public class V1Refund {
    * 支付渠道失败错误码
    * @return failureCode
   **/
-  @ApiModelProperty(required = true, value = "支付渠道失败错误码")
+  @ApiModelProperty(value = "支付渠道失败错误码")
   public String getFailureCode() {
     return failureCode;
   }
@@ -215,7 +240,7 @@ public class V1Refund {
    * 支付渠道失败原因描述
    * @return failureMsg
   **/
-  @ApiModelProperty(required = true, value = "支付渠道失败原因描述")
+  @ApiModelProperty(value = "支付渠道失败原因描述")
   public String getFailureMsg() {
     return failureMsg;
   }
@@ -233,7 +258,7 @@ public class V1Refund {
    * 退款是否成功
    * @return isSuccess
   **/
-  @ApiModelProperty(required = true, value = "退款是否成功")
+  @ApiModelProperty(value = "退款是否成功")
   public Boolean isIsSuccess() {
     return isSuccess;
   }
@@ -277,7 +302,7 @@ public class V1Refund {
    * Refund 对象 ID
    * @return refundId
   **/
-  @ApiModelProperty(required = true, value = "Refund 对象 ID")
+  @ApiModelProperty(value = "Refund 对象 ID")
   public String getRefundId() {
     return refundId;
   }
@@ -295,7 +320,7 @@ public class V1Refund {
    * 退款单号
    * @return refundNo
   **/
-  @ApiModelProperty(required = true, value = "退款单号")
+  @ApiModelProperty(value = "退款单号")
   public String getRefundNo() {
     return refundNo;
   }
@@ -313,13 +338,31 @@ public class V1Refund {
    * 退款状态
    * @return status
   **/
-  @ApiModelProperty(required = true, value = "退款状态")
+  @ApiModelProperty(value = "退款状态")
   public String getStatus() {
     return status;
   }
 
   public void setStatus(String status) {
     this.status = status;
+  }
+
+  public V1Refund succeedTs(BigDecimal succeedTs) {
+    this.succeedTs = succeedTs;
+    return this;
+  }
+
+   /**
+   * 退款成功时间
+   * @return succeedTs
+  **/
+  @ApiModelProperty(value = "退款成功时间")
+  public BigDecimal getSucceedTs() {
+    return succeedTs;
+  }
+
+  public void setSucceedTs(BigDecimal succeedTs) {
+    this.succeedTs = succeedTs;
   }
 
   public V1Refund successAt(OffsetDateTime successAt) {
@@ -349,7 +392,7 @@ public class V1Refund {
    * 交易号
    * @return transactionNo
   **/
-  @ApiModelProperty(required = true, value = "交易号")
+  @ApiModelProperty(value = "交易号")
   public String getTransactionNo() {
     return transactionNo;
   }
@@ -372,6 +415,7 @@ public class V1Refund {
         Objects.equals(this.amount, v1Refund.amount) &&
         Objects.equals(this.chargeId, v1Refund.chargeId) &&
         Objects.equals(this.chargeMerchantTradeId, v1Refund.chargeMerchantTradeId) &&
+        Objects.equals(this.created, v1Refund.created) &&
         Objects.equals(this.createdAt, v1Refund.createdAt) &&
         Objects.equals(this.description, v1Refund.description) &&
         Objects.equals(this.failureCode, v1Refund.failureCode) &&
@@ -381,13 +425,14 @@ public class V1Refund {
         Objects.equals(this.refundId, v1Refund.refundId) &&
         Objects.equals(this.refundNo, v1Refund.refundNo) &&
         Objects.equals(this.status, v1Refund.status) &&
+        Objects.equals(this.succeedTs, v1Refund.succeedTs) &&
         Objects.equals(this.successAt, v1Refund.successAt) &&
         Objects.equals(this.transactionNo, v1Refund.transactionNo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(account, amount, chargeId, chargeMerchantTradeId, createdAt, description, failureCode, failureMsg, isSuccess, metadata, refundId, refundNo, status, successAt, transactionNo);
+    return Objects.hash(account, amount, chargeId, chargeMerchantTradeId, created, createdAt, description, failureCode, failureMsg, isSuccess, metadata, refundId, refundNo, status, succeedTs, successAt, transactionNo);
   }
 
 
@@ -400,6 +445,7 @@ public class V1Refund {
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
     sb.append("    chargeMerchantTradeId: ").append(toIndentedString(chargeMerchantTradeId)).append("\n");
+    sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    failureCode: ").append(toIndentedString(failureCode)).append("\n");
@@ -409,6 +455,7 @@ public class V1Refund {
     sb.append("    refundId: ").append(toIndentedString(refundId)).append("\n");
     sb.append("    refundNo: ").append(toIndentedString(refundNo)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    succeedTs: ").append(toIndentedString(succeedTs)).append("\n");
     sb.append("    successAt: ").append(toIndentedString(successAt)).append("\n");
     sb.append("    transactionNo: ").append(toIndentedString(transactionNo)).append("\n");
     sb.append("}");

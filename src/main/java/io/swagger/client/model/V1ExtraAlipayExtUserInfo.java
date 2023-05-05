@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayExtUserInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2022-06-13T16:32:34.561Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
 public class V1ExtraAlipayExtUserInfo {
   @SerializedName("cert_no")
   private String certNo = null;
@@ -59,7 +59,7 @@ public class V1ExtraAlipayExtUserInfo {
    * 真实用户的证件号码
    * @return certNo
   **/
-  @ApiModelProperty(required = true, value = "真实用户的证件号码")
+  @ApiModelProperty(value = "真实用户的证件号码")
   public String getCertNo() {
     return certNo;
   }
@@ -77,7 +77,7 @@ public class V1ExtraAlipayExtUserInfo {
    * 真实用户的证件类型
    * @return certType
   **/
-  @ApiModelProperty(required = true, value = "真实用户的证件类型")
+  @ApiModelProperty(value = "真实用户的证件类型")
   public String getCertType() {
     return certType;
   }
@@ -95,7 +95,7 @@ public class V1ExtraAlipayExtUserInfo {
    * 是否是实名用户
    * @return fixBuyer
   **/
-  @ApiModelProperty(required = true, value = "是否是实名用户")
+  @ApiModelProperty(value = "是否是实名用户")
   public String getFixBuyer() {
     return fixBuyer;
   }
@@ -113,7 +113,7 @@ public class V1ExtraAlipayExtUserInfo {
    * 真实用户的证件有效期的起始时间
    * @return minAge
   **/
-  @ApiModelProperty(required = true, value = "真实用户的证件有效期的起始时间")
+  @ApiModelProperty(value = "真实用户的证件有效期的起始时间")
   public String getMinAge() {
     return minAge;
   }
@@ -131,7 +131,7 @@ public class V1ExtraAlipayExtUserInfo {
    * 真实用户的手机号码
    * @return mobile
   **/
-  @ApiModelProperty(required = true, value = "真实用户的手机号码")
+  @ApiModelProperty(value = "真实用户的手机号码")
   public String getMobile() {
     return mobile;
   }
@@ -149,7 +149,7 @@ public class V1ExtraAlipayExtUserInfo {
    * 真实用户的姓名
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "真实用户的姓名")
+  @ApiModelProperty(value = "真实用户的姓名")
   public String getName() {
     return name;
   }
@@ -167,7 +167,7 @@ public class V1ExtraAlipayExtUserInfo {
    * 是否需要补充身份信息
    * @return needCheckInfo
   **/
-  @ApiModelProperty(required = true, value = "是否需要补充身份信息")
+  @ApiModelProperty(value = "是否需要补充身份信息")
   public String getNeedCheckInfo() {
     return needCheckInfo;
   }

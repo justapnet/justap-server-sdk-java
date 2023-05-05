@@ -4,15 +4,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alipayGoodsId** | **String** | 支付宝商品编号 | 
-**body** | **String** | 商品描述 | 
-**categoriesTree** | **String** | 商品类目树 | 
-**goodsCategory** | **String** | 商品类目 | 
-**goodsId** | **String** | 商品编号 | 
-**goodsName** | **String** | 商品名称 | 
-**price** | **Float** | 价格 | 
-**quantity** | [**BigDecimal**](BigDecimal.md) | 商品数量 | 
-**showUrl** | **String** | 商品显示链接 | 
+**alipayGoodsId** | **String** | 支付宝商品编号 |  [optional]
+**body** | **String** | 商品描述 |  [optional]
+**categoriesTree** | **String** | 商品类目树 |  [optional]
+**goodsCategory** | **String** | 商品类目 |  [optional]
+**goodsId** | **String** | 商品编号 |  [optional]
+**goodsName** | **String** | 商品名称 |  [optional]
+**price** | **Float** | 价格 |  [optional]
+**quantity** | [**BigDecimal**](BigDecimal.md) | 商品数量 |  [optional]
+**showUrl** | **String** | 商品显示链接 |  [optional]
 
 
 
