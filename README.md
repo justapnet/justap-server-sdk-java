@@ -2,7 +2,7 @@
 
 Justap API
 - API version: 1.0
-  - Build date: 2023-05-05T15:15:21.742Z
+  - Build date: 2023-05-07T16:33:43.952Z
 
 For more information, please visit [https://www.justap.cn/docs](https://www.justap.cn/docs)
 
@@ -164,6 +164,10 @@ Class | Method | HTTP request | Description
  - [SettlementAccountRecipientRecipientType](docs/SettlementAccountRecipientRecipientType.md)
  - [SettlementAccountRecipientWechatpayChannelRecipient](docs/SettlementAccountRecipientWechatpayChannelRecipient.md)
  - [Tradev1Channel](docs/Tradev1Channel.md)
+ - [Tradev1RoyaltyMethod](docs/Tradev1RoyaltyMethod.md)
+ - [V1AcquirerCreateRoyaltyResponse](docs/V1AcquirerCreateRoyaltyResponse.md)
+ - [V1AcquirerQueryRoyaltyResponse](docs/V1AcquirerQueryRoyaltyResponse.md)
+ - [V1AcquirerRoyaltyNotifyResponse](docs/V1AcquirerRoyaltyNotifyResponse.md)
  - [V1AlipayCallbackResponse](docs/V1AlipayCallbackResponse.md)
  - [V1AlipayNotifyResponse](docs/V1AlipayNotifyResponse.md)
  - [V1CallbackRoutingResponse](docs/V1CallbackRoutingResponse.md)
@@ -236,9 +240,9 @@ Class | Method | HTTP request | Description
  - [V1RefundRoutingResponse](docs/V1RefundRoutingResponse.md)
  - [V1Royalty](docs/V1Royalty.md)
  - [V1RoyaltyListResponse](docs/V1RoyaltyListResponse.md)
- - [V1RoyaltyMethod](docs/V1RoyaltyMethod.md)
  - [V1RoyaltyMode](docs/V1RoyaltyMode.md)
  - [V1RoyaltyResponse](docs/V1RoyaltyResponse.md)
+ - [V1RoyaltyRoutingRequestRoyaltyMethod](docs/V1RoyaltyRoutingRequestRoyaltyMethod.md)
  - [V1RoyaltyRoutingResponse](docs/V1RoyaltyRoutingResponse.md)
  - [V1RoyaltySettlement](docs/V1RoyaltySettlement.md)
  - [V1RoyaltySettlementListResponse](docs/V1RoyaltySettlementListResponse.md)
@@ -262,9 +266,6 @@ Class | Method | HTTP request | Description
  - [V1UserResponse](docs/V1UserResponse.md)
  - [V1WechatpayCallbackResponse](docs/V1WechatpayCallbackResponse.md)
  - [V1WechatpayNotifyResponse](docs/V1WechatpayNotifyResponse.md)
- - [V1WechatpayV3PartnerNotifyResponse](docs/V1WechatpayV3PartnerNotifyResponse.md)
- - [V1WechatpayV3PartnerQueryRoyaltyResponse](docs/V1WechatpayV3PartnerQueryRoyaltyResponse.md)
- - [V1WechatpayV3PartnerRoyaltyResponse](docs/V1WechatpayV3PartnerRoyaltyResponse.md)
 
 
 ## Documentation for Authorization

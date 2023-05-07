@@ -22,7 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.V1RoyaltyMethod;
+import io.swagger.client.model.Tradev1RoyaltyMethod;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +31,7 @@ import java.util.Map;
 /**
  * V1Royalty
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-07T16:33:43.952Z")
 public class V1Royalty {
   @SerializedName("amount")
   private Double amount = null;
@@ -55,7 +55,7 @@ public class V1Royalty {
   private Map<String, String> metadata = null;
 
   @SerializedName("method")
-  private V1RoyaltyMethod method = null;
+  private Tradev1RoyaltyMethod method = null;
 
   @SerializedName("object")
   private String object = "Royalty";
@@ -221,7 +221,7 @@ public class V1Royalty {
     this.metadata = metadata;
   }
 
-  public V1Royalty method(V1RoyaltyMethod method) {
+  public V1Royalty method(Tradev1RoyaltyMethod method) {
     this.method = method;
     return this;
   }
@@ -231,11 +231,11 @@ public class V1Royalty {
    * @return method
   **/
   @ApiModelProperty(value = "")
-  public V1RoyaltyMethod getMethod() {
+  public Tradev1RoyaltyMethod getMethod() {
     return method;
   }
 
-  public void setMethod(V1RoyaltyMethod method) {
+  public void setMethod(Tradev1RoyaltyMethod method) {
     this.method = method;
   }
 

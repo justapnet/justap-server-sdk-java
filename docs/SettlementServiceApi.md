@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="settlementServiceCreateSettlementAccount"></a>
 # **settlementServiceCreateSettlementAccount**
-> V1SettlementAccountResponse settlementServiceCreateSettlementAccount(appId, userId, customerId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity)
+> V1SettlementAccountResponse settlementServiceCreateSettlementAccount(appId, userId, customerId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientWechatpayChannelRecipientAppId, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity)
 
 创建 SettlementAccount 对象
 
@@ -45,6 +45,7 @@ String recipientWechatpayChannelRecipientName = "recipientWechatpayChannelRecipi
 Boolean recipientWechatpayChannelRecipientForceCheck = false; // Boolean | 是否强制校验收款人姓名
 String recipientWechatpayChannelRecipientType = "TYPE_UNSET"; // String | 微信支付分账接收方类型
 String recipientWechatpayChannelRecipientAccountType = "ACCOUNT_TYPE_UNSET"; // String | 微信支付分账接收方账户类型   - ACCOUNT_TYPE_UNSET: 未设置  - MERCHANT_ID: 分账到微信商户号  - OPENID: 分账到个人微信号（父公众号的openid，或服务商的openid））  - SUB_OPENID: 分账到个人微信号，子账号的  - LOGIN_NAME: 分账到微信登录号
+String recipientWechatpayChannelRecipientAppId = "recipientWechatpayChannelRecipientAppId_example"; // String | 微信支付分账接收方 openid 所对应的公众号 ID
 String recipientAlipayChannelRecipientAccount = "recipientAlipayChannelRecipientAccount_example"; // String | 支付宝账号，账号ID或者登录邮箱
 String recipientAlipayChannelRecipientName = "recipientAlipayChannelRecipientName_example"; // String | 支付宝账号真实姓名
 String recipientAlipayChannelRecipientType = "TYPE_UNSET"; // String | 支付宝账号类型
@@ -57,7 +58,7 @@ String recipientBankChannelRecipientBankBranch = "recipientBankChannelRecipientB
 String recipientBankChannelRecipientBankProvince = "recipientBankChannelRecipientBankProvince_example"; // String | 银行卡开户省份
 String recipientBankChannelRecipientBankCity = "recipientBankChannelRecipientBankCity_example"; // String | 银行卡开户城市
 try {
-    V1SettlementAccountResponse result = apiInstance.settlementServiceCreateSettlementAccount(appId, userId, customerId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity);
+    V1SettlementAccountResponse result = apiInstance.settlementServiceCreateSettlementAccount(appId, userId, customerId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientWechatpayChannelRecipientAppId, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SettlementServiceApi#settlementServiceCreateSettlementAccount");
@@ -78,6 +79,7 @@ Name | Type | Description  | Notes
  **recipientWechatpayChannelRecipientForceCheck** | **Boolean**| 是否强制校验收款人姓名 | [optional] [default to false]
  **recipientWechatpayChannelRecipientType** | **String**| 微信支付分账接收方类型 | [optional] [default to TYPE_UNSET] [enum: TYPE_UNSET, B2C, B2B]
  **recipientWechatpayChannelRecipientAccountType** | **String**| 微信支付分账接收方账户类型   - ACCOUNT_TYPE_UNSET: 未设置  - MERCHANT_ID: 分账到微信商户号  - OPENID: 分账到个人微信号（父公众号的openid，或服务商的openid））  - SUB_OPENID: 分账到个人微信号，子账号的  - LOGIN_NAME: 分账到微信登录号 | [optional] [default to ACCOUNT_TYPE_UNSET] [enum: ACCOUNT_TYPE_UNSET, MERCHANT_ID, OPENID, SUB_OPENID, LOGIN_NAME, USER_ID]
+ **recipientWechatpayChannelRecipientAppId** | **String**| 微信支付分账接收方 openid 所对应的公众号 ID | [optional]
  **recipientAlipayChannelRecipientAccount** | **String**| 支付宝账号，账号ID或者登录邮箱 | [optional]
  **recipientAlipayChannelRecipientName** | **String**| 支付宝账号真实姓名 | [optional]
  **recipientAlipayChannelRecipientType** | **String**| 支付宝账号类型 | [optional] [default to TYPE_UNSET] [enum: TYPE_UNSET, B2C, B2B]
@@ -233,7 +235,7 @@ Name | Type | Description  | Notes
 
 <a name="settlementServiceRetrieveSettlementAccount"></a>
 # **settlementServiceRetrieveSettlementAccount**
-> V1SettlementAccountResponse settlementServiceRetrieveSettlementAccount(id, appId, object, dataId, dataAppId, dataUserId, dataChannel, dataRecipientWechatpayChannelRecipientAccount, dataRecipientWechatpayChannelRecipientName, dataRecipientWechatpayChannelRecipientForceCheck, dataRecipientWechatpayChannelRecipientType, dataRecipientWechatpayChannelRecipientAccountType, dataRecipientAlipayChannelRecipientAccount, dataRecipientAlipayChannelRecipientName, dataRecipientAlipayChannelRecipientType, dataRecipientAlipayChannelRecipientAccountType, dataRecipientBankChannelRecipientAccount, dataRecipientBankChannelRecipientName, dataRecipientBankChannelRecipientType, dataRecipientBankChannelRecipientBankName, dataRecipientBankChannelRecipientBankBranch, dataRecipientBankChannelRecipientBankProvince, dataRecipientBankChannelRecipientBankCity, dataCreated, dataUpdated, dataObject)
+> V1SettlementAccountResponse settlementServiceRetrieveSettlementAccount(id, appId, object, dataId, dataAppId, dataUserId, dataChannel, dataRecipientWechatpayChannelRecipientAccount, dataRecipientWechatpayChannelRecipientName, dataRecipientWechatpayChannelRecipientForceCheck, dataRecipientWechatpayChannelRecipientType, dataRecipientWechatpayChannelRecipientAccountType, dataRecipientWechatpayChannelRecipientAppId, dataRecipientAlipayChannelRecipientAccount, dataRecipientAlipayChannelRecipientName, dataRecipientAlipayChannelRecipientType, dataRecipientAlipayChannelRecipientAccountType, dataRecipientBankChannelRecipientAccount, dataRecipientBankChannelRecipientName, dataRecipientBankChannelRecipientType, dataRecipientBankChannelRecipientBankName, dataRecipientBankChannelRecipientBankBranch, dataRecipientBankChannelRecipientBankProvince, dataRecipientBankChannelRecipientBankCity, dataCreated, dataUpdated, dataObject)
 
 查询 SettlementAccount 对象
 
@@ -267,6 +269,7 @@ String dataRecipientWechatpayChannelRecipientName = "dataRecipientWechatpayChann
 Boolean dataRecipientWechatpayChannelRecipientForceCheck = false; // Boolean | 是否强制校验收款人姓名
 String dataRecipientWechatpayChannelRecipientType = "TYPE_UNSET"; // String | 微信支付分账接收方类型
 String dataRecipientWechatpayChannelRecipientAccountType = "ACCOUNT_TYPE_UNSET"; // String | 微信支付分账接收方账户类型   - ACCOUNT_TYPE_UNSET: 未设置  - MERCHANT_ID: 分账到微信商户号  - OPENID: 分账到个人微信号（父公众号的openid，或服务商的openid））  - SUB_OPENID: 分账到个人微信号，子账号的  - LOGIN_NAME: 分账到微信登录号
+String dataRecipientWechatpayChannelRecipientAppId = "dataRecipientWechatpayChannelRecipientAppId_example"; // String | 微信支付分账接收方 openid 所对应的公众号 ID
 String dataRecipientAlipayChannelRecipientAccount = "dataRecipientAlipayChannelRecipientAccount_example"; // String | 支付宝账号，账号ID或者登录邮箱
 String dataRecipientAlipayChannelRecipientName = "dataRecipientAlipayChannelRecipientName_example"; // String | 支付宝账号真实姓名
 String dataRecipientAlipayChannelRecipientType = "TYPE_UNSET"; // String | 支付宝账号类型
@@ -282,7 +285,7 @@ Long dataCreated = 0L; // Long | 分账接收方的创建时间
 Long dataUpdated = 0L; // Long | 分账接收方的更新时间
 String dataObject = "Recipient"; // String | 对象类型
 try {
-    V1SettlementAccountResponse result = apiInstance.settlementServiceRetrieveSettlementAccount(id, appId, object, dataId, dataAppId, dataUserId, dataChannel, dataRecipientWechatpayChannelRecipientAccount, dataRecipientWechatpayChannelRecipientName, dataRecipientWechatpayChannelRecipientForceCheck, dataRecipientWechatpayChannelRecipientType, dataRecipientWechatpayChannelRecipientAccountType, dataRecipientAlipayChannelRecipientAccount, dataRecipientAlipayChannelRecipientName, dataRecipientAlipayChannelRecipientType, dataRecipientAlipayChannelRecipientAccountType, dataRecipientBankChannelRecipientAccount, dataRecipientBankChannelRecipientName, dataRecipientBankChannelRecipientType, dataRecipientBankChannelRecipientBankName, dataRecipientBankChannelRecipientBankBranch, dataRecipientBankChannelRecipientBankProvince, dataRecipientBankChannelRecipientBankCity, dataCreated, dataUpdated, dataObject);
+    V1SettlementAccountResponse result = apiInstance.settlementServiceRetrieveSettlementAccount(id, appId, object, dataId, dataAppId, dataUserId, dataChannel, dataRecipientWechatpayChannelRecipientAccount, dataRecipientWechatpayChannelRecipientName, dataRecipientWechatpayChannelRecipientForceCheck, dataRecipientWechatpayChannelRecipientType, dataRecipientWechatpayChannelRecipientAccountType, dataRecipientWechatpayChannelRecipientAppId, dataRecipientAlipayChannelRecipientAccount, dataRecipientAlipayChannelRecipientName, dataRecipientAlipayChannelRecipientType, dataRecipientAlipayChannelRecipientAccountType, dataRecipientBankChannelRecipientAccount, dataRecipientBankChannelRecipientName, dataRecipientBankChannelRecipientType, dataRecipientBankChannelRecipientBankName, dataRecipientBankChannelRecipientBankBranch, dataRecipientBankChannelRecipientBankProvince, dataRecipientBankChannelRecipientBankCity, dataCreated, dataUpdated, dataObject);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SettlementServiceApi#settlementServiceRetrieveSettlementAccount");
@@ -306,6 +309,7 @@ Name | Type | Description  | Notes
  **dataRecipientWechatpayChannelRecipientForceCheck** | **Boolean**| 是否强制校验收款人姓名 | [optional] [default to false]
  **dataRecipientWechatpayChannelRecipientType** | **String**| 微信支付分账接收方类型 | [optional] [default to TYPE_UNSET] [enum: TYPE_UNSET, B2C, B2B]
  **dataRecipientWechatpayChannelRecipientAccountType** | **String**| 微信支付分账接收方账户类型   - ACCOUNT_TYPE_UNSET: 未设置  - MERCHANT_ID: 分账到微信商户号  - OPENID: 分账到个人微信号（父公众号的openid，或服务商的openid））  - SUB_OPENID: 分账到个人微信号，子账号的  - LOGIN_NAME: 分账到微信登录号 | [optional] [default to ACCOUNT_TYPE_UNSET] [enum: ACCOUNT_TYPE_UNSET, MERCHANT_ID, OPENID, SUB_OPENID, LOGIN_NAME, USER_ID]
+ **dataRecipientWechatpayChannelRecipientAppId** | **String**| 微信支付分账接收方 openid 所对应的公众号 ID | [optional]
  **dataRecipientAlipayChannelRecipientAccount** | **String**| 支付宝账号，账号ID或者登录邮箱 | [optional]
  **dataRecipientAlipayChannelRecipientName** | **String**| 支付宝账号真实姓名 | [optional]
  **dataRecipientAlipayChannelRecipientType** | **String**| 支付宝账号类型 | [optional] [default to TYPE_UNSET] [enum: TYPE_UNSET, B2C, B2B]
@@ -391,7 +395,7 @@ Name | Type | Description  | Notes
 
 <a name="settlementServiceUpdateSettlementAccount"></a>
 # **settlementServiceUpdateSettlementAccount**
-> V1SettlementAccountResponse settlementServiceUpdateSettlementAccount(id, customerId, userId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity)
+> V1SettlementAccountResponse settlementServiceUpdateSettlementAccount(id, customerId, userId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientWechatpayChannelRecipientAppId, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity)
 
 更新 SettlementAccount 对象
 
@@ -422,6 +426,7 @@ String recipientWechatpayChannelRecipientName = "recipientWechatpayChannelRecipi
 Boolean recipientWechatpayChannelRecipientForceCheck = false; // Boolean | 是否强制校验收款人姓名
 String recipientWechatpayChannelRecipientType = "TYPE_UNSET"; // String | 微信支付分账接收方类型
 String recipientWechatpayChannelRecipientAccountType = "ACCOUNT_TYPE_UNSET"; // String | 微信支付分账接收方账户类型   - ACCOUNT_TYPE_UNSET: 未设置  - MERCHANT_ID: 分账到微信商户号  - OPENID: 分账到个人微信号（父公众号的openid，或服务商的openid））  - SUB_OPENID: 分账到个人微信号，子账号的  - LOGIN_NAME: 分账到微信登录号
+String recipientWechatpayChannelRecipientAppId = "recipientWechatpayChannelRecipientAppId_example"; // String | 微信支付分账接收方 openid 所对应的公众号 ID
 String recipientAlipayChannelRecipientAccount = "recipientAlipayChannelRecipientAccount_example"; // String | 支付宝账号，账号ID或者登录邮箱
 String recipientAlipayChannelRecipientName = "recipientAlipayChannelRecipientName_example"; // String | 支付宝账号真实姓名
 String recipientAlipayChannelRecipientType = "TYPE_UNSET"; // String | 支付宝账号类型
@@ -434,7 +439,7 @@ String recipientBankChannelRecipientBankBranch = "recipientBankChannelRecipientB
 String recipientBankChannelRecipientBankProvince = "recipientBankChannelRecipientBankProvince_example"; // String | 银行卡开户省份
 String recipientBankChannelRecipientBankCity = "recipientBankChannelRecipientBankCity_example"; // String | 银行卡开户城市
 try {
-    V1SettlementAccountResponse result = apiInstance.settlementServiceUpdateSettlementAccount(id, customerId, userId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity);
+    V1SettlementAccountResponse result = apiInstance.settlementServiceUpdateSettlementAccount(id, customerId, userId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientWechatpayChannelRecipientAppId, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling SettlementServiceApi#settlementServiceUpdateSettlementAccount");
@@ -455,6 +460,7 @@ Name | Type | Description  | Notes
  **recipientWechatpayChannelRecipientForceCheck** | **Boolean**| 是否强制校验收款人姓名 | [optional] [default to false]
  **recipientWechatpayChannelRecipientType** | **String**| 微信支付分账接收方类型 | [optional] [default to TYPE_UNSET] [enum: TYPE_UNSET, B2C, B2B]
  **recipientWechatpayChannelRecipientAccountType** | **String**| 微信支付分账接收方账户类型   - ACCOUNT_TYPE_UNSET: 未设置  - MERCHANT_ID: 分账到微信商户号  - OPENID: 分账到个人微信号（父公众号的openid，或服务商的openid））  - SUB_OPENID: 分账到个人微信号，子账号的  - LOGIN_NAME: 分账到微信登录号 | [optional] [default to ACCOUNT_TYPE_UNSET] [enum: ACCOUNT_TYPE_UNSET, MERCHANT_ID, OPENID, SUB_OPENID, LOGIN_NAME, USER_ID]
+ **recipientWechatpayChannelRecipientAppId** | **String**| 微信支付分账接收方 openid 所对应的公众号 ID | [optional]
  **recipientAlipayChannelRecipientAccount** | **String**| 支付宝账号，账号ID或者登录邮箱 | [optional]
  **recipientAlipayChannelRecipientName** | **String**| 支付宝账号真实姓名 | [optional]
  **recipientAlipayChannelRecipientType** | **String**| 支付宝账号类型 | [optional] [default to TYPE_UNSET] [enum: TYPE_UNSET, B2C, B2B]

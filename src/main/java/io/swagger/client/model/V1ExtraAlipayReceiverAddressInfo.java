@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayReceiverAddressInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-07T16:33:43.952Z")
 public class V1ExtraAlipayReceiverAddressInfo {
   @SerializedName("address")
   private String address = null;

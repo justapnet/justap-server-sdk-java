@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **id** | **String** |  |  [optional]
 **livemode** | **Boolean** |  |  [optional]
 **metadata** | **Map&lt;String, String&gt;** |  |  [optional]
-**method** | [**V1RoyaltyMethod**](V1RoyaltyMethod.md) |  |  [optional]
+**method** | [**Tradev1RoyaltyMethod**](Tradev1RoyaltyMethod.md) |  |  [optional]
 **object** | **String** | 对象类型 |  [optional]
 **orderId** | **String** |  |  [optional]
 **payerAppId** | **String** |  |  [optional]

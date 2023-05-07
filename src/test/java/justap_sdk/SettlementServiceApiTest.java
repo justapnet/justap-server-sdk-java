@@ -54,6 +54,7 @@ public class SettlementServiceApiTest {
         Boolean recipientWechatpayChannelRecipientForceCheck = null;
         String recipientWechatpayChannelRecipientType = null;
         String recipientWechatpayChannelRecipientAccountType = null;
+        String recipientWechatpayChannelRecipientAppId = null;
         String recipientAlipayChannelRecipientAccount = null;
         String recipientAlipayChannelRecipientName = null;
         String recipientAlipayChannelRecipientType = null;
@@ -65,7 +66,7 @@ public class SettlementServiceApiTest {
         String recipientBankChannelRecipientBankBranch = null;
         String recipientBankChannelRecipientBankProvince = null;
         String recipientBankChannelRecipientBankCity = null;
-        V1SettlementAccountResponse response = api.settlementServiceCreateSettlementAccount(appId, userId, customerId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity);
+        V1SettlementAccountResponse response = api.settlementServiceCreateSettlementAccount(appId, userId, customerId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientWechatpayChannelRecipientAppId, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity);
 
         // TODO: test validations
     }
@@ -135,6 +136,7 @@ public class SettlementServiceApiTest {
         Boolean dataRecipientWechatpayChannelRecipientForceCheck = null;
         String dataRecipientWechatpayChannelRecipientType = null;
         String dataRecipientWechatpayChannelRecipientAccountType = null;
+        String dataRecipientWechatpayChannelRecipientAppId = null;
         String dataRecipientAlipayChannelRecipientAccount = null;
         String dataRecipientAlipayChannelRecipientName = null;
         String dataRecipientAlipayChannelRecipientType = null;
@@ -149,7 +151,7 @@ public class SettlementServiceApiTest {
         Long dataCreated = null;
         Long dataUpdated = null;
         String dataObject = null;
-        V1SettlementAccountResponse response = api.settlementServiceRetrieveSettlementAccount(id, appId, object, dataId, dataAppId, dataUserId, dataChannel, dataRecipientWechatpayChannelRecipientAccount, dataRecipientWechatpayChannelRecipientName, dataRecipientWechatpayChannelRecipientForceCheck, dataRecipientWechatpayChannelRecipientType, dataRecipientWechatpayChannelRecipientAccountType, dataRecipientAlipayChannelRecipientAccount, dataRecipientAlipayChannelRecipientName, dataRecipientAlipayChannelRecipientType, dataRecipientAlipayChannelRecipientAccountType, dataRecipientBankChannelRecipientAccount, dataRecipientBankChannelRecipientName, dataRecipientBankChannelRecipientType, dataRecipientBankChannelRecipientBankName, dataRecipientBankChannelRecipientBankBranch, dataRecipientBankChannelRecipientBankProvince, dataRecipientBankChannelRecipientBankCity, dataCreated, dataUpdated, dataObject);
+        V1SettlementAccountResponse response = api.settlementServiceRetrieveSettlementAccount(id, appId, object, dataId, dataAppId, dataUserId, dataChannel, dataRecipientWechatpayChannelRecipientAccount, dataRecipientWechatpayChannelRecipientName, dataRecipientWechatpayChannelRecipientForceCheck, dataRecipientWechatpayChannelRecipientType, dataRecipientWechatpayChannelRecipientAccountType, dataRecipientWechatpayChannelRecipientAppId, dataRecipientAlipayChannelRecipientAccount, dataRecipientAlipayChannelRecipientName, dataRecipientAlipayChannelRecipientType, dataRecipientAlipayChannelRecipientAccountType, dataRecipientBankChannelRecipientAccount, dataRecipientBankChannelRecipientName, dataRecipientBankChannelRecipientType, dataRecipientBankChannelRecipientBankName, dataRecipientBankChannelRecipientBankBranch, dataRecipientBankChannelRecipientBankProvince, dataRecipientBankChannelRecipientBankCity, dataCreated, dataUpdated, dataObject);
 
         // TODO: test validations
     }
@@ -190,6 +192,7 @@ public class SettlementServiceApiTest {
         Boolean recipientWechatpayChannelRecipientForceCheck = null;
         String recipientWechatpayChannelRecipientType = null;
         String recipientWechatpayChannelRecipientAccountType = null;
+        String recipientWechatpayChannelRecipientAppId = null;
         String recipientAlipayChannelRecipientAccount = null;
         String recipientAlipayChannelRecipientName = null;
         String recipientAlipayChannelRecipientType = null;
@@ -201,7 +204,7 @@ public class SettlementServiceApiTest {
         String recipientBankChannelRecipientBankBranch = null;
         String recipientBankChannelRecipientBankProvince = null;
         String recipientBankChannelRecipientBankCity = null;
-        V1SettlementAccountResponse response = api.settlementServiceUpdateSettlementAccount(id, customerId, userId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity);
+        V1SettlementAccountResponse response = api.settlementServiceUpdateSettlementAccount(id, customerId, userId, channel, recipientWechatpayChannelRecipientAccount, recipientWechatpayChannelRecipientName, recipientWechatpayChannelRecipientForceCheck, recipientWechatpayChannelRecipientType, recipientWechatpayChannelRecipientAccountType, recipientWechatpayChannelRecipientAppId, recipientAlipayChannelRecipientAccount, recipientAlipayChannelRecipientName, recipientAlipayChannelRecipientType, recipientAlipayChannelRecipientAccountType, recipientBankChannelRecipientAccount, recipientBankChannelRecipientName, recipientBankChannelRecipientType, recipientBankChannelRecipientBankName, recipientBankChannelRecipientBankBranch, recipientBankChannelRecipientBankProvince, recipientBankChannelRecipientBankCity);
 
         // TODO: test validations
     }

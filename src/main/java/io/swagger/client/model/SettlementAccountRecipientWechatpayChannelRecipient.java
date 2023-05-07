@@ -29,13 +29,16 @@ import java.io.IOException;
 /**
  * SettlementAccountRecipientWechatpayChannelRecipient
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-05T15:15:21.742Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-07T16:33:43.952Z")
 public class SettlementAccountRecipientWechatpayChannelRecipient {
   @SerializedName("account")
   private String account = null;
 
   @SerializedName("account_type")
   private SettlementAccountRecipientAccountType accountType = null;
+
+  @SerializedName("app_id")
+  private String appId = null;
 
   @SerializedName("force_check")
   private Boolean forceCheck = false;
@@ -80,6 +83,24 @@ public class SettlementAccountRecipientWechatpayChannelRecipient {
 
   public void setAccountType(SettlementAccountRecipientAccountType accountType) {
     this.accountType = accountType;
+  }
+
+  public SettlementAccountRecipientWechatpayChannelRecipient appId(String appId) {
+    this.appId = appId;
+    return this;
+  }
+
+   /**
+   * 微信支付分账接收方 openid 所对应的公众号 ID
+   * @return appId
+  **/
+  @ApiModelProperty(value = "微信支付分账接收方 openid 所对应的公众号 ID")
+  public String getAppId() {
+    return appId;
+  }
+
+  public void setAppId(String appId) {
+    this.appId = appId;
   }
 
   public SettlementAccountRecipientWechatpayChannelRecipient forceCheck(Boolean forceCheck) {
@@ -148,6 +169,7 @@ public class SettlementAccountRecipientWechatpayChannelRecipient {
     SettlementAccountRecipientWechatpayChannelRecipient settlementAccountRecipientWechatpayChannelRecipient = (SettlementAccountRecipientWechatpayChannelRecipient) o;
     return Objects.equals(this.account, settlementAccountRecipientWechatpayChannelRecipient.account) &&
         Objects.equals(this.accountType, settlementAccountRecipientWechatpayChannelRecipient.accountType) &&
+        Objects.equals(this.appId, settlementAccountRecipientWechatpayChannelRecipient.appId) &&
         Objects.equals(this.forceCheck, settlementAccountRecipientWechatpayChannelRecipient.forceCheck) &&
         Objects.equals(this.name, settlementAccountRecipientWechatpayChannelRecipient.name) &&
         Objects.equals(this.type, settlementAccountRecipientWechatpayChannelRecipient.type);
@@ -155,7 +177,7 @@ public class SettlementAccountRecipientWechatpayChannelRecipient {
 
   @Override
   public int hashCode() {
-    return Objects.hash(account, accountType, forceCheck, name, type);
+    return Objects.hash(account, accountType, appId, forceCheck, name, type);
   }
 
 
@@ -166,6 +188,7 @@ public class SettlementAccountRecipientWechatpayChannelRecipient {
     
     sb.append("    account: ").append(toIndentedString(account)).append("\n");
     sb.append("    accountType: ").append(toIndentedString(accountType)).append("\n");
+    sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    forceCheck: ").append(toIndentedString(forceCheck)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
