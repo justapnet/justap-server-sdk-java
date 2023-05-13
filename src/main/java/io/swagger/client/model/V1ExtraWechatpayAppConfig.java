@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayAppConfig
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:39:03.113Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:44:38.071Z")
 public class V1ExtraWechatpayAppConfig {
   @SerializedName("appid")
   private String appid = null;
