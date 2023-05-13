@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * V1ExtraAlipayPage
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:36:02.782Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:39:03.113Z")
 public class V1ExtraAlipayPage {
   @SerializedName("business_params")
   private BigDecimal businessParams = null;
