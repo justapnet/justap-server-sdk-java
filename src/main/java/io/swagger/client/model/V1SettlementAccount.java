@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * V1SettlementAccount
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:21:06.028Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:44:50.732Z")
 public class V1SettlementAccount {
   @SerializedName("app_id")
   private String appId = "0";

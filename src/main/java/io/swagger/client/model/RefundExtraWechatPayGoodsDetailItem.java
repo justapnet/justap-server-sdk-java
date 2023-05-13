@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * RefundExtraWechatPayGoodsDetailItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:21:06.028Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:44:50.732Z")
 public class RefundExtraWechatPayGoodsDetailItem {
   @SerializedName("goods_name")
   private String goodsName = null;
