@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1DeleteSettlementAccountResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:48:56.468Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:55:31.921Z")
 public class V1DeleteSettlementAccountResponse {
   @SerializedName("deleted")
   private Boolean deleted = null;

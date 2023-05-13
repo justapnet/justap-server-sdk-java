@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * V1ExtraAlipayGoodsDetail
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:48:56.468Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:55:31.921Z")
 public class V1ExtraAlipayGoodsDetail {
   @SerializedName("alipay_goods_id")
   private String alipayGoodsId = null;

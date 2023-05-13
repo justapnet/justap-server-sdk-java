@@ -40,7 +40,7 @@ import java.io.IOException;
 /**
  * V1CreateChargeRequestExtra
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:48:56.468Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:55:31.921Z")
 public class V1CreateChargeRequestExtra {
   @SerializedName("alipay_app")
   private V1ExtraAlipayApp alipayApp = null;
