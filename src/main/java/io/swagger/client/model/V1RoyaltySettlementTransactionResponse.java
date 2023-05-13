@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * V1RoyaltySettlementTransactionResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:50:06.091Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:52:07.806Z")
 public class V1RoyaltySettlementTransactionResponse {
   @SerializedName("data")
   private V1RoyaltySettlementTransaction data = null;

@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * SettlementAccountRecipientWechatpayChannelRecipient
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:50:06.091Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:52:07.806Z")
 public class SettlementAccountRecipientWechatpayChannelRecipient {
   @SerializedName("account")
   private String account = null;
