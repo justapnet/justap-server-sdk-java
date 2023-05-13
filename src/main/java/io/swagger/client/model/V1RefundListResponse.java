@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * V1RefundListResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:44:50.732Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:50:06.091Z")
 public class V1RefundListResponse {
   @SerializedName("data")
   private List<V1Refund> data = null;
