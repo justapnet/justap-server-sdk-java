@@ -31,7 +31,7 @@ import java.io.IOException;
 /**
  * V1ExtraWechatpayApp
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:25:53.691Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:31:32.932Z")
 public class V1ExtraWechatpayApp {
   @SerializedName("app_config")
   private V1ExtraWechatpayAppConfig appConfig = null;
