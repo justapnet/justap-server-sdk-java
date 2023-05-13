@@ -36,7 +36,7 @@ import java.util.Map;
 /**
  * V1Charge
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-07T16:33:43.952Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T04:13:11.519Z")
 public class V1Charge {
   @SerializedName("amount")
   private Double amount = 0.0d;

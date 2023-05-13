@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayPayParams
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-07T16:33:43.952Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T04:13:11.519Z")
 public class V1ExtraAlipayPayParams {
   @SerializedName("async_type")
   private String asyncType = null;

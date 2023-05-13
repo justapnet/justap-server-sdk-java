@@ -29,7 +29,7 @@ import java.io.IOException;
  * 返回一个支付凭据 charge 对象。
  */
 @ApiModel(description = "返回一个支付凭据 charge 对象。")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-07T16:33:43.952Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T04:13:11.519Z")
 public class V1ChargeResponse {
   @SerializedName("data")
   private V1Charge data = null;
