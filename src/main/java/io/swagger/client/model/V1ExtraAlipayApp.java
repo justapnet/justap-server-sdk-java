@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * V1ExtraAlipayApp
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:55:31.921Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:21:06.028Z")
 public class V1ExtraAlipayApp {
   @SerializedName("credit_agreement_id")
   private String creditAgreementId = null;

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1WechatpayCallbackResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:55:31.921Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T08:21:06.028Z")
 public class V1WechatpayCallbackResponse {
   @SerializedName("callback_url")
   private String callbackUrl = null;
