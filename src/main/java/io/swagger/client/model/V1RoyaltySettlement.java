@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * V1RoyaltySettlement
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T04:13:11.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T04:16:11.137Z")
 public class V1RoyaltySettlement {
   @SerializedName("amount")
   private Double amount = null;

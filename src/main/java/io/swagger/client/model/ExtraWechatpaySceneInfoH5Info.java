@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ExtraWechatpaySceneInfoH5Info
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T04:13:11.519Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T04:16:11.137Z")
 public class ExtraWechatpaySceneInfoH5Info {
   @SerializedName("app_name")
   private String appName = null;
