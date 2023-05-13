@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * V1CreateRoyaltyRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T09:30:43.113Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T09:32:21.805Z")
 public class V1CreateRoyaltyRequest {
   @SerializedName("app_id")
   private String appId = null;
