@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ListAllRoyaltiesRequestCreated
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:46:54.238Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:47:18.464Z")
 public class V1ListAllRoyaltiesRequestCreated {
   @SerializedName("gt")
   private Long gt = 0l;
