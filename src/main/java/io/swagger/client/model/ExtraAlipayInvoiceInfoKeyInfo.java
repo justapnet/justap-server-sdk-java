@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ExtraAlipayInvoiceInfoKeyInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T04:16:11.137Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:23:31.941Z")
 public class ExtraAlipayInvoiceInfoKeyInfo {
   @SerializedName("invoice_merchant_name")
   private String invoiceMerchantName = null;
