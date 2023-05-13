@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1AlipayCallbackResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:44:38.071Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T06:46:54.238Z")
 public class V1AlipayCallbackResponse {
   @SerializedName("callback_url")
   private String callbackUrl = null;
