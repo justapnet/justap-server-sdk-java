@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * V1ExtraAlipayExtUserInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:47:18.464Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:48:56.468Z")
 public class V1ExtraAlipayExtUserInfo {
   @SerializedName("cert_no")
   private String certNo = null;

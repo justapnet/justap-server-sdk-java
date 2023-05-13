@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * V1ExtraAlipayExtendParams
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:47:18.464Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T07:48:56.468Z")
 public class V1ExtraAlipayExtendParams {
   @SerializedName("card_type")
   private String cardType = null;
