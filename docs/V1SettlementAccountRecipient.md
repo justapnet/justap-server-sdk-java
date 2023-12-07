@@ -4,9 +4,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**alipayChannelRecipient** | [**SettlementAccountRecipientAlipayChannelRecipient**](SettlementAccountRecipientAlipayChannelRecipient.md) |  |  [optional]
-**bankChannelRecipient** | [**SettlementAccountRecipientBankChannelRecipient**](SettlementAccountRecipientBankChannelRecipient.md) |  |  [optional]
-**wechatpayChannelRecipient** | [**SettlementAccountRecipientWechatpayChannelRecipient**](SettlementAccountRecipientWechatpayChannelRecipient.md) |  |  [optional]
+**balance** | [**SettlementAccountRecipientBalanceChannelRecipient**](SettlementAccountRecipientBalanceChannelRecipient.md) |  |  [optional]
+**bank** | [**SettlementAccountRecipientBankChannelRecipient**](SettlementAccountRecipientBankChannelRecipient.md) |  |  [optional]
+**paymentAlipay** | [**SettlementAccountRecipientAlipayChannelRecipient**](SettlementAccountRecipientAlipayChannelRecipient.md) |  |  [optional]
+**wechatpay** | [**SettlementAccountRecipientWechatpayChannelRecipient**](SettlementAccountRecipientWechatpayChannelRecipient.md) |  |  [optional]
+**ysepayMerchant** | [**SettlementAccountRecipientYsepayMerchantRecipient**](SettlementAccountRecipientYsepayMerchantRecipient.md) |  |  [optional]
 
 
 

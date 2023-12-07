@@ -8,11 +8,13 @@
 
 * `ALIPAY` (value: `"ALIPAY"`)
 
-* `WECHANTPAY` (value: `"WECHANTPAY"`)
+* `WECHATPAY` (value: `"WECHATPAY"`)
 
 * `BANK` (value: `"BANK"`)
 
 * `BALANCE` (value: `"BALANCE"`)
+
+* `YSEPAY_MERCHANT` (value: `"YSEPAY_MERCHANT"`)
 
 
 

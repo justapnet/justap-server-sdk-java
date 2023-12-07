@@ -12,5 +12,7 @@
 
 * `WECHATPAY` (value: `"Wechatpay"`)
 
+* `YSEPAYMERCHANT` (value: `"YsepayMerchant"`)
+
 
 

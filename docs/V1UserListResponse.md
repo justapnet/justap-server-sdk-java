@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**List&lt;V1User&gt;**](V1User.md) |  |  [optional]
 **hasMore** | **Boolean** |  |  [optional]
-**object** | **String** | 对象类型 |  [optional]
+**object** | **String** | 对象类型 | 
 
 
 

@@ -14,5 +14,7 @@
 
 * `RETURN_ROYALTY` (value: `"RETURN_ROYALTY"`)
 
+* `QUERY_RETURN_ROYALTY` (value: `"QUERY_RETURN_ROYALTY"`)
+
 
 

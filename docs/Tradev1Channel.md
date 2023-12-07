@@ -22,6 +22,8 @@
 
 * `ALIPAYLITE` (value: `"AlipayLite"`)
 
+* `ALIPAYJSAPI` (value: `"AlipayJSAPI"`)
+
 * `WECHATPAYAPP` (value: `"WechatpayApp"`)
 
 * `WECHATPAYJSAPI` (value: `"WechatpayJSAPI"`)
@@ -35,6 +37,8 @@
 * `WECHATPAYFACE` (value: `"WechatpayFace"`)
 
 * `WECHATPAYSCAN` (value: `"WechatpayScan"`)
+
+* `UNIONPAYQR` (value: `"UnionPayQr"`)
 
 
 

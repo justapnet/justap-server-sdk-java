@@ -17,7 +17,8 @@ Name | Type | Description | Notes
 **id** | **String** |  |  [optional]
 **metadata** | **Map&lt;String, String&gt;** |  |  [optional]
 **name** | **String** |  |  [optional]
-**object** | **String** | 对象类型 |  [optional]
+**nickname** | **String** |  |  [optional]
+**object** | **String** | 对象类型 | 
 **parentId** | **String** |  |  [optional]
 **phone** | **String** |  |  [optional]
 **updated** | **String** |  |  [optional]

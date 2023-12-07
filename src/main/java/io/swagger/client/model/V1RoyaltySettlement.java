@@ -1,6 +1,6 @@
 /*
  * Justap API
- * 欢迎阅读 Justap Api 文档  Justap 是为移动端应用和PC端应用打造的下一代聚合支付SAAS服务平台，通过一个 SDK 即可快速的支持各种形式的应用，并且一次接口完成多个不同支付渠道的接入。平台除了支持服务商子商户模式，同时还对商家自有商户（即自己前往微信、支付宝等机构开户）提供了完整的支持。  感谢您的支持，我们将不断探索，为您提供更优质的服务！如需技术支持可前往商户中心提交工单，支持工程师会尽快与您取得联系！  # 文档说明 采用 REST 风格设计。所有接口请求地址都是可预期的以及面向资源的。使用规范的 HTTP 响应代码来表示请求结果的正确或错误信息。使用 HTTP 内置的特性，如 HTTP Authentication 和 HTTP 请求方法让接口易于理解。  ## HTTP 状态码 HTTP 状态码可以用于表明服务的状态。服务器返回的 HTTP 状态码遵循 [RFC 7231](http://tools.ietf.org/html/rfc7231#section-6) 和 [IANA Status Code Registry](http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) 标准。  ## 认证 在调用 API 时，必须提供 API Key 作为每个请求的身份验证。你可以在管理平台内管理你的 API Key。API Key 是商户在系统中的身份标识，请安全存储，确保其不要被泄露。如需获取或更新 API Key ，也可以在商户中心内进行操作。 Api Key 在使用自定义的 HTTP Header 进行传递。  ``` X-Justap-Api-Key ```  API Key 分为 live 和 test 两种模式。分别对应真实交易环境和模拟测试交易环境并且可以实时切换。 测试模式下的 API Key 会模拟交易等请求，但是不会产生任何真实交易行为和费用，便于调试和接入。  **⚠️ 注意**：在使用 live 模式前，需要先前往 `商户中心 -> 应用设置 -> 开发参数` 开启 live 模式。  <SecurityDefinitions />  ## 请求类型 所有的 API 请求只支持 HTTPS 方式调用。  ## 路由参数 路由参数是指出现在 URL 路径中的可变变量。在本文档中，使用 `{}` 包裹的部分。 例如： `{charge_id}`，在实际使用是，需要将 `{charge_id}` 替换为实际值 `charge_8a8sdf888888`  ## MIME Type MIME 类型用于指示服务器返回的数据格式。服务器目前默认采用 `application/json`。  例如: ``` application/json ```  ## 错误 服务器使用 HTTP 状态码 (status code) 来表明一个 API 请求的成功或失败状态。返回 HTTP 2XX 表明 API 请求成功。返回 HTTP 4XX 表明在请求 API 时提供了错误信息，例如参数缺失、参数错误、支付渠道错误等。返回 HTTP 5XX 表明 API 请求时，服务器发生了错误。 在返回错误的状态码时，回同时返回一些错误信息提示出错原因。  具体的错误码我们正在整理当中。  ## 分页 所有的 Justap 资源都可以被 list API 方法支持，例如分页 charges 和 refunds。这些 list API 方法拥有相同的数据结构。Justap 是基于 cursor 的分页机制，使用参数 starting_after 来决定列表从何处开始，使用参数 ending_before 来决定列表从何处结束。  ## 参数说明 请求参数中包含的以下字段释义请参考：  - REQUIRED: 必填参数 - OPTIONAL: 可选参数，可以在请求当前接口时按需传入 - CONDITIONAL: 在某些条件下必传 - RESPONSE-ONLY: 标示该参数仅在接口返回参数中出现，调用 API 时无需传入  # 如何保证幂等性 如果发生请求超时或服务器内部错误，客户端可能会尝试重发请求。您可以在请求中设置 ClientToken 参数避免多次重试带来重复操作的问题。  ## 什么是幂等性 在数学计算或者计算机科学中，幂等性（idempotence）是指相同操作或资源在一次或多次请求中具有同样效果的作用。幂等性是在分布式系统设计中具有十分重要的地位。  ## 保证幂等性 通常情况下，客户端只需要在500（InternalErrorInternalError）或503（ServiceUnavailable）错误，或者无法获取响应结果时重试。充实时您可以从客户端生成一个参数值不超过64个的ASCII字符，并将值赋予 ClientToken，保证重试请求的幂等性。  ## ClientToken 详解 ClientToken参数的详细信息如下所示。  - ClientToken 是一个由客户端生成的唯一的、大小写敏感、不超过64个ASCII字符的字符串。例如，`ClientToken=123e4567-e89b-12d3-a456-426655440000`。 - 如果您提供了一个已经使用过的 ClientToken，但其他请求参数**有变化**，则服务器会返回 IdempotentParameterMismatch 的错误代码。 - 如果您提供了一个已经使用过的 ClientToken，且其他请求参数**不变**，则服务器会尝试返回 ClientToken 对应的记录。  ## API列表 以下为部分包含了 ClientToken 参数的API，供您参考。具体哪些API支持 ClientToken 参数请以各 API 文档为准，此处不一一列举。  - [申请退款接口](https://www.justap.cn/docs#operation/TradeService_Refunds)  # 签名 为保证安全，JUSTAP 所有接口均需要对请求进行签名。服务器收到请求后进行签名的验证。如果签名验证不通过，将会拒绝处理请求，并返回 401 Unauthorized。  签名算法：  ``` base64Encode(hamc-sha256(md5(请求 body + 请求时间戳 + 一次性随机字符串) + 一次性随机字符串)) ```  ## 准备 首先需要在 Justap 创建一个应用，商户需要生成一对 RSA 密钥对，并将公钥配置到 `商户中心 -> 开发配置`。 RSA 可以使用支付宝提供的 [密钥生成工具](https://opendocs.alipay.com/common/02kipl) 来生成。  商户在使用时，可以按照下述步骤生成请求的签名。   ## 算法描述: - 在请求发送前，取完整的**请求 body** - 生成一个随机的32位字符串，得到 **一次性随机字符串** - 获取当前时间的时间戳，得到 **请求时间戳** - 在请求字符串后面拼接上 **请求时间戳** 和 **一次性随机字符串**，得到 **待 Hash 字符串** - 对 **待 Hash 字符串** 计算 md5，得到 **待签名字符串** - **待签名字符串** 后面拼接上 一次性随机字符串，得到完整的 **待签名字符串** - 使用商户 RSA 私钥，对 **待签名字符串** 计算签名，并对 结果 进行 base64 编码，即可得到 **签名**  ## 设置HTTP头 Justap 要求请求通过 自定义头部 来传递签名。具体定义如下:  ``` X-Justap-Signature: 签名 X-Justap-Request-Time: 请求时间戳 X-Justap-Nonce: 一次性随机字符串 X-Justap-Body-Hash: 待签名字符串 ```  具体的签名算法实现，可参考我们提供的各语言 SDK。  # WebHooks 
+ * 欢迎阅读 Justap Api 文档  Justap 是为移动端应用和PC端应用打造的下一代聚合支付SAAS服务平台，通过一个 SDK 即可快速的支持各种形式的应用，并且一次接口完成多个不同支付渠道的接入。平台除了支持服务商子商户模式，同时还对商家自有商户（即自己前往微信、支付宝等机构开户）提供了完整的支持。  感谢您的支持，我们将不断探索，为您提供更优质的服务！如需技术支持可前往商户中心提交工单，支持工程师会尽快与您取得联系！  # 文档说明 采用 REST 风格设计。所有接口请求地址都是可预期的以及面向资源的。使用规范的 HTTP 响应代码来表示请求结果的正确或错误信息。使用 HTTP 内置的特性，如 HTTP Authentication 和 HTTP 请求方法让接口易于理解。  ## HTTP 状态码 HTTP 状态码可以用于表明服务的状态。服务器返回的 HTTP 状态码遵循 [RFC 7231](http://tools.ietf.org/html/rfc7231#section-6) 和 [IANA Status Code Registry](http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) 标准。  ## 认证 在调用 API 时，必须提供 API Key 作为每个请求的身份验证。你可以在管理平台内管理你的 API Key。API Key 是商户在系统中的身份标识，请安全存储，确保其不要被泄露。如需获取或更新 API Key ，也可以在商户中心内进行操作。 Api Key 在使用自定义的 HTTP Header 进行传递。  ``` X-Justap-Api-Key ```  API Key 分为 live 和 test 两种模式。分别对应真实交易环境和模拟测试交易环境并且可以实时切换。 测试模式下的 API Key 会模拟交易等请求，但是不会产生任何真实交易行为和费用，便于调试和接入。  **⚠️ 注意**：在使用 live 模式前，需要先前往 `商户中心 -> 应用设置 -> 开发参数` 开启 live 模式。  <SecurityDefinitions />  ## 请求类型 所有的 API 请求只支持 HTTPS 方式调用。  ## 路由参数 路由参数是指出现在 URL 路径中的可变变量。在本文档中，使用 `{}` 包裹的部分。 例如： `{charge_id}`，在实际使用是，需要将 `{charge_id}` 替换为实际值 `charge_8a8sdf888888`  ## MIME Type MIME 类型用于指示服务器返回的数据格式。服务器目前默认采用 `application/json`。  例如: ``` application/json ```  ## 错误 服务器使用 HTTP 状态码 (status code) 来表明一个 API 请求的成功或失败状态。返回 HTTP 2XX 表明 API 请求成功。返回 HTTP 4XX 表明在请求 API 时提供了错误信息，例如参数缺失、参数错误、支付渠道错误等。返回 HTTP 5XX 表明 API 请求时，服务器发生了错误。 在返回错误的状态码时，回同时返回一些错误信息提示出错原因。  具体的错误码我们正在整理当中。  ## 分页 所有的 Justap 资源都可以被 list API 方法支持，例如分页 charges 和 refunds。这些 list API 方法拥有相同的数据结构。Justap 是基于 cursor 的分页机制，使用参数 starting_after 来决定列表从何处开始，使用参数 ending_before 来决定列表从何处结束。  ## 参数说明 请求参数中包含的以下字段释义请参考：  - REQUIRED: 必填参数 - OPTIONAL: 可选参数，可以在请求当前接口时按需传入 - CONDITIONAL: 在某些条件下必传 - RESPONSE-ONLY: 标示该参数仅在接口返回参数中出现，调用 API 时无需传入  # 如何保证幂等性 如果发生请求超时或服务器内部错误，客户端可能会尝试重发请求。您可以在请求中设置 ClientToken 参数避免多次重试带来重复操作的问题。  ## 什么是幂等性 在数学计算或者计算机科学中，幂等性（idempotence）是指相同操作或资源在一次或多次请求中具有同样效果的作用。幂等性是在分布式系统设计中具有十分重要的地位。  ## 保证幂等性 通常情况下，客户端只需要在500（InternalErrorInternalError）或503（ServiceUnavailable）错误，或者无法获取响应结果时重试。充实时您可以从客户端生成一个参数值不超过64个的ASCII字符，并将值赋予 ClientToken，保证重试请求的幂等性。  ## ClientToken 详解 ClientToken参数的详细信息如下所示。  - ClientToken 是一个由客户端生成的唯一的、大小写敏感、不超过64个ASCII字符的字符串。例如，`ClientToken=123e4567-e89b-12d3-a456-426655440000`。 - 如果您提供了一个已经使用过的 ClientToken，但其他请求参数**有变化**，则服务器会返回 IdempotentParameterMismatch 的错误代码。 - 如果您提供了一个已经使用过的 ClientToken，且其他请求参数**不变**，则服务器会尝试返回 ClientToken 对应的记录。  ## API列表 以下为部分包含了 ClientToken 参数的API，供您参考。具体哪些API支持 ClientToken 参数请以各 API 文档为准，此处不一一列举。  - [申请退款接口](https://www.justap.cn/docs#operation/TradeService_Refunds)  # 签名 为保证安全，JUSTAP 所有接口均需要对请求进行签名。服务器收到请求后进行签名的验证。如果签名验证不通过，将会拒绝处理请求，并返回 401 Unauthorized。  签名算法：  ``` base64Encode(hamc-sha256(md5(请求 body + 请求时间戳 + 一次性随机字符串) + 一次性随机字符串)) ```  ## 准备 首先需要在 Justap 创建一个应用，商户需要生成一对 RSA 密钥对，并将公钥配置到 `商户中心 -> 开发配置`。 RSA 可以使用支付宝提供的 [密钥生成工具](https://opendocs.alipay.com/common/02kipl) 来生成。  商户在使用时，可以按照下述步骤生成请求的签名。   ## 算法描述: - 在请求发送前，取完整的**请求 body** - 生成一个随机的32位字符串，得到 **一次性随机字符串** - 获取当前时间的时间戳，得到 **请求时间戳** - 在请求字符串后面拼接上 **请求时间戳** 和 **一次性随机字符串**，得到 **待 Hash 字符串** - 对 **待 Hash 字符串** 转换为 utf8 编码并计算 md5，得到 **待签名字符串** - **待签名字符串** 后面拼接上 一次性随机字符串，得到完整的 **待签名字符串** - 使用商户 RSA 私钥，对 **待签名字符串** 计算签名，并对 结果 进行 base64 编码，即可得到 **签名**  ## 设置HTTP头 Justap 要求请求通过 自定义头部 来传递签名。具体定义如下:  ``` X-Justap-Signature: 签名 X-Justap-Request-Time: 请求时间戳 X-Justap-Nonce: 一次性随机字符串 X-Justap-Body-Hash: 待签名字符串 ```  具体的签名算法实现，可参考我们提供的各语言 SDK。  # WebHooks 
  *
  * OpenAPI spec version: 1.0
  * Contact: support@justap.net
@@ -22,7 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.Tradev1RoyaltyMethod;
+import io.swagger.client.model.RoyaltySettlementRoyaltySettlementStatus;
 import io.swagger.client.model.V1RoyaltySettlementSource;
 import io.swagger.client.model.V1RoyaltySettlementTransaction;
 import java.io.IOException;
@@ -34,40 +34,37 @@ import java.util.Map;
 /**
  * V1RoyaltySettlement
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-05-13T09:32:21.805Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-07T07:04:49.831Z")
 public class V1RoyaltySettlement {
   @SerializedName("amount")
-  private Double amount = null;
+  private Float amount = null;
 
   @SerializedName("amount_canceled")
-  private Double amountCanceled = null;
+  private Float amountCanceled = null;
 
   @SerializedName("amount_failed")
-  private Double amountFailed = null;
+  private Float amountFailed = null;
 
   @SerializedName("amount_succeeded")
-  private Double amountSucceeded = null;
+  private Float amountSucceeded = null;
 
   @SerializedName("app_id")
   private String appId = null;
 
   @SerializedName("count")
-  private String count = null;
+  private Long count = 0l;
 
   @SerializedName("count_canceled")
-  private String countCanceled = null;
+  private Long countCanceled = 0l;
 
   @SerializedName("count_failed")
-  private String countFailed = null;
+  private Long countFailed = 0l;
 
   @SerializedName("count_succeeded")
-  private String countSucceeded = null;
-
-  @SerializedName("created")
-  private String created = null;
+  private Long countSucceeded = 0l;
 
   @SerializedName("fee")
-  private Double fee = null;
+  private Float fee = null;
 
   @SerializedName("id")
   private String id = null;
@@ -76,10 +73,7 @@ public class V1RoyaltySettlement {
   private Boolean livemode = null;
 
   @SerializedName("metadata")
-  private Map<String, String> metadata = null;
-
-  @SerializedName("method")
-  private Tradev1RoyaltyMethod method = null;
+  private Map<String, String> metadata = new HashMap<>();
 
   @SerializedName("object")
   private String object = "RoyaltySettlement";
@@ -91,83 +85,83 @@ public class V1RoyaltySettlement {
   private V1RoyaltySettlementSource source = null;
 
   @SerializedName("status")
-  private String status = null;
+  private RoyaltySettlementRoyaltySettlementStatus status = null;
 
   @SerializedName("time_finished")
-  private String timeFinished = null;
+  private Long timeFinished = 0l;
 
   @SerializedName("transactions")
-  private List<V1RoyaltySettlementTransaction> transactions = null;
+  private List<V1RoyaltySettlementTransaction> transactions = new ArrayList<>();
 
-  public V1RoyaltySettlement amount(Double amount) {
+  public V1RoyaltySettlement amount(Float amount) {
     this.amount = amount;
     return this;
   }
 
    /**
-   * Get amount
+   * 结算金额
    * @return amount
   **/
-  @ApiModelProperty(value = "")
-  public Double getAmount() {
+  @ApiModelProperty(required = true, value = "结算金额")
+  public Float getAmount() {
     return amount;
   }
 
-  public void setAmount(Double amount) {
+  public void setAmount(Float amount) {
     this.amount = amount;
   }
 
-  public V1RoyaltySettlement amountCanceled(Double amountCanceled) {
+  public V1RoyaltySettlement amountCanceled(Float amountCanceled) {
     this.amountCanceled = amountCanceled;
     return this;
   }
 
    /**
-   * Get amountCanceled
+   * 结算取消金额
    * @return amountCanceled
   **/
-  @ApiModelProperty(value = "")
-  public Double getAmountCanceled() {
+  @ApiModelProperty(required = true, value = "结算取消金额")
+  public Float getAmountCanceled() {
     return amountCanceled;
   }
 
-  public void setAmountCanceled(Double amountCanceled) {
+  public void setAmountCanceled(Float amountCanceled) {
     this.amountCanceled = amountCanceled;
   }
 
-  public V1RoyaltySettlement amountFailed(Double amountFailed) {
+  public V1RoyaltySettlement amountFailed(Float amountFailed) {
     this.amountFailed = amountFailed;
     return this;
   }
 
    /**
-   * Get amountFailed
+   * 结算失败金额
    * @return amountFailed
   **/
-  @ApiModelProperty(value = "")
-  public Double getAmountFailed() {
+  @ApiModelProperty(required = true, value = "结算失败金额")
+  public Float getAmountFailed() {
     return amountFailed;
   }
 
-  public void setAmountFailed(Double amountFailed) {
+  public void setAmountFailed(Float amountFailed) {
     this.amountFailed = amountFailed;
   }
 
-  public V1RoyaltySettlement amountSucceeded(Double amountSucceeded) {
+  public V1RoyaltySettlement amountSucceeded(Float amountSucceeded) {
     this.amountSucceeded = amountSucceeded;
     return this;
   }
 
    /**
-   * Get amountSucceeded
+   * 结算成功金额
    * @return amountSucceeded
   **/
-  @ApiModelProperty(value = "")
-  public Double getAmountSucceeded() {
+  @ApiModelProperty(required = true, value = "结算成功金额")
+  public Float getAmountSucceeded() {
     return amountSucceeded;
   }
 
-  public void setAmountSucceeded(Double amountSucceeded) {
+  public void setAmountSucceeded(Float amountSucceeded) {
     this.amountSucceeded = amountSucceeded;
   }
 
@@ -177,10 +171,10 @@ public class V1RoyaltySettlement {
   }
 
    /**
-   * Get appId
+   * 付款方 App ID
    * @return appId
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "付款方 App ID")
   public String getAppId() {
     return appId;
   }
@@ -189,111 +183,93 @@ public class V1RoyaltySettlement {
     this.appId = appId;
   }
 
-  public V1RoyaltySettlement count(String count) {
+  public V1RoyaltySettlement count(Long count) {
     this.count = count;
     return this;
   }
 
    /**
-   * Get count
+   * 分账总笔数
    * @return count
   **/
-  @ApiModelProperty(value = "")
-  public String getCount() {
+  @ApiModelProperty(required = true, value = "分账总笔数")
+  public Long getCount() {
     return count;
   }
 
-  public void setCount(String count) {
+  public void setCount(Long count) {
     this.count = count;
   }
 
-  public V1RoyaltySettlement countCanceled(String countCanceled) {
+  public V1RoyaltySettlement countCanceled(Long countCanceled) {
     this.countCanceled = countCanceled;
     return this;
   }
 
    /**
-   * Get countCanceled
+   * 分账取消笔数
    * @return countCanceled
   **/
-  @ApiModelProperty(value = "")
-  public String getCountCanceled() {
+  @ApiModelProperty(required = true, value = "分账取消笔数")
+  public Long getCountCanceled() {
     return countCanceled;
   }
 
-  public void setCountCanceled(String countCanceled) {
+  public void setCountCanceled(Long countCanceled) {
     this.countCanceled = countCanceled;
   }
 
-  public V1RoyaltySettlement countFailed(String countFailed) {
+  public V1RoyaltySettlement countFailed(Long countFailed) {
     this.countFailed = countFailed;
     return this;
   }
 
    /**
-   * Get countFailed
+   * 分账失败笔数
    * @return countFailed
   **/
-  @ApiModelProperty(value = "")
-  public String getCountFailed() {
+  @ApiModelProperty(required = true, value = "分账失败笔数")
+  public Long getCountFailed() {
     return countFailed;
   }
 
-  public void setCountFailed(String countFailed) {
+  public void setCountFailed(Long countFailed) {
     this.countFailed = countFailed;
   }
 
-  public V1RoyaltySettlement countSucceeded(String countSucceeded) {
+  public V1RoyaltySettlement countSucceeded(Long countSucceeded) {
     this.countSucceeded = countSucceeded;
     return this;
   }
 
    /**
-   * Get countSucceeded
+   * 分账成功笔数
    * @return countSucceeded
   **/
-  @ApiModelProperty(value = "")
-  public String getCountSucceeded() {
+  @ApiModelProperty(required = true, value = "分账成功笔数")
+  public Long getCountSucceeded() {
     return countSucceeded;
   }
 
-  public void setCountSucceeded(String countSucceeded) {
+  public void setCountSucceeded(Long countSucceeded) {
     this.countSucceeded = countSucceeded;
   }
 
-  public V1RoyaltySettlement created(String created) {
-    this.created = created;
-    return this;
-  }
-
-   /**
-   * Get created
-   * @return created
-  **/
-  @ApiModelProperty(value = "")
-  public String getCreated() {
-    return created;
-  }
-
-  public void setCreated(String created) {
-    this.created = created;
-  }
-
-  public V1RoyaltySettlement fee(Double fee) {
+  public V1RoyaltySettlement fee(Float fee) {
     this.fee = fee;
     return this;
   }
 
    /**
-   * Get fee
+   * 手续费
    * @return fee
   **/
-  @ApiModelProperty(value = "")
-  public Double getFee() {
+  @ApiModelProperty(required = true, value = "手续费")
+  public Float getFee() {
     return fee;
   }
 
-  public void setFee(Double fee) {
+  public void setFee(Float fee) {
     this.fee = fee;
   }
 
@@ -303,10 +279,10 @@ public class V1RoyaltySettlement {
   }
 
    /**
-   * Get id
+   * 分账结算单 ID
    * @return id
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "分账结算单 ID")
   public String getId() {
     return id;
   }
@@ -339,42 +315,21 @@ public class V1RoyaltySettlement {
   }
 
   public V1RoyaltySettlement putMetadataItem(String key, String metadataItem) {
-    if (this.metadata == null) {
-      this.metadata = new HashMap<>();
-    }
     this.metadata.put(key, metadataItem);
     return this;
   }
 
    /**
-   * Get metadata
+   * 元数据
    * @return metadata
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "元数据")
   public Map<String, String> getMetadata() {
     return metadata;
   }
 
   public void setMetadata(Map<String, String> metadata) {
     this.metadata = metadata;
-  }
-
-  public V1RoyaltySettlement method(Tradev1RoyaltyMethod method) {
-    this.method = method;
-    return this;
-  }
-
-   /**
-   * Get method
-   * @return method
-  **/
-  @ApiModelProperty(value = "")
-  public Tradev1RoyaltyMethod getMethod() {
-    return method;
-  }
-
-  public void setMethod(Tradev1RoyaltyMethod method) {
-    this.method = method;
   }
 
   public V1RoyaltySettlement object(String object) {
@@ -386,7 +341,7 @@ public class V1RoyaltySettlement {
    * 对象类型
    * @return object
   **/
-  @ApiModelProperty(value = "对象类型")
+  @ApiModelProperty(required = true, value = "对象类型")
   public String getObject() {
     return object;
   }
@@ -401,10 +356,10 @@ public class V1RoyaltySettlement {
   }
 
    /**
-   * Get operationUrl
+   * 操作链接
    * @return operationUrl
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "操作链接")
   public String getOperationUrl() {
     return operationUrl;
   }
@@ -419,10 +374,10 @@ public class V1RoyaltySettlement {
   }
 
    /**
-   * Get source
+   * 分账来源
    * @return source
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "分账来源")
   public V1RoyaltySettlementSource getSource() {
     return source;
   }
@@ -431,39 +386,39 @@ public class V1RoyaltySettlement {
     this.source = source;
   }
 
-  public V1RoyaltySettlement status(String status) {
+  public V1RoyaltySettlement status(RoyaltySettlementRoyaltySettlementStatus status) {
     this.status = status;
     return this;
   }
 
    /**
-   * Get status
+   * 结算状态
    * @return status
   **/
-  @ApiModelProperty(value = "")
-  public String getStatus() {
+  @ApiModelProperty(required = true, value = "结算状态")
+  public RoyaltySettlementRoyaltySettlementStatus getStatus() {
     return status;
   }
 
-  public void setStatus(String status) {
+  public void setStatus(RoyaltySettlementRoyaltySettlementStatus status) {
     this.status = status;
   }
 
-  public V1RoyaltySettlement timeFinished(String timeFinished) {
+  public V1RoyaltySettlement timeFinished(Long timeFinished) {
     this.timeFinished = timeFinished;
     return this;
   }
 
    /**
-   * Get timeFinished
+   * 分账完成时间
    * @return timeFinished
   **/
-  @ApiModelProperty(value = "")
-  public String getTimeFinished() {
+  @ApiModelProperty(required = true, value = "分账完成时间")
+  public Long getTimeFinished() {
     return timeFinished;
   }
 
-  public void setTimeFinished(String timeFinished) {
+  public void setTimeFinished(Long timeFinished) {
     this.timeFinished = timeFinished;
   }
 
@@ -473,18 +428,15 @@ public class V1RoyaltySettlement {
   }
 
   public V1RoyaltySettlement addTransactionsItem(V1RoyaltySettlementTransaction transactionsItem) {
-    if (this.transactions == null) {
-      this.transactions = new ArrayList<>();
-    }
     this.transactions.add(transactionsItem);
     return this;
   }
 
    /**
-   * Get transactions
+   * 分账处理流水列表
    * @return transactions
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(required = true, value = "分账处理流水列表")
   public List<V1RoyaltySettlementTransaction> getTransactions() {
     return transactions;
   }
@@ -512,12 +464,10 @@ public class V1RoyaltySettlement {
         Objects.equals(this.countCanceled, v1RoyaltySettlement.countCanceled) &&
         Objects.equals(this.countFailed, v1RoyaltySettlement.countFailed) &&
         Objects.equals(this.countSucceeded, v1RoyaltySettlement.countSucceeded) &&
-        Objects.equals(this.created, v1RoyaltySettlement.created) &&
         Objects.equals(this.fee, v1RoyaltySettlement.fee) &&
         Objects.equals(this.id, v1RoyaltySettlement.id) &&
         Objects.equals(this.livemode, v1RoyaltySettlement.livemode) &&
         Objects.equals(this.metadata, v1RoyaltySettlement.metadata) &&
-        Objects.equals(this.method, v1RoyaltySettlement.method) &&
         Objects.equals(this.object, v1RoyaltySettlement.object) &&
         Objects.equals(this.operationUrl, v1RoyaltySettlement.operationUrl) &&
         Objects.equals(this.source, v1RoyaltySettlement.source) &&
@@ -528,7 +478,7 @@ public class V1RoyaltySettlement {
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, amountCanceled, amountFailed, amountSucceeded, appId, count, countCanceled, countFailed, countSucceeded, created, fee, id, livemode, metadata, method, object, operationUrl, source, status, timeFinished, transactions);
+    return Objects.hash(amount, amountCanceled, amountFailed, amountSucceeded, appId, count, countCanceled, countFailed, countSucceeded, fee, id, livemode, metadata, object, operationUrl, source, status, timeFinished, transactions);
   }
 
 
@@ -546,12 +496,10 @@ public class V1RoyaltySettlement {
     sb.append("    countCanceled: ").append(toIndentedString(countCanceled)).append("\n");
     sb.append("    countFailed: ").append(toIndentedString(countFailed)).append("\n");
     sb.append("    countSucceeded: ").append(toIndentedString(countSucceeded)).append("\n");
-    sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    fee: ").append(toIndentedString(fee)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    livemode: ").append(toIndentedString(livemode)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
-    sb.append("    method: ").append(toIndentedString(method)).append("\n");
     sb.append("    object: ").append(toIndentedString(object)).append("\n");
     sb.append("    operationUrl: ").append(toIndentedString(operationUrl)).append("\n");
     sb.append("    source: ").append(toIndentedString(source)).append("\n");

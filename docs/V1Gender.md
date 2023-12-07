@@ -8,7 +8,7 @@
 
 * `MALE` (value: `"MALE"`)
 
-* `FE_MALE` (value: `"FE_MALE"`)
+* `FEMALE` (value: `"FEMALE"`)
 
 * `PRIVACY` (value: `"PRIVACY"`)
 

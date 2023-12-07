@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 <a name="customerServiceUpdateCustomer"></a>
 # **customerServiceUpdateCustomer**
-> V1CustomerResponse customerServiceUpdateCustomer(id, appId, address, currency, description, email, name, phone, avatar, disabled, gender, parentCustomerId, outCustomerId)
+> V1CustomerResponse customerServiceUpdateCustomer(id)
 
 
 
@@ -338,20 +338,8 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 
 CustomerServiceApi apiInstance = new CustomerServiceApi();
 String id = "id_example"; // String | 
-String appId = "appId_example"; // String | 
-String address = "address_example"; // String | 
-String currency = "currency_example"; // String | 
-String description = "description_example"; // String | 
-String email = "email_example"; // String | 
-String name = "name_example"; // String | 
-String phone = "phone_example"; // String | 
-String avatar = "avatar_example"; // String | 
-Boolean disabled = true; // Boolean | 
-String gender = "GENDER_UNKNOWN"; // String |  - GENDER_UNKNOWN: 未设置  - MALE: 男  - FE_MALE: 女  - PRIVACY: 保密  - ThirdGender: 第三性别
-String parentCustomerId = "parentCustomerId_example"; // String | 
-String outCustomerId = "outCustomerId_example"; // String | 
 try {
-    V1CustomerResponse result = apiInstance.customerServiceUpdateCustomer(id, appId, address, currency, description, email, name, phone, avatar, disabled, gender, parentCustomerId, outCustomerId);
+    V1CustomerResponse result = apiInstance.customerServiceUpdateCustomer(id);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CustomerServiceApi#customerServiceUpdateCustomer");
@@ -364,18 +352,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
- **appId** | **String**|  | [optional]
- **address** | **String**|  | [optional]
- **currency** | **String**|  | [optional]
- **description** | **String**|  | [optional]
- **email** | **String**|  | [optional]
- **name** | **String**|  | [optional]
- **phone** | **String**|  | [optional]
- **avatar** | **String**|  | [optional]
- **disabled** | **Boolean**|  | [optional]
- **gender** | **String**|  - GENDER_UNKNOWN: 未设置  - MALE: 男  - FE_MALE: 女  - PRIVACY: 保密  - ThirdGender: 第三性别 | [optional] [default to GENDER_UNKNOWN] [enum: GENDER_UNKNOWN, MALE, FE_MALE, PRIVACY, ThirdGender]
- **parentCustomerId** | **String**|  | [optional]
- **outCustomerId** | **String**|  | [optional]
 
 ### Return type
 
