@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**chargeServiceCharges2**](DefaultApi.md#chargeServiceCharges2) | **POST** /v1/charges | 创建 Charge 对象
 [**chargeServiceQueryCharge**](DefaultApi.md#chargeServiceQueryCharge) | **GET** /transaction/v1/charges/{charge_id} | 查询 Charge 对象
 [**chargeServiceQueryCharge2**](DefaultApi.md#chargeServiceQueryCharge2) | **GET** /v1/charges/{charge_id} | 查询 Charge 对象
+[**chargeServiceQueryCharge3**](DefaultApi.md#chargeServiceQueryCharge3) | **GET** /v1/charges/merchant_trade_id/{merchant_trade_id} | 查询 Charge 对象
 [**chargeServiceQueryChargeList**](DefaultApi.md#chargeServiceQueryChargeList) | **GET** /transaction/v1/charges | 查询 Charge 对象列表
 [**chargeServiceQueryChargeList2**](DefaultApi.md#chargeServiceQueryChargeList2) | **GET** /v1/charges | 查询 Charge 对象列表
 [**chargeServiceReverseCharge**](DefaultApi.md#chargeServiceReverseCharge) | **POST** /transaction/v1/charges/{charge_id}/reverse | 撤销 Charge 对象
@@ -578,7 +579,7 @@ Name | Type | Description  | Notes
 
 <a name="chargeServiceQueryCharge"></a>
 # **chargeServiceQueryCharge**
-> V1ChargeResponse chargeServiceQueryCharge(chargeId, appId)
+> V1ChargeResponse chargeServiceQueryCharge(chargeId, appId, merchantTradeId)
 
 查询 Charge 对象
 
@@ -604,8 +605,9 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 DefaultApi apiInstance = new DefaultApi();
 String chargeId = "chargeId_example"; // String | [REQUIRED] Charge 对象 id
 String appId = "appId_example"; // String | [REQUIRED] 应用 id
+String merchantTradeId = "merchantTradeId_example"; // String | [OPTIONAL] 商户订单号
 try {
-    V1ChargeResponse result = apiInstance.chargeServiceQueryCharge(chargeId, appId);
+    V1ChargeResponse result = apiInstance.chargeServiceQueryCharge(chargeId, appId, merchantTradeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DefaultApi#chargeServiceQueryCharge");
@@ -619,6 +621,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chargeId** | **String**| [REQUIRED] Charge 对象 id |
  **appId** | **String**| [REQUIRED] 应用 id | [optional]
+ **merchantTradeId** | **String**| [OPTIONAL] 商户订单号 | [optional]
 
 ### Return type
 
@@ -635,7 +638,7 @@ Name | Type | Description  | Notes
 
 <a name="chargeServiceQueryCharge2"></a>
 # **chargeServiceQueryCharge2**
-> V1ChargeResponse chargeServiceQueryCharge2(chargeId, appId)
+> V1ChargeResponse chargeServiceQueryCharge2(chargeId, appId, merchantTradeId)
 
 查询 Charge 对象
 
@@ -661,8 +664,9 @@ ApiKeyAuth.setApiKey("YOUR API KEY");
 DefaultApi apiInstance = new DefaultApi();
 String chargeId = "chargeId_example"; // String | [REQUIRED] Charge 对象 id
 String appId = "appId_example"; // String | [REQUIRED] 应用 id
+String merchantTradeId = "merchantTradeId_example"; // String | [OPTIONAL] 商户订单号
 try {
-    V1ChargeResponse result = apiInstance.chargeServiceQueryCharge2(chargeId, appId);
+    V1ChargeResponse result = apiInstance.chargeServiceQueryCharge2(chargeId, appId, merchantTradeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DefaultApi#chargeServiceQueryCharge2");
@@ -675,6 +679,66 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **chargeId** | **String**| [REQUIRED] Charge 对象 id |
+ **appId** | **String**| [REQUIRED] 应用 id | [optional]
+ **merchantTradeId** | **String**| [OPTIONAL] 商户订单号 | [optional]
+
+### Return type
+
+[**V1ChargeResponse**](V1ChargeResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="chargeServiceQueryCharge3"></a>
+# **chargeServiceQueryCharge3**
+> V1ChargeResponse chargeServiceQueryCharge3(merchantTradeId, chargeId, appId)
+
+查询 Charge 对象
+
+你可以在后台异步通知之前，通过查询接口确认支付状态。通过charge对象的id查询一个已创建的charge对象。
+
+### Example
+```java
+// Import classes:
+//import justap.ApiClient;
+//import justap.ApiException;
+//import justap.Configuration;
+//import justap.auth.*;
+//import justap_sdk.DefaultApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure API key authorization: ApiKeyAuth
+ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+ApiKeyAuth.setApiKey("YOUR API KEY");
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.setApiKeyPrefix("Token");
+
+DefaultApi apiInstance = new DefaultApi();
+String merchantTradeId = "merchantTradeId_example"; // String | [OPTIONAL] 商户订单号
+String chargeId = "chargeId_example"; // String | [REQUIRED] Charge 对象 id
+String appId = "appId_example"; // String | [REQUIRED] 应用 id
+try {
+    V1ChargeResponse result = apiInstance.chargeServiceQueryCharge3(merchantTradeId, chargeId, appId);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling DefaultApi#chargeServiceQueryCharge3");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **merchantTradeId** | **String**| [OPTIONAL] 商户订单号 |
+ **chargeId** | **String**| [REQUIRED] Charge 对象 id | [optional]
  **appId** | **String**| [REQUIRED] 应用 id | [optional]
 
 ### Return type

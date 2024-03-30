@@ -15,12 +15,84 @@ package io.swagger.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.V1ServiceError;
+import java.io.IOException;
 
 /**
  * V1AcquirerCreateRefundResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-07T07:04:49.831Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
 public class V1AcquirerCreateRefundResponse {
+  @SerializedName("charge_id")
+  private Long chargeId = 0l;
+
+  @SerializedName("error")
+  private V1ServiceError error = null;
+
+  @SerializedName("refund_id")
+  private Long refundId = 0l;
+
+  public V1AcquirerCreateRefundResponse chargeId(Long chargeId) {
+    this.chargeId = chargeId;
+    return this;
+  }
+
+   /**
+   * 支付单 ID
+   * @return chargeId
+  **/
+  @ApiModelProperty(required = true, value = "支付单 ID")
+  public Long getChargeId() {
+    return chargeId;
+  }
+
+  public void setChargeId(Long chargeId) {
+    this.chargeId = chargeId;
+  }
+
+  public V1AcquirerCreateRefundResponse error(V1ServiceError error) {
+    this.error = error;
+    return this;
+  }
+
+   /**
+   * Get error
+   * @return error
+  **/
+  @ApiModelProperty(value = "")
+  public V1ServiceError getError() {
+    return error;
+  }
+
+  public void setError(V1ServiceError error) {
+    this.error = error;
+  }
+
+  public V1AcquirerCreateRefundResponse refundId(Long refundId) {
+    this.refundId = refundId;
+    return this;
+  }
+
+   /**
+   * 退款单号
+   * @return refundId
+  **/
+  @ApiModelProperty(required = true, value = "退款单号")
+  public Long getRefundId() {
+    return refundId;
+  }
+
+  public void setRefundId(Long refundId) {
+    this.refundId = refundId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +102,15 @@ public class V1AcquirerCreateRefundResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    V1AcquirerCreateRefundResponse v1AcquirerCreateRefundResponse = (V1AcquirerCreateRefundResponse) o;
+    return Objects.equals(this.chargeId, v1AcquirerCreateRefundResponse.chargeId) &&
+        Objects.equals(this.error, v1AcquirerCreateRefundResponse.error) &&
+        Objects.equals(this.refundId, v1AcquirerCreateRefundResponse.refundId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(chargeId, error, refundId);
   }
 
 
@@ -44,6 +119,9 @@ public class V1AcquirerCreateRefundResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class V1AcquirerCreateRefundResponse {\n");
     
+    sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
+    sb.append("    error: ").append(toIndentedString(error)).append("\n");
+    sb.append("    refundId: ").append(toIndentedString(refundId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

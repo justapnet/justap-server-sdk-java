@@ -13,6 +13,7 @@
 
 package justap_sdk;
 
+import io.swagger.client.model.GooglerpcStatus;
 import io.swagger.client.model.RpcStatus;
 import io.swagger.client.model.V1BusinessUser;
 import io.swagger.client.model.V1ChargeListResponse;
@@ -229,7 +230,8 @@ public class DefaultApiTest {
     public void chargeServiceQueryChargeTest() throws Exception {
         String chargeId = null;
         String appId = null;
-        V1ChargeResponse response = api.chargeServiceQueryCharge(chargeId, appId);
+        String merchantTradeId = null;
+        V1ChargeResponse response = api.chargeServiceQueryCharge(chargeId, appId, merchantTradeId);
 
         // TODO: test validations
     }
@@ -246,7 +248,26 @@ public class DefaultApiTest {
     public void chargeServiceQueryCharge2Test() throws Exception {
         String chargeId = null;
         String appId = null;
-        V1ChargeResponse response = api.chargeServiceQueryCharge2(chargeId, appId);
+        String merchantTradeId = null;
+        V1ChargeResponse response = api.chargeServiceQueryCharge2(chargeId, appId, merchantTradeId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * 查询 Charge 对象
+     *
+     * 你可以在后台异步通知之前，通过查询接口确认支付状态。通过charge对象的id查询一个已创建的charge对象。
+     *
+     * @throws Exception
+     *          if the Api call fails
+     */
+    @Test
+    public void chargeServiceQueryCharge3Test() throws Exception {
+        String merchantTradeId = null;
+        String chargeId = null;
+        String appId = null;
+        V1ChargeResponse response = api.chargeServiceQueryCharge3(merchantTradeId, chargeId, appId);
 
         // TODO: test validations
     }

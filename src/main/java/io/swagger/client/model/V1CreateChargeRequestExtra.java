@@ -24,6 +24,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.V1ExtraAlipayApp;
 import io.swagger.client.model.V1ExtraAlipayFace;
+import io.swagger.client.model.V1ExtraAlipayJSAPI;
 import io.swagger.client.model.V1ExtraAlipayLite;
 import io.swagger.client.model.V1ExtraAlipayPage;
 import io.swagger.client.model.V1ExtraAlipayQr;
@@ -40,13 +41,16 @@ import java.io.IOException;
 /**
  * V1CreateChargeRequestExtra
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-07T07:04:49.831Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
 public class V1CreateChargeRequestExtra {
   @SerializedName("alipay_app")
   private V1ExtraAlipayApp alipayApp = null;
 
   @SerializedName("alipay_face")
   private V1ExtraAlipayFace alipayFace = null;
+
+  @SerializedName("alipay_jsapi")
+  private V1ExtraAlipayJSAPI alipayJsapi = null;
 
   @SerializedName("alipay_lite")
   private V1ExtraAlipayLite alipayLite = null;
@@ -115,6 +119,24 @@ public class V1CreateChargeRequestExtra {
 
   public void setAlipayFace(V1ExtraAlipayFace alipayFace) {
     this.alipayFace = alipayFace;
+  }
+
+  public V1CreateChargeRequestExtra alipayJsapi(V1ExtraAlipayJSAPI alipayJsapi) {
+    this.alipayJsapi = alipayJsapi;
+    return this;
+  }
+
+   /**
+   * 支付宝 JSAPI 支付元数据
+   * @return alipayJsapi
+  **/
+  @ApiModelProperty(value = "支付宝 JSAPI 支付元数据")
+  public V1ExtraAlipayJSAPI getAlipayJsapi() {
+    return alipayJsapi;
+  }
+
+  public void setAlipayJsapi(V1ExtraAlipayJSAPI alipayJsapi) {
+    this.alipayJsapi = alipayJsapi;
   }
 
   public V1CreateChargeRequestExtra alipayLite(V1ExtraAlipayLite alipayLite) {
@@ -327,6 +349,7 @@ public class V1CreateChargeRequestExtra {
     V1CreateChargeRequestExtra v1CreateChargeRequestExtra = (V1CreateChargeRequestExtra) o;
     return Objects.equals(this.alipayApp, v1CreateChargeRequestExtra.alipayApp) &&
         Objects.equals(this.alipayFace, v1CreateChargeRequestExtra.alipayFace) &&
+        Objects.equals(this.alipayJsapi, v1CreateChargeRequestExtra.alipayJsapi) &&
         Objects.equals(this.alipayLite, v1CreateChargeRequestExtra.alipayLite) &&
         Objects.equals(this.alipayPage, v1CreateChargeRequestExtra.alipayPage) &&
         Objects.equals(this.alipayQr, v1CreateChargeRequestExtra.alipayQr) &&
@@ -342,7 +365,7 @@ public class V1CreateChargeRequestExtra {
 
   @Override
   public int hashCode() {
-    return Objects.hash(alipayApp, alipayFace, alipayLite, alipayPage, alipayQr, alipayScan, alipayWap, wechatpayApp, wechatpayH5, wechatpayJsapi, wechatpayLite, wechatpayNative, wechatpayScan);
+    return Objects.hash(alipayApp, alipayFace, alipayJsapi, alipayLite, alipayPage, alipayQr, alipayScan, alipayWap, wechatpayApp, wechatpayH5, wechatpayJsapi, wechatpayLite, wechatpayNative, wechatpayScan);
   }
 
 
@@ -353,6 +376,7 @@ public class V1CreateChargeRequestExtra {
     
     sb.append("    alipayApp: ").append(toIndentedString(alipayApp)).append("\n");
     sb.append("    alipayFace: ").append(toIndentedString(alipayFace)).append("\n");
+    sb.append("    alipayJsapi: ").append(toIndentedString(alipayJsapi)).append("\n");
     sb.append("    alipayLite: ").append(toIndentedString(alipayLite)).append("\n");
     sb.append("    alipayPage: ").append(toIndentedString(alipayPage)).append("\n");
     sb.append("    alipayQr: ").append(toIndentedString(alipayQr)).append("\n");

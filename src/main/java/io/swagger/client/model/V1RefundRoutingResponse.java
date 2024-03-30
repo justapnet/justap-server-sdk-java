@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * V1RefundRoutingResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-07T07:04:49.831Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
 public class V1RefundRoutingResponse {
   @SerializedName("charge_id")
   private Long chargeId = 0l;

@@ -22,12 +22,13 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.RoyaltySettlementTransactionRoyaltyTransactionStatus;
 import java.io.IOException;
 
 /**
  * V1RoyaltySettlementTransaction
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-07T07:04:49.831Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
 public class V1RoyaltySettlementTransaction {
   @SerializedName("amount")
   private Float amount = null;
@@ -57,7 +58,7 @@ public class V1RoyaltySettlementTransaction {
   private String royaltySettlementId = null;
 
   @SerializedName("status")
-  private String status = null;
+  private RoyaltySettlementTransactionRoyaltyTransactionStatus status = null;
 
   @SerializedName("transfer_id")
   private String transferId = null;
@@ -227,7 +228,7 @@ public class V1RoyaltySettlementTransaction {
     this.royaltySettlementId = royaltySettlementId;
   }
 
-  public V1RoyaltySettlementTransaction status(String status) {
+  public V1RoyaltySettlementTransaction status(RoyaltySettlementTransactionRoyaltyTransactionStatus status) {
     this.status = status;
     return this;
   }
@@ -236,12 +237,12 @@ public class V1RoyaltySettlementTransaction {
    * 结算状态
    * @return status
   **/
-  @ApiModelProperty(required = true, value = "结算状态")
-  public String getStatus() {
+  @ApiModelProperty(value = "结算状态")
+  public RoyaltySettlementTransactionRoyaltyTransactionStatus getStatus() {
     return status;
   }
 
-  public void setStatus(String status) {
+  public void setStatus(RoyaltySettlementTransactionRoyaltyTransactionStatus status) {
     this.status = status;
   }
 

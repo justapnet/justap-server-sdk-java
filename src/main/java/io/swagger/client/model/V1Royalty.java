@@ -23,6 +23,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Tradev1RoyaltyMethod;
+import io.swagger.client.model.V1RoyaltyStatus;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -31,11 +32,8 @@ import java.util.Map;
 /**
  * V1Royalty
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-07T07:04:49.831Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
 public class V1Royalty {
-  @SerializedName("amount")
-  private Float amount = null;
-
   @SerializedName("charge_id")
   private String chargeId = null;
 
@@ -75,32 +73,11 @@ public class V1Royalty {
   @SerializedName("royalty_settlement_id")
   private String royaltySettlementId = null;
 
-  @SerializedName("royalty_settlement_transaction_id")
-  private String royaltySettlementTransactionId = null;
-
   @SerializedName("status")
-  private String status = null;
+  private V1RoyaltyStatus status = null;
 
   @SerializedName("time_settled")
   private Long timeSettled = 0l;
-
-  public V1Royalty amount(Float amount) {
-    this.amount = amount;
-    return this;
-  }
-
-   /**
-   * 分账金额
-   * @return amount
-  **/
-  @ApiModelProperty(required = true, value = "分账金额")
-  public Float getAmount() {
-    return amount;
-  }
-
-  public void setAmount(Float amount) {
-    this.amount = amount;
-  }
 
   public V1Royalty chargeId(String chargeId) {
     this.chargeId = chargeId;
@@ -341,25 +318,7 @@ public class V1Royalty {
     this.royaltySettlementId = royaltySettlementId;
   }
 
-  public V1Royalty royaltySettlementTransactionId(String royaltySettlementTransactionId) {
-    this.royaltySettlementTransactionId = royaltySettlementTransactionId;
-    return this;
-  }
-
-   /**
-   * Get royaltySettlementTransactionId
-   * @return royaltySettlementTransactionId
-  **/
-  @ApiModelProperty(value = "")
-  public String getRoyaltySettlementTransactionId() {
-    return royaltySettlementTransactionId;
-  }
-
-  public void setRoyaltySettlementTransactionId(String royaltySettlementTransactionId) {
-    this.royaltySettlementTransactionId = royaltySettlementTransactionId;
-  }
-
-  public V1Royalty status(String status) {
+  public V1Royalty status(V1RoyaltyStatus status) {
     this.status = status;
     return this;
   }
@@ -369,11 +328,11 @@ public class V1Royalty {
    * @return status
   **/
   @ApiModelProperty(required = true, value = "分账状态")
-  public String getStatus() {
+  public V1RoyaltyStatus getStatus() {
     return status;
   }
 
-  public void setStatus(String status) {
+  public void setStatus(V1RoyaltyStatus status) {
     this.status = status;
   }
 
@@ -405,8 +364,7 @@ public class V1Royalty {
       return false;
     }
     V1Royalty v1Royalty = (V1Royalty) o;
-    return Objects.equals(this.amount, v1Royalty.amount) &&
-        Objects.equals(this.chargeId, v1Royalty.chargeId) &&
+    return Objects.equals(this.chargeId, v1Royalty.chargeId) &&
         Objects.equals(this.created, v1Royalty.created) &&
         Objects.equals(this.description, v1Royalty.description) &&
         Objects.equals(this.id, v1Royalty.id) &&
@@ -419,14 +377,13 @@ public class V1Royalty {
         Objects.equals(this.payerSettleAccountId, v1Royalty.payerSettleAccountId) &&
         Objects.equals(this.payerUserId, v1Royalty.payerUserId) &&
         Objects.equals(this.royaltySettlementId, v1Royalty.royaltySettlementId) &&
-        Objects.equals(this.royaltySettlementTransactionId, v1Royalty.royaltySettlementTransactionId) &&
         Objects.equals(this.status, v1Royalty.status) &&
         Objects.equals(this.timeSettled, v1Royalty.timeSettled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, chargeId, created, description, id, livemode, metadata, method, object, orderId, payerAppId, payerSettleAccountId, payerUserId, royaltySettlementId, royaltySettlementTransactionId, status, timeSettled);
+    return Objects.hash(chargeId, created, description, id, livemode, metadata, method, object, orderId, payerAppId, payerSettleAccountId, payerUserId, royaltySettlementId, status, timeSettled);
   }
 
 
@@ -435,7 +392,6 @@ public class V1Royalty {
     StringBuilder sb = new StringBuilder();
     sb.append("class V1Royalty {\n");
     
-    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
     sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
     sb.append("    created: ").append(toIndentedString(created)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
@@ -449,7 +405,6 @@ public class V1Royalty {
     sb.append("    payerSettleAccountId: ").append(toIndentedString(payerSettleAccountId)).append("\n");
     sb.append("    payerUserId: ").append(toIndentedString(payerUserId)).append("\n");
     sb.append("    royaltySettlementId: ").append(toIndentedString(royaltySettlementId)).append("\n");
-    sb.append("    royaltySettlementTransactionId: ").append(toIndentedString(royaltySettlementTransactionId)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    timeSettled: ").append(toIndentedString(timeSettled)).append("\n");
     sb.append("}");

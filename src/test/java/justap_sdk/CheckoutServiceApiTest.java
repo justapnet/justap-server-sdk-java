@@ -13,6 +13,7 @@
 
 package justap_sdk;
 
+import io.swagger.client.model.GooglerpcStatus;
 import io.swagger.client.model.RpcStatus;
 import io.swagger.client.model.V1UnionQrRequest;
 import org.junit.Test;

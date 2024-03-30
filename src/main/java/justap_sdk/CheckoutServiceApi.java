@@ -27,6 +27,7 @@ import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
 
 
+import io.swagger.client.model.GooglerpcStatus;
 import io.swagger.client.model.RpcStatus;
 import io.swagger.client.model.V1UnionQrRequest;
 

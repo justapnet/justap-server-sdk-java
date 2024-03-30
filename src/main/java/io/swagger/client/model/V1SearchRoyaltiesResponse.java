@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * V1SearchRoyaltiesResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-07T07:04:49.831Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
 public class V1SearchRoyaltiesResponse {
   @SerializedName("data")
   private V1Royalty data = null;

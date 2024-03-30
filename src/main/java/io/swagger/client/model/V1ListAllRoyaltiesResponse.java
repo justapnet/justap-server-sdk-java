@@ -24,14 +24,16 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.V1Royalty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * V1ListAllRoyaltiesResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2023-12-07T07:04:49.831Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
 public class V1ListAllRoyaltiesResponse {
   @SerializedName("data")
-  private V1Royalty data = null;
+  private List<V1Royalty> data = new ArrayList<>();
 
   @SerializedName("has_more")
   private Boolean hasMore = false;
@@ -39,8 +41,13 @@ public class V1ListAllRoyaltiesResponse {
   @SerializedName("object")
   private String object = "RoyaltyList";
 
-  public V1ListAllRoyaltiesResponse data(V1Royalty data) {
+  public V1ListAllRoyaltiesResponse data(List<V1Royalty> data) {
     this.data = data;
+    return this;
+  }
+
+  public V1ListAllRoyaltiesResponse addDataItem(V1Royalty dataItem) {
+    this.data.add(dataItem);
     return this;
   }
 
@@ -49,11 +56,11 @@ public class V1ListAllRoyaltiesResponse {
    * @return data
   **/
   @ApiModelProperty(required = true, value = "分账列表")
-  public V1Royalty getData() {
+  public List<V1Royalty> getData() {
     return data;
   }
 
-  public void setData(V1Royalty data) {
+  public void setData(List<V1Royalty> data) {
     this.data = data;
   }
 
