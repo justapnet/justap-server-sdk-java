@@ -32,7 +32,7 @@ import java.util.Map;
  * 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。
  */
 @ApiModel(description = "通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款。当进行全额退款之前，可以进行多次退款，直至全额退款。当一次退款成功后，会发送 Webhooks 通知。")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
 public class V1CreateRefundRequest {
   @SerializedName("amount")
   private Float amount = null;
@@ -54,6 +54,12 @@ public class V1CreateRefundRequest {
 
   @SerializedName("metadata")
   private Map<String, String> metadata = null;
+
+  @SerializedName("notification_area")
+  private String notificationArea = "CN";
+
+  @SerializedName("notify_url")
+  private String notifyUrl = null;
 
   public V1CreateRefundRequest amount(Float amount) {
     this.amount = amount;
@@ -189,6 +195,42 @@ public class V1CreateRefundRequest {
     this.metadata = metadata;
   }
 
+  public V1CreateRefundRequest notificationArea(String notificationArea) {
+    this.notificationArea = notificationArea;
+    return this;
+  }
+
+   /**
+   * [OPTIONAL] 接受通知服务器所在区域，为确保消息能够送达，请选择服务器所在国家的国家码。如不填默认为 CN
+   * @return notificationArea
+  **/
+  @ApiModelProperty(required = true, value = "[OPTIONAL] 接受通知服务器所在区域，为确保消息能够送达，请选择服务器所在国家的国家码。如不填默认为 CN")
+  public String getNotificationArea() {
+    return notificationArea;
+  }
+
+  public void setNotificationArea(String notificationArea) {
+    this.notificationArea = notificationArea;
+  }
+
+  public V1CreateRefundRequest notifyUrl(String notifyUrl) {
+    this.notifyUrl = notifyUrl;
+    return this;
+  }
+
+   /**
+   * [OPTIONAL] 退款成功后的异步通知地址。
+   * @return notifyUrl
+  **/
+  @ApiModelProperty(value = "[OPTIONAL] 退款成功后的异步通知地址。")
+  public String getNotifyUrl() {
+    return notifyUrl;
+  }
+
+  public void setNotifyUrl(String notifyUrl) {
+    this.notifyUrl = notifyUrl;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -205,12 +247,14 @@ public class V1CreateRefundRequest {
         Objects.equals(this.description, v1CreateRefundRequest.description) &&
         Objects.equals(this.extra, v1CreateRefundRequest.extra) &&
         Objects.equals(this.merchantRefundId, v1CreateRefundRequest.merchantRefundId) &&
-        Objects.equals(this.metadata, v1CreateRefundRequest.metadata);
+        Objects.equals(this.metadata, v1CreateRefundRequest.metadata) &&
+        Objects.equals(this.notificationArea, v1CreateRefundRequest.notificationArea) &&
+        Objects.equals(this.notifyUrl, v1CreateRefundRequest.notifyUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, appId, chargeId, description, extra, merchantRefundId, metadata);
+    return Objects.hash(amount, appId, chargeId, description, extra, merchantRefundId, metadata, notificationArea, notifyUrl);
   }
 
 
@@ -226,6 +270,8 @@ public class V1CreateRefundRequest {
     sb.append("    extra: ").append(toIndentedString(extra)).append("\n");
     sb.append("    merchantRefundId: ").append(toIndentedString(merchantRefundId)).append("\n");
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+    sb.append("    notificationArea: ").append(toIndentedString(notificationArea)).append("\n");
+    sb.append("    notifyUrl: ").append(toIndentedString(notifyUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

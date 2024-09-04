@@ -40,5 +40,9 @@
 
 * `UNIONPAYQR` (value: `"UnionPayQr"`)
 
+* `UNIONPAYCARDLESSQUICKPAY` (value: `"UnionPayCardlessQuickPay"`)
+
+* `UNIONPAYAGREEMENTQUICKPAY` (value: `"UnionPayAgreementQuickPay"`)
+
 
 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **authToken** | **String** | 授权码 | 
 **businessParams** | **String** | 业务扩展参数 | 
+**directPayForm** | [**ExtraAlipayPageAlipayDirectPayForm**](ExtraAlipayPageAlipayDirectPayForm.md) |  |  [optional]
 **disablePayChannels** | **String** | 禁用渠道 | 
 **enablePayChannels** | **String** | 可用渠道 | 
 **extendParams** | [**V1ExtraAlipayExtendParams**](V1ExtraAlipayExtendParams.md) | 业务扩展参数 |  [optional]

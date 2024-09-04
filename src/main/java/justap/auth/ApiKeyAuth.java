@@ -18,7 +18,7 @@ import justap.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

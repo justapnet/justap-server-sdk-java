@@ -30,6 +30,7 @@ import io.swagger.client.model.V1ExtraAlipayPage;
 import io.swagger.client.model.V1ExtraAlipayQr;
 import io.swagger.client.model.V1ExtraAlipayScan;
 import io.swagger.client.model.V1ExtraAlipayWap;
+import io.swagger.client.model.V1ExtraUnionPayCardlessQuickPay;
 import io.swagger.client.model.V1ExtraWechatpayApp;
 import io.swagger.client.model.V1ExtraWechatpayH5;
 import io.swagger.client.model.V1ExtraWechatpayJsapi;
@@ -41,7 +42,7 @@ import java.io.IOException;
 /**
  * V1CreateChargeRequestExtra
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
 public class V1CreateChargeRequestExtra {
   @SerializedName("alipay_app")
   private V1ExtraAlipayApp alipayApp = null;
@@ -66,6 +67,9 @@ public class V1CreateChargeRequestExtra {
 
   @SerializedName("alipay_wap")
   private V1ExtraAlipayWap alipayWap = null;
+
+  @SerializedName("unionpay_cardless_quick_pay")
+  private V1ExtraUnionPayCardlessQuickPay unionpayCardlessQuickPay = null;
 
   @SerializedName("wechatpay_app")
   private V1ExtraWechatpayApp wechatpayApp = null;
@@ -229,6 +233,24 @@ public class V1CreateChargeRequestExtra {
     this.alipayWap = alipayWap;
   }
 
+  public V1CreateChargeRequestExtra unionpayCardlessQuickPay(V1ExtraUnionPayCardlessQuickPay unionpayCardlessQuickPay) {
+    this.unionpayCardlessQuickPay = unionpayCardlessQuickPay;
+    return this;
+  }
+
+   /**
+   * 银联无卡快捷支付元数据
+   * @return unionpayCardlessQuickPay
+  **/
+  @ApiModelProperty(value = "银联无卡快捷支付元数据")
+  public V1ExtraUnionPayCardlessQuickPay getUnionpayCardlessQuickPay() {
+    return unionpayCardlessQuickPay;
+  }
+
+  public void setUnionpayCardlessQuickPay(V1ExtraUnionPayCardlessQuickPay unionpayCardlessQuickPay) {
+    this.unionpayCardlessQuickPay = unionpayCardlessQuickPay;
+  }
+
   public V1CreateChargeRequestExtra wechatpayApp(V1ExtraWechatpayApp wechatpayApp) {
     this.wechatpayApp = wechatpayApp;
     return this;
@@ -355,6 +377,7 @@ public class V1CreateChargeRequestExtra {
         Objects.equals(this.alipayQr, v1CreateChargeRequestExtra.alipayQr) &&
         Objects.equals(this.alipayScan, v1CreateChargeRequestExtra.alipayScan) &&
         Objects.equals(this.alipayWap, v1CreateChargeRequestExtra.alipayWap) &&
+        Objects.equals(this.unionpayCardlessQuickPay, v1CreateChargeRequestExtra.unionpayCardlessQuickPay) &&
         Objects.equals(this.wechatpayApp, v1CreateChargeRequestExtra.wechatpayApp) &&
         Objects.equals(this.wechatpayH5, v1CreateChargeRequestExtra.wechatpayH5) &&
         Objects.equals(this.wechatpayJsapi, v1CreateChargeRequestExtra.wechatpayJsapi) &&
@@ -365,7 +388,7 @@ public class V1CreateChargeRequestExtra {
 
   @Override
   public int hashCode() {
-    return Objects.hash(alipayApp, alipayFace, alipayJsapi, alipayLite, alipayPage, alipayQr, alipayScan, alipayWap, wechatpayApp, wechatpayH5, wechatpayJsapi, wechatpayLite, wechatpayNative, wechatpayScan);
+    return Objects.hash(alipayApp, alipayFace, alipayJsapi, alipayLite, alipayPage, alipayQr, alipayScan, alipayWap, unionpayCardlessQuickPay, wechatpayApp, wechatpayH5, wechatpayJsapi, wechatpayLite, wechatpayNative, wechatpayScan);
   }
 
 
@@ -382,6 +405,7 @@ public class V1CreateChargeRequestExtra {
     sb.append("    alipayQr: ").append(toIndentedString(alipayQr)).append("\n");
     sb.append("    alipayScan: ").append(toIndentedString(alipayScan)).append("\n");
     sb.append("    alipayWap: ").append(toIndentedString(alipayWap)).append("\n");
+    sb.append("    unionpayCardlessQuickPay: ").append(toIndentedString(unionpayCardlessQuickPay)).append("\n");
     sb.append("    wechatpayApp: ").append(toIndentedString(wechatpayApp)).append("\n");
     sb.append("    wechatpayH5: ").append(toIndentedString(wechatpayH5)).append("\n");
     sb.append("    wechatpayJsapi: ").append(toIndentedString(wechatpayJsapi)).append("\n");

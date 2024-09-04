@@ -19,7 +19,7 @@ import java.util.Arrays;
 /**
  * SettlementAccountRecipientBalanceChannelRecipient
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
 public class SettlementAccountRecipientBalanceChannelRecipient {
 
   @Override

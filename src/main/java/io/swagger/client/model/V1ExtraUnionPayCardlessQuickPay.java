@@ -22,75 +22,222 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.V1ServiceError;
+import io.swagger.client.model.ExtraUnionPayCardlessQuickPayCardType;
 import java.io.IOException;
 
 /**
- * V1AcquirerQueryRefundResponse
+ * V1ExtraUnionPayCardlessQuickPay
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
-public class V1AcquirerQueryRefundResponse {
-  @SerializedName("charge_id")
-  private Long chargeId = 0l;
+public class V1ExtraUnionPayCardlessQuickPay {
+  @SerializedName("bank_account_type")
+  private String bankAccountType = "personal";
 
-  @SerializedName("error")
-  private V1ServiceError error = null;
+  @SerializedName("bank_name")
+  private String bankName = null;
 
-  @SerializedName("refund_id")
-  private Long refundId = 0l;
+  @SerializedName("bank_type")
+  private String bankType = null;
 
-  public V1AcquirerQueryRefundResponse chargeId(Long chargeId) {
-    this.chargeId = chargeId;
+  @SerializedName("buyer_card_number")
+  private String buyerCardNumber = null;
+
+  @SerializedName("buyer_id_no")
+  private String buyerIdNo = null;
+
+  @SerializedName("buyer_mobile")
+  private String buyerMobile = null;
+
+  @SerializedName("buyer_name")
+  private String buyerName = null;
+
+  @SerializedName("credit_card_cvn2")
+  private String creditCardCvn2 = null;
+
+  @SerializedName("credit_card_expiry")
+  private String creditCardExpiry = null;
+
+  @SerializedName("support_card_type")
+  private ExtraUnionPayCardlessQuickPayCardType supportCardType = null;
+
+  public V1ExtraUnionPayCardlessQuickPay bankAccountType(String bankAccountType) {
+    this.bankAccountType = bankAccountType;
     return this;
   }
 
    /**
-   * 支付单 ID
-   * @return chargeId
+   * 银行卡类型
+   * @return bankAccountType
   **/
-  @ApiModelProperty(required = true, value = "支付单 ID")
-  public Long getChargeId() {
-    return chargeId;
+  @ApiModelProperty(required = true, value = "银行卡类型")
+  public String getBankAccountType() {
+    return bankAccountType;
   }
 
-  public void setChargeId(Long chargeId) {
-    this.chargeId = chargeId;
+  public void setBankAccountType(String bankAccountType) {
+    this.bankAccountType = bankAccountType;
   }
 
-  public V1AcquirerQueryRefundResponse error(V1ServiceError error) {
-    this.error = error;
+  public V1ExtraUnionPayCardlessQuickPay bankName(String bankName) {
+    this.bankName = bankName;
     return this;
   }
 
    /**
-   * Get error
-   * @return error
+   * 银行名称
+   * @return bankName
   **/
-  @ApiModelProperty(value = "")
-  public V1ServiceError getError() {
-    return error;
+  @ApiModelProperty(required = true, value = "银行名称")
+  public String getBankName() {
+    return bankName;
   }
 
-  public void setError(V1ServiceError error) {
-    this.error = error;
+  public void setBankName(String bankName) {
+    this.bankName = bankName;
   }
 
-  public V1AcquirerQueryRefundResponse refundId(Long refundId) {
-    this.refundId = refundId;
+  public V1ExtraUnionPayCardlessQuickPay bankType(String bankType) {
+    this.bankType = bankType;
     return this;
   }
 
    /**
-   * 退款单号
-   * @return refundId
+   * 银行类型
+   * @return bankType
   **/
-  @ApiModelProperty(required = true, value = "退款单号")
-  public Long getRefundId() {
-    return refundId;
+  @ApiModelProperty(required = true, value = "银行类型")
+  public String getBankType() {
+    return bankType;
   }
 
-  public void setRefundId(Long refundId) {
-    this.refundId = refundId;
+  public void setBankType(String bankType) {
+    this.bankType = bankType;
+  }
+
+  public V1ExtraUnionPayCardlessQuickPay buyerCardNumber(String buyerCardNumber) {
+    this.buyerCardNumber = buyerCardNumber;
+    return this;
+  }
+
+   /**
+   * 付款方银行卡号
+   * @return buyerCardNumber
+  **/
+  @ApiModelProperty(required = true, value = "付款方银行卡号")
+  public String getBuyerCardNumber() {
+    return buyerCardNumber;
+  }
+
+  public void setBuyerCardNumber(String buyerCardNumber) {
+    this.buyerCardNumber = buyerCardNumber;
+  }
+
+  public V1ExtraUnionPayCardlessQuickPay buyerIdNo(String buyerIdNo) {
+    this.buyerIdNo = buyerIdNo;
+    return this;
+  }
+
+   /**
+   * 付款方身份证号
+   * @return buyerIdNo
+  **/
+  @ApiModelProperty(required = true, value = "付款方身份证号")
+  public String getBuyerIdNo() {
+    return buyerIdNo;
+  }
+
+  public void setBuyerIdNo(String buyerIdNo) {
+    this.buyerIdNo = buyerIdNo;
+  }
+
+  public V1ExtraUnionPayCardlessQuickPay buyerMobile(String buyerMobile) {
+    this.buyerMobile = buyerMobile;
+    return this;
+  }
+
+   /**
+   * 付款方银行预留手机号
+   * @return buyerMobile
+  **/
+  @ApiModelProperty(required = true, value = "付款方银行预留手机号")
+  public String getBuyerMobile() {
+    return buyerMobile;
+  }
+
+  public void setBuyerMobile(String buyerMobile) {
+    this.buyerMobile = buyerMobile;
+  }
+
+  public V1ExtraUnionPayCardlessQuickPay buyerName(String buyerName) {
+    this.buyerName = buyerName;
+    return this;
+  }
+
+   /**
+   * 付款方银行姓名
+   * @return buyerName
+  **/
+  @ApiModelProperty(required = true, value = "付款方银行姓名")
+  public String getBuyerName() {
+    return buyerName;
+  }
+
+  public void setBuyerName(String buyerName) {
+    this.buyerName = buyerName;
+  }
+
+  public V1ExtraUnionPayCardlessQuickPay creditCardCvn2(String creditCardCvn2) {
+    this.creditCardCvn2 = creditCardCvn2;
+    return this;
+  }
+
+   /**
+   * 信用卡背面的末三位数字
+   * @return creditCardCvn2
+  **/
+  @ApiModelProperty(required = true, value = "信用卡背面的末三位数字")
+  public String getCreditCardCvn2() {
+    return creditCardCvn2;
+  }
+
+  public void setCreditCardCvn2(String creditCardCvn2) {
+    this.creditCardCvn2 = creditCardCvn2;
+  }
+
+  public V1ExtraUnionPayCardlessQuickPay creditCardExpiry(String creditCardExpiry) {
+    this.creditCardExpiry = creditCardExpiry;
+    return this;
+  }
+
+   /**
+   * 信用卡有效期
+   * @return creditCardExpiry
+  **/
+  @ApiModelProperty(required = true, value = "信用卡有效期")
+  public String getCreditCardExpiry() {
+    return creditCardExpiry;
+  }
+
+  public void setCreditCardExpiry(String creditCardExpiry) {
+    this.creditCardExpiry = creditCardExpiry;
+  }
+
+  public V1ExtraUnionPayCardlessQuickPay supportCardType(ExtraUnionPayCardlessQuickPayCardType supportCardType) {
+    this.supportCardType = supportCardType;
+    return this;
+  }
+
+   /**
+   * 支持的银行卡类型
+   * @return supportCardType
+  **/
+  @ApiModelProperty(required = true, value = "支持的银行卡类型")
+  public ExtraUnionPayCardlessQuickPayCardType getSupportCardType() {
+    return supportCardType;
+  }
+
+  public void setSupportCardType(ExtraUnionPayCardlessQuickPayCardType supportCardType) {
+    this.supportCardType = supportCardType;
   }
 
 
@@ -102,26 +249,40 @@ public class V1AcquirerQueryRefundResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AcquirerQueryRefundResponse v1AcquirerQueryRefundResponse = (V1AcquirerQueryRefundResponse) o;
-    return Objects.equals(this.chargeId, v1AcquirerQueryRefundResponse.chargeId) &&
-        Objects.equals(this.error, v1AcquirerQueryRefundResponse.error) &&
-        Objects.equals(this.refundId, v1AcquirerQueryRefundResponse.refundId);
+    V1ExtraUnionPayCardlessQuickPay v1ExtraUnionPayCardlessQuickPay = (V1ExtraUnionPayCardlessQuickPay) o;
+    return Objects.equals(this.bankAccountType, v1ExtraUnionPayCardlessQuickPay.bankAccountType) &&
+        Objects.equals(this.bankName, v1ExtraUnionPayCardlessQuickPay.bankName) &&
+        Objects.equals(this.bankType, v1ExtraUnionPayCardlessQuickPay.bankType) &&
+        Objects.equals(this.buyerCardNumber, v1ExtraUnionPayCardlessQuickPay.buyerCardNumber) &&
+        Objects.equals(this.buyerIdNo, v1ExtraUnionPayCardlessQuickPay.buyerIdNo) &&
+        Objects.equals(this.buyerMobile, v1ExtraUnionPayCardlessQuickPay.buyerMobile) &&
+        Objects.equals(this.buyerName, v1ExtraUnionPayCardlessQuickPay.buyerName) &&
+        Objects.equals(this.creditCardCvn2, v1ExtraUnionPayCardlessQuickPay.creditCardCvn2) &&
+        Objects.equals(this.creditCardExpiry, v1ExtraUnionPayCardlessQuickPay.creditCardExpiry) &&
+        Objects.equals(this.supportCardType, v1ExtraUnionPayCardlessQuickPay.supportCardType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chargeId, error, refundId);
+    return Objects.hash(bankAccountType, bankName, bankType, buyerCardNumber, buyerIdNo, buyerMobile, buyerName, creditCardCvn2, creditCardExpiry, supportCardType);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AcquirerQueryRefundResponse {\n");
+    sb.append("class V1ExtraUnionPayCardlessQuickPay {\n");
     
-    sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
-    sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    refundId: ").append(toIndentedString(refundId)).append("\n");
+    sb.append("    bankAccountType: ").append(toIndentedString(bankAccountType)).append("\n");
+    sb.append("    bankName: ").append(toIndentedString(bankName)).append("\n");
+    sb.append("    bankType: ").append(toIndentedString(bankType)).append("\n");
+    sb.append("    buyerCardNumber: ").append(toIndentedString(buyerCardNumber)).append("\n");
+    sb.append("    buyerIdNo: ").append(toIndentedString(buyerIdNo)).append("\n");
+    sb.append("    buyerMobile: ").append(toIndentedString(buyerMobile)).append("\n");
+    sb.append("    buyerName: ").append(toIndentedString(buyerName)).append("\n");
+    sb.append("    creditCardCvn2: ").append(toIndentedString(creditCardCvn2)).append("\n");
+    sb.append("    creditCardExpiry: ").append(toIndentedString(creditCardExpiry)).append("\n");
+    sb.append("    supportCardType: ").append(toIndentedString(supportCardType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

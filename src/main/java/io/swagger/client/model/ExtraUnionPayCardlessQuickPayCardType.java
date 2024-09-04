@@ -15,127 +15,61 @@ package io.swagger.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.annotations.SerializedName;
+
+import java.io.IOException;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.V1ServiceError;
-import java.io.IOException;
 
 /**
- * V1AcquirerQueryRefundResponse
+ * Gets or Sets ExtraUnionPayCardlessQuickPayCardType
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
-public class V1AcquirerQueryRefundResponse {
-  @SerializedName("charge_id")
-  private Long chargeId = 0l;
+@JsonAdapter(ExtraUnionPayCardlessQuickPayCardType.Adapter.class)
+public enum ExtraUnionPayCardlessQuickPayCardType {
+  
+  CARDTYPEUNSET("CardTypeUnset"),
+  
+  CREDIT("Credit"),
+  
+  DEBIT("Debit");
 
-  @SerializedName("error")
-  private V1ServiceError error = null;
+  private String value;
 
-  @SerializedName("refund_id")
-  private Long refundId = 0l;
-
-  public V1AcquirerQueryRefundResponse chargeId(Long chargeId) {
-    this.chargeId = chargeId;
-    return this;
+  ExtraUnionPayCardlessQuickPayCardType(String value) {
+    this.value = value;
   }
 
-   /**
-   * 支付单 ID
-   * @return chargeId
-  **/
-  @ApiModelProperty(required = true, value = "支付单 ID")
-  public Long getChargeId() {
-    return chargeId;
+  public String getValue() {
+    return value;
   }
-
-  public void setChargeId(Long chargeId) {
-    this.chargeId = chargeId;
-  }
-
-  public V1AcquirerQueryRefundResponse error(V1ServiceError error) {
-    this.error = error;
-    return this;
-  }
-
-   /**
-   * Get error
-   * @return error
-  **/
-  @ApiModelProperty(value = "")
-  public V1ServiceError getError() {
-    return error;
-  }
-
-  public void setError(V1ServiceError error) {
-    this.error = error;
-  }
-
-  public V1AcquirerQueryRefundResponse refundId(Long refundId) {
-    this.refundId = refundId;
-    return this;
-  }
-
-   /**
-   * 退款单号
-   * @return refundId
-  **/
-  @ApiModelProperty(required = true, value = "退款单号")
-  public Long getRefundId() {
-    return refundId;
-  }
-
-  public void setRefundId(Long refundId) {
-    this.refundId = refundId;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
-    }
-    V1AcquirerQueryRefundResponse v1AcquirerQueryRefundResponse = (V1AcquirerQueryRefundResponse) o;
-    return Objects.equals(this.chargeId, v1AcquirerQueryRefundResponse.chargeId) &&
-        Objects.equals(this.error, v1AcquirerQueryRefundResponse.error) &&
-        Objects.equals(this.refundId, v1AcquirerQueryRefundResponse.refundId);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(chargeId, error, refundId);
-  }
-
 
   @Override
   public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class V1AcquirerQueryRefundResponse {\n");
-    
-    sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
-    sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    refundId: ").append(toIndentedString(refundId)).append("\n");
-    sb.append("}");
-    return sb.toString();
+    return String.valueOf(value);
   }
 
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+  public static ExtraUnionPayCardlessQuickPayCardType fromValue(String text) {
+    for (ExtraUnionPayCardlessQuickPayCardType b : ExtraUnionPayCardlessQuickPayCardType.values()) {
+      if (String.valueOf(b.value).equals(text)) {
+        return b;
+      }
     }
-    return o.toString().replace("\n", "\n    ");
+    return null;
   }
 
+  public static class Adapter extends TypeAdapter<ExtraUnionPayCardlessQuickPayCardType> {
+    @Override
+    public void write(final JsonWriter jsonWriter, final ExtraUnionPayCardlessQuickPayCardType enumeration) throws IOException {
+      jsonWriter.value(enumeration.getValue());
+    }
+
+    @Override
+    public ExtraUnionPayCardlessQuickPayCardType read(final JsonReader jsonReader) throws IOException {
+      String value = jsonReader.nextString();
+      return ExtraUnionPayCardlessQuickPayCardType.fromValue(String.valueOf(value));
+    }
+  }
 }
 

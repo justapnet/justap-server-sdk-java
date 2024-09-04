@@ -22,6 +22,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.ExtraAlipayPageAlipayDirectPayForm;
 import io.swagger.client.model.V1ExtraAlipayExtendParams;
 import io.swagger.client.model.V1ExtraAlipayGoodsDetail;
 import io.swagger.client.model.V1ExtraAlipayVoucherDetailList;
@@ -32,13 +33,16 @@ import java.util.List;
 /**
  * V1ExtraAlipayWap
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
 public class V1ExtraAlipayWap {
   @SerializedName("auth_token")
   private String authToken = null;
 
   @SerializedName("business_params")
   private String businessParams = null;
+
+  @SerializedName("direct_pay_form")
+  private ExtraAlipayPageAlipayDirectPayForm directPayForm = null;
 
   @SerializedName("disable_pay_channels")
   private String disablePayChannels = null;
@@ -119,6 +123,24 @@ public class V1ExtraAlipayWap {
 
   public void setBusinessParams(String businessParams) {
     this.businessParams = businessParams;
+  }
+
+  public V1ExtraAlipayWap directPayForm(ExtraAlipayPageAlipayDirectPayForm directPayForm) {
+    this.directPayForm = directPayForm;
+    return this;
+  }
+
+   /**
+   * Get directPayForm
+   * @return directPayForm
+  **/
+  @ApiModelProperty(value = "")
+  public ExtraAlipayPageAlipayDirectPayForm getDirectPayForm() {
+    return directPayForm;
+  }
+
+  public void setDirectPayForm(ExtraAlipayPageAlipayDirectPayForm directPayForm) {
+    this.directPayForm = directPayForm;
   }
 
   public V1ExtraAlipayWap disablePayChannels(String disablePayChannels) {
@@ -419,6 +441,7 @@ public class V1ExtraAlipayWap {
     V1ExtraAlipayWap v1ExtraAlipayWap = (V1ExtraAlipayWap) o;
     return Objects.equals(this.authToken, v1ExtraAlipayWap.authToken) &&
         Objects.equals(this.businessParams, v1ExtraAlipayWap.businessParams) &&
+        Objects.equals(this.directPayForm, v1ExtraAlipayWap.directPayForm) &&
         Objects.equals(this.disablePayChannels, v1ExtraAlipayWap.disablePayChannels) &&
         Objects.equals(this.enablePayChannels, v1ExtraAlipayWap.enablePayChannels) &&
         Objects.equals(this.extendParams, v1ExtraAlipayWap.extendParams) &&
@@ -438,7 +461,7 @@ public class V1ExtraAlipayWap {
 
   @Override
   public int hashCode() {
-    return Objects.hash(authToken, businessParams, disablePayChannels, enablePayChannels, extendParams, fundBillList, goodsDetail, goodsType, merchantTradeId, payUrl, productCode, promoParams, quitUrl, returnUrl, sellerId, storeId, voucherDetailList);
+    return Objects.hash(authToken, businessParams, directPayForm, disablePayChannels, enablePayChannels, extendParams, fundBillList, goodsDetail, goodsType, merchantTradeId, payUrl, productCode, promoParams, quitUrl, returnUrl, sellerId, storeId, voucherDetailList);
   }
 
 
@@ -449,6 +472,7 @@ public class V1ExtraAlipayWap {
     
     sb.append("    authToken: ").append(toIndentedString(authToken)).append("\n");
     sb.append("    businessParams: ").append(toIndentedString(businessParams)).append("\n");
+    sb.append("    directPayForm: ").append(toIndentedString(directPayForm)).append("\n");
     sb.append("    disablePayChannels: ").append(toIndentedString(disablePayChannels)).append("\n");
     sb.append("    enablePayChannels: ").append(toIndentedString(enablePayChannels)).append("\n");
     sb.append("    extendParams: ").append(toIndentedString(extendParams)).append("\n");

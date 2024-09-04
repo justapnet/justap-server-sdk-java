@@ -11,6 +11,8 @@ Name | Type | Description | Notes
 **extra** | [**ProtobufAny**](ProtobufAny.md) | [OPTIONAL] 退款 extra 参数。 |  [optional]
 **merchantRefundId** | **String** | [REQUIRED] 商户系统的退款单号，必须保证唯一。由于 charge 支持多次退款，对于失败重试动作确保使用相同的订单号，以避免重复退款造成损失。 | 
 **metadata** | **Map&lt;String, String&gt;** | [OPTIONAL] 参考元数据。 |  [optional]
+**notificationArea** | **String** | [OPTIONAL] 接受通知服务器所在区域，为确保消息能够送达，请选择服务器所在国家的国家码。如不填默认为 CN | 
+**notifyUrl** | **String** | [OPTIONAL] 退款成功后的异步通知地址。 |  [optional]
 
 
 

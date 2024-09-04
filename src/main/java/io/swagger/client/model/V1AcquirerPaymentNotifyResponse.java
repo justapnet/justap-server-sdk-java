@@ -15,12 +15,63 @@ package io.swagger.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.V1ServiceError;
+import java.io.IOException;
 
 /**
  * V1AcquirerPaymentNotifyResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
 public class V1AcquirerPaymentNotifyResponse {
+  @SerializedName("charge_id")
+  private Long chargeId = 0l;
+
+  @SerializedName("error")
+  private V1ServiceError error = null;
+
+  public V1AcquirerPaymentNotifyResponse chargeId(Long chargeId) {
+    this.chargeId = chargeId;
+    return this;
+  }
+
+   /**
+   * 支付单 ID
+   * @return chargeId
+  **/
+  @ApiModelProperty(required = true, value = "支付单 ID")
+  public Long getChargeId() {
+    return chargeId;
+  }
+
+  public void setChargeId(Long chargeId) {
+    this.chargeId = chargeId;
+  }
+
+  public V1AcquirerPaymentNotifyResponse error(V1ServiceError error) {
+    this.error = error;
+    return this;
+  }
+
+   /**
+   * Get error
+   * @return error
+  **/
+  @ApiModelProperty(value = "")
+  public V1ServiceError getError() {
+    return error;
+  }
+
+  public void setError(V1ServiceError error) {
+    this.error = error;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +81,14 @@ public class V1AcquirerPaymentNotifyResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    V1AcquirerPaymentNotifyResponse v1AcquirerPaymentNotifyResponse = (V1AcquirerPaymentNotifyResponse) o;
+    return Objects.equals(this.chargeId, v1AcquirerPaymentNotifyResponse.chargeId) &&
+        Objects.equals(this.error, v1AcquirerPaymentNotifyResponse.error);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(chargeId, error);
   }
 
 
@@ -44,6 +97,8 @@ public class V1AcquirerPaymentNotifyResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class V1AcquirerPaymentNotifyResponse {\n");
     
+    sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
+    sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -22,75 +22,53 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.V1ServiceError;
 import java.io.IOException;
 
 /**
- * V1AcquirerQueryRefundResponse
+ * ExtraAlipayPageAlipayDirectPayForm
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
-public class V1AcquirerQueryRefundResponse {
-  @SerializedName("charge_id")
-  private Long chargeId = 0l;
+public class ExtraAlipayPageAlipayDirectPayForm {
+  @SerializedName("form_action")
+  private String formAction = null;
 
-  @SerializedName("error")
-  private V1ServiceError error = null;
+  @SerializedName("form_fields")
+  private String formFields = null;
 
-  @SerializedName("refund_id")
-  private Long refundId = 0l;
-
-  public V1AcquirerQueryRefundResponse chargeId(Long chargeId) {
-    this.chargeId = chargeId;
+  public ExtraAlipayPageAlipayDirectPayForm formAction(String formAction) {
+    this.formAction = formAction;
     return this;
   }
 
    /**
-   * 支付单 ID
-   * @return chargeId
+   * [ONLY IN RESPONSE] 表单提交地址
+   * @return formAction
   **/
-  @ApiModelProperty(required = true, value = "支付单 ID")
-  public Long getChargeId() {
-    return chargeId;
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 表单提交地址")
+  public String getFormAction() {
+    return formAction;
   }
 
-  public void setChargeId(Long chargeId) {
-    this.chargeId = chargeId;
+  public void setFormAction(String formAction) {
+    this.formAction = formAction;
   }
 
-  public V1AcquirerQueryRefundResponse error(V1ServiceError error) {
-    this.error = error;
+  public ExtraAlipayPageAlipayDirectPayForm formFields(String formFields) {
+    this.formFields = formFields;
     return this;
   }
 
    /**
-   * Get error
-   * @return error
+   * [ONLY IN RESPONSE] 表单字段
+   * @return formFields
   **/
-  @ApiModelProperty(value = "")
-  public V1ServiceError getError() {
-    return error;
+  @ApiModelProperty(required = true, value = "[ONLY IN RESPONSE] 表单字段")
+  public String getFormFields() {
+    return formFields;
   }
 
-  public void setError(V1ServiceError error) {
-    this.error = error;
-  }
-
-  public V1AcquirerQueryRefundResponse refundId(Long refundId) {
-    this.refundId = refundId;
-    return this;
-  }
-
-   /**
-   * 退款单号
-   * @return refundId
-  **/
-  @ApiModelProperty(required = true, value = "退款单号")
-  public Long getRefundId() {
-    return refundId;
-  }
-
-  public void setRefundId(Long refundId) {
-    this.refundId = refundId;
+  public void setFormFields(String formFields) {
+    this.formFields = formFields;
   }
 
 
@@ -102,26 +80,24 @@ public class V1AcquirerQueryRefundResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    V1AcquirerQueryRefundResponse v1AcquirerQueryRefundResponse = (V1AcquirerQueryRefundResponse) o;
-    return Objects.equals(this.chargeId, v1AcquirerQueryRefundResponse.chargeId) &&
-        Objects.equals(this.error, v1AcquirerQueryRefundResponse.error) &&
-        Objects.equals(this.refundId, v1AcquirerQueryRefundResponse.refundId);
+    ExtraAlipayPageAlipayDirectPayForm extraAlipayPageAlipayDirectPayForm = (ExtraAlipayPageAlipayDirectPayForm) o;
+    return Objects.equals(this.formAction, extraAlipayPageAlipayDirectPayForm.formAction) &&
+        Objects.equals(this.formFields, extraAlipayPageAlipayDirectPayForm.formFields);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chargeId, error, refundId);
+    return Objects.hash(formAction, formFields);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class V1AcquirerQueryRefundResponse {\n");
+    sb.append("class ExtraAlipayPageAlipayDirectPayForm {\n");
     
-    sb.append("    chargeId: ").append(toIndentedString(chargeId)).append("\n");
-    sb.append("    error: ").append(toIndentedString(error)).append("\n");
-    sb.append("    refundId: ").append(toIndentedString(refundId)).append("\n");
+    sb.append("    formAction: ").append(toIndentedString(formAction)).append("\n");
+    sb.append("    formFields: ").append(toIndentedString(formFields)).append("\n");
     sb.append("}");
     return sb.toString();
   }

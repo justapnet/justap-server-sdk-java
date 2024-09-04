@@ -15,12 +15,63 @@ package io.swagger.client.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.V1ServiceError;
+import java.io.IOException;
 
 /**
  * V1AcquirerRoyaltyNotifyResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
 public class V1AcquirerRoyaltyNotifyResponse {
+  @SerializedName("error")
+  private V1ServiceError error = null;
+
+  @SerializedName("royalty_id")
+  private Long royaltyId = 0l;
+
+  public V1AcquirerRoyaltyNotifyResponse error(V1ServiceError error) {
+    this.error = error;
+    return this;
+  }
+
+   /**
+   * Get error
+   * @return error
+  **/
+  @ApiModelProperty(value = "")
+  public V1ServiceError getError() {
+    return error;
+  }
+
+  public void setError(V1ServiceError error) {
+    this.error = error;
+  }
+
+  public V1AcquirerRoyaltyNotifyResponse royaltyId(Long royaltyId) {
+    this.royaltyId = royaltyId;
+    return this;
+  }
+
+   /**
+   * 分账单号
+   * @return royaltyId
+  **/
+  @ApiModelProperty(required = true, value = "分账单号")
+  public Long getRoyaltyId() {
+    return royaltyId;
+  }
+
+  public void setRoyaltyId(Long royaltyId) {
+    this.royaltyId = royaltyId;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +81,14 @@ public class V1AcquirerRoyaltyNotifyResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    V1AcquirerRoyaltyNotifyResponse v1AcquirerRoyaltyNotifyResponse = (V1AcquirerRoyaltyNotifyResponse) o;
+    return Objects.equals(this.error, v1AcquirerRoyaltyNotifyResponse.error) &&
+        Objects.equals(this.royaltyId, v1AcquirerRoyaltyNotifyResponse.royaltyId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(error, royaltyId);
   }
 
 
@@ -44,6 +97,8 @@ public class V1AcquirerRoyaltyNotifyResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class V1AcquirerRoyaltyNotifyResponse {\n");
     
+    sb.append("    error: ").append(toIndentedString(error)).append("\n");
+    sb.append("    royaltyId: ").append(toIndentedString(royaltyId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

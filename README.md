@@ -2,7 +2,7 @@
 
 Justap API
 - API version: 1.0
-  - Build date: 2024-03-30T15:42:32.013Z
+  - Build date: 2024-09-04T00:13:14.840Z
 
 For more information, please visit [https://www.justap.cn/docs](https://www.justap.cn/docs)
 
@@ -155,7 +155,9 @@ Class | Method | HTTP request | Description
  - [CreateRoyaltyRequestRoyaltyReceiver](docs/CreateRoyaltyRequestRoyaltyReceiver.md)
  - [ExtraAlipayInvoiceInfoKeyInfo](docs/ExtraAlipayInvoiceInfoKeyInfo.md)
  - [ExtraAlipayJSAPIPayer](docs/ExtraAlipayJSAPIPayer.md)
+ - [ExtraAlipayPageAlipayDirectPayForm](docs/ExtraAlipayPageAlipayDirectPayForm.md)
  - [ExtraAlipaySettleInfoSettleDetailInfos](docs/ExtraAlipaySettleInfoSettleDetailInfos.md)
+ - [ExtraUnionPayCardlessQuickPayCardType](docs/ExtraUnionPayCardlessQuickPayCardType.md)
  - [ExtraWechatpayDetailGoodsDetail](docs/ExtraWechatpayDetailGoodsDetail.md)
  - [ExtraWechatpaySceneInfoH5Info](docs/ExtraWechatpaySceneInfoH5Info.md)
  - [ExtraWechatpaySceneInfoStoreInfo](docs/ExtraWechatpaySceneInfoStoreInfo.md)
@@ -231,6 +233,7 @@ Class | Method | HTTP request | Description
  - [V1ExtraAlipaySubMerchant](docs/V1ExtraAlipaySubMerchant.md)
  - [V1ExtraAlipayVoucherDetailList](docs/V1ExtraAlipayVoucherDetailList.md)
  - [V1ExtraAlipayWap](docs/V1ExtraAlipayWap.md)
+ - [V1ExtraUnionPayCardlessQuickPay](docs/V1ExtraUnionPayCardlessQuickPay.md)
  - [V1ExtraWechatpayApp](docs/V1ExtraWechatpayApp.md)
  - [V1ExtraWechatpayAppConfig](docs/V1ExtraWechatpayAppConfig.md)
  - [V1ExtraWechatpayAppletConfig](docs/V1ExtraWechatpayAppletConfig.md)

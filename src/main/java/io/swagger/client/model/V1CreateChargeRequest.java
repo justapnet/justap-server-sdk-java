@@ -33,7 +33,7 @@ import java.util.Map;
  * 你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。
  */
 @ApiModel(description = "你可以创建一个 charge 对象向用户收款。charge 是一个支付凭据对象，所有和支付相关的要素信息都存储在这个对象中，你的服务端可以通过发起支付请求来创建一个新的 charge 对象，也可以随时查询一个或者多个 charge 对象的状态。每个 charge 对象都拥有一个标识 id，该 id 在系统内唯一。")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-03-30T15:42:32.013Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2024-09-04T00:13:14.840Z")
 public class V1CreateChargeRequest {
   @SerializedName("amount")
   private Float amount = null;
@@ -73,6 +73,9 @@ public class V1CreateChargeRequest {
 
   @SerializedName("notify_url")
   private String notifyUrl = null;
+
+  @SerializedName("source")
+  private String source = "Default";
 
   @SerializedName("subject")
   private String subject = null;
@@ -322,6 +325,24 @@ public class V1CreateChargeRequest {
     this.notifyUrl = notifyUrl;
   }
 
+  public V1CreateChargeRequest source(String source) {
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * [OPTIONAL] 支付来源。固定值: DEFAULT
+   * @return source
+  **/
+  @ApiModelProperty(required = true, value = "[OPTIONAL] 支付来源。固定值: DEFAULT")
+  public String getSource() {
+    return source;
+  }
+
+  public void setSource(String source) {
+    this.source = source;
+  }
+
   public V1CreateChargeRequest subject(String subject) {
     this.subject = subject;
     return this;
@@ -381,13 +402,14 @@ public class V1CreateChargeRequest {
         Objects.equals(this.metadata, v1CreateChargeRequest.metadata) &&
         Objects.equals(this.notificationArea, v1CreateChargeRequest.notificationArea) &&
         Objects.equals(this.notifyUrl, v1CreateChargeRequest.notifyUrl) &&
+        Objects.equals(this.source, v1CreateChargeRequest.source) &&
         Objects.equals(this.subject, v1CreateChargeRequest.subject) &&
         Objects.equals(this.ttl, v1CreateChargeRequest.ttl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, appId, body, callbackUrl, channel, clientIp, currency, description, extra, merchantTradeId, metadata, notificationArea, notifyUrl, subject, ttl);
+    return Objects.hash(amount, appId, body, callbackUrl, channel, clientIp, currency, description, extra, merchantTradeId, metadata, notificationArea, notifyUrl, source, subject, ttl);
   }
 
 
@@ -409,6 +431,7 @@ public class V1CreateChargeRequest {
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    notificationArea: ").append(toIndentedString(notificationArea)).append("\n");
     sb.append("    notifyUrl: ").append(toIndentedString(notifyUrl)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    ttl: ").append(toIndentedString(ttl)).append("\n");
     sb.append("}");

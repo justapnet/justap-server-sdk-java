@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **metadata** | **Map&lt;String, String&gt;** | [OPTIONAL] 订单元数据，原样返回 |  [optional]
 **notificationArea** | **String** | [OPTIONAL] 接受通知服务器所在区域，为确保消息能够送达，请选择服务器所在国家的国家码。如不填默认为 CN | 
 **notifyUrl** | **String** | [OPTIONAL] 通知地址，如不传则使用 APP 设置中的通知地址。若都为空，则不发送通知 | 
+**source** | **String** | [OPTIONAL] 支付来源。固定值: DEFAULT | 
 **subject** | **String** | [REQUIRED] 物品或服务名称（交易标题） | 
 **ttl** | **Integer** | [OPTIONAL] 订单超时时间，单位秒 | 
 
